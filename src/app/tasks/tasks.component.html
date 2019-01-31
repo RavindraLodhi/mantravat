@@ -1,0 +1,85 @@
+<div class="container-fluid container-fluid1 ">
+    <div class="row">
+        <div class="col-sm-2 sidebarleft">
+            <ul style="list-style-type:none;">
+                <li id="sidebarleftOpt"><a routerLink="/leave">
+                                <span class="glyphicon glyphicon-home"></span>
+                                Create Task</a></li>
+                <li id="sidebarleftOpt"><a routerLink="/leave">
+                                <span class="glyphicon glyphicon-magnet"></span>
+                                Chnage Task</a></li>
+                <li id="sidebarleftOpt"><a routerLink="/leave">
+                                <span class="glyphicon glyphicon-credit-card"></span>
+                                Display Task</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-7 mainContainer">
+            <div class="container-fluid container-fluid1 ">
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8 forn">
+                        <form #userForm="ngForm" (ngSubmit)="submit(userForm.value)">
+                            <div class="row">
+                              <div class="col-sm-4 form-group">
+                                <label>Task Title</label>
+                              </div>
+                              <div class=" col-sm-8 form-group">
+                                <input type="text" placeholder="Enter Username" class="form-control" name="userName" ngModel>
+                              </div>
+                              <div class="col-sm-4 form-group">
+                                <label>Task Discription</label>
+                              </div>
+                              <div class=" col-sm-8 form-group">
+                                <textarea rows="1" cols="5" type="text" placeholder="Enter Username" class="form-control" name="userName" ngModel></textarea>
+                              </div>
+                              <div class="col-sm-4 form-group">
+                                <label>Task Time Line</label>
+                              </div>
+                              <div class=" col-sm-4 form-group">
+                                <input type="date" placeholder="From" class="form-control" name="userName" ngModel>
+                              </div>
+                              <div class=" col-sm-4 form-group">
+                                <input type="date" placeholder="To" class="form-control" name="userName" ngModel>
+                              </div>
+                              <div class="col-sm-4 form-group">
+                                <label>Task Effort</label>
+                              </div>
+                              <div class=" col-sm-8 form-group">
+                                <input type="text" placeholder="Enter Username" class="form-control" name="userName" ngModel>
+                              </div>
+                              <div class="col-sm-4 form-group">
+                                  <label>Task Priority</label>
+                                </div>
+                                <div class=" col-sm-8 form-group">  
+                                  <select type="text" placeholder="Enter Username" class="form-control" name="userName" ngModel>
+                                      <option value="volvo">Very High</option>
+                                      <option value="saab">High</option>
+                                      <option value="opel">Medium</option>
+                                      <option value="audi">Low</option>
+                                  </select>
+                                </div>
+                                <div class="col-sm-4 form-group">
+                                    <label>Task Status</label>
+                                  </div>
+                                  <div class=" col-sm-8 form-group">  
+                                    <select type="text" placeholder="Enter Username" class="form-control" name="userName" ngModel>
+                                        <option value="volvo">Open</option>
+                                        <option value="saab">InProgress</option>
+                                        <option value="opel">Completed</option>
+                                    </select>
+                                  </div>
+                                  <div class=" col-sm-8"> </div>
+                              <button class=" col-sm-2" type="submit">submit</button>
+                            </div>
+                          </form>
+                    </div>
+                    <div class="col-sm-2"></div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 right-sidebar">
+            Feed Updates
+        </div>
+    </div>
+</div>

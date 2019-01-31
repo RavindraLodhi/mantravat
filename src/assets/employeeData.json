@@ -1,0 +1,56 @@
+[
+  
+  
+    {
+      "id": 11,
+      "name": "Ravi",
+      "salory": 1000
+    },
+    {
+      "id": 12,
+      "name": "Ram",
+      "salory": 2000
+    },
+    {
+      "id": 13,
+      "name": "Raju",
+      "salory": 3000
+    },
+    {
+      "id": 14,
+      "name": "Amit",
+      "salory": 3400
+    },
+    {
+      "id": 15,
+      "name": "Manta",
+      "salory": 5000
+    },
+    {
+      "id": 16,
+      "name": "Rubi",
+      "salory": 8987
+    },
+    {
+      "id": 17,
+      "name": "Dhan",
+      "salory": 7000
+    },
+    {
+      "id": 18,
+      "name": "sumit",
+      "salory": 1000
+    },
+    {
+      "id": 19,
+      "name": "Magma",
+      "salory": 5500
+    },
+    {
+      "id": 20,
+      "name": "Ranjeet",
+      "salory": 9000
+    }
+  
+  
+  ]
