@@ -94,9 +94,36 @@ img{
       margin-top: 100px;
   }
   button{
-    margin-left: 15pc;
+   
     width: 90px;
-    background: green;
+    background: white;
     border-radius: 46px;
+}
+#button{
+  margin-left: 15pc;
+}
+
+/* leaveHestry css */
+#serchHeader{
+  background: rgba(65, 19, 230, 0.96);
+  height: 42px;
+  padding-left: 45px
+}
+.leavHistry{
+  margin-top: 1px;
+  text-align: center;
+padding-top: 10px;
+  background:white;
+  height: 42px;
+  border-bottom: 0.5px solid #D3D3D0;
+}
+.companyLeav{
+  background: white;
+  height: 35px;
+  margin-top: 2px;
+}
+.right-sidebar{
+  overflow: auto;
+  height: 500px;
 }
   

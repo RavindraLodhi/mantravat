@@ -1,0 +1,55 @@
+<header class="container-fluid">
+  <div class="row">
+    <div class="col-md-3">
+      <select>
+      <option value="volvo">2001</option>
+      <option value="saab">2002</option>
+      <option value="mercedes">2003</option>
+      <option value="audi">2004</option>
+      <option value="volvo">2005</option>
+      <option value="saab">2006</option>
+      <option value="mercedes">2007</option>
+      <option value="audi">2008</option>
+    </select>
+    </div>
+    <div class="col-md-3">
+      <select>
+        <option value="volvo">JANUARY </option>
+        <option value="saab">FEBRUARY</option>
+        <option value="mercedes">MARCH </option>
+        <option value="audi">APRIL</option>
+        <option value="volvo">MAY </option>
+        <option value="saab">JUNE </option>
+        <option value="mercedes">JULY</option>
+        <option value="audi">AUGUST</option>
+        <option value="volvo">SEPTEMBER</option>
+        <option value="saab">OCTOBER</option>
+        <option value="mercedes">NOVEMBER</option>
+        <option value="audi">DECEMBER </option>
+      </select>
+    </div>
+    <div class="col-md-3">rkerjk</div>
+    <div class="col-md-1">
+      <button type="submit">Set</button>
+    </div>
+    <div class="col-md-1">
+      <button type="submit">save</button>
+    </div>
+  </div>
+</header>
+<div class="container ">
+  <div class="row seven-cols">
+    <div *ngFor="let day of days">
+      <div class="col-lg-1 col-md-3 col-sm-4 col-xs-6 A">
+        <div class="container ">
+          {{day}}
+          <div class="row seven-cols">
+            <div class="col-lg-1 col-md-3 col-sm-4 col-xs-6 ">
+            </div>
+            <div class="col-lg-1 col-md-3 col-sm-4 col-xs-6 ">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

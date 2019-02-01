@@ -1,0 +1,29 @@
+@media (min-width: 1200px) {
+    .seven-cols .col-md-1,
+    .seven-cols .col-sm-1,
+    .seven-cols .col-lg-1 {
+      width: 14.085714285714285714285714285714%;
+      *width: 14.085714285714285714285714285714%;
+    }
+  }
+  /* 14% = 100% (full-width row) divided by 7 */  
+  .A{
+    background-color: white;
+    height: 90px;
+    margin-left: 1px; 
+    margin-top: 1px; 
+  }
+  header{
+    background: #FFF;
+    height: 41px;
+    padding-top: 10px;
+    /* margin-left: 20px;
+    margin-right: 200px; */
+  }
+  button{
+    width: 68px;
+    border-radius: 8px;
+  }
+  .container{
+   margin-top: 10px;
+  }

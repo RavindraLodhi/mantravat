@@ -1,4 +1,6 @@
 .wrapper{
     background-color: #ddd;
     height: 569px;
+    overflow: auto;
+    overflow-x: hidden;
 }

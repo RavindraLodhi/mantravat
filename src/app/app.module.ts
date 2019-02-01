@@ -13,6 +13,7 @@ import { HeaderComponent } from "./header/header.component";
 import { HomeLayoutComponent } from "./home-layout/home-layout.component";
 import { LeaveComponent } from "./leave/leave.component";
 import { LoginLayoutComponent } from "./login-layout/login-layout.component";
+import { TimesheetComponent } from './timesheet/timesheet.component';
 
 @NgModule({
   providers: [],
@@ -52,6 +53,10 @@ import { LoginLayoutComponent } from "./login-layout/login-layout.component";
           {
             path: "task",
             component: TasksComponent
+          },
+          {
+            path :"timesheet",
+            component :TimesheetComponent
           }
         ]
       }
@@ -66,7 +71,8 @@ import { LoginLayoutComponent } from "./login-layout/login-layout.component";
     HeaderComponent,
     HomeLayoutComponent,
     LeaveComponent,
-    LoginLayoutComponent
+    LoginLayoutComponent,
+    TimesheetComponent
   ]
 })
 export class AppModule {}

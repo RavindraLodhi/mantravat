@@ -2,18 +2,18 @@
     <div class="row">
         <div class="col-sm-2 sidebarleft">
             <ul style="list-style-type:none;">
-                <li id="sidebarleftOpt"><a routerLink="/leave">
+                <li id="sidebarleftOpt"><a (click)="callComponentMethodHere(1)">
                                 <span class="glyphicon glyphicon-home"></span>
                                 Apply Leave</a></li>
-                <li id="sidebarleftOpt"><a routerLink="/leave">
+                <li id="sidebarleftOpt"><a (click)="callComponentMethodHere(2)">
                                 <span class="glyphicon glyphicon-magnet"></span>
                                 Leave Histry</a></li>
-                <li id="sidebarleftOpt"><a routerLink="/leave">
+                <li id="sidebarleftOpt"><a (click)="callComponentMethodHere(3)">
                                 <span class="glyphicon glyphicon-credit-card"></span>
                                 Leave Status</a></li>
             </ul>
         </div>
-        <div class="col-sm-7 mainContainer">
+        <div *ngIf="applyLeave" class="col-sm-7 mainContainer">
             <div class="container-fluid container-fluid1 ">
                 <div class="row">
                     <div class="col-sm-2"></div>
@@ -28,16 +28,16 @@
                             </div>
                             <label class="col-sm-4">Leave Type</label>
                             <div class="form-group col-sm-8 ">
-                                    <select type="text" placeholder="Enter Username" class="form-control" name="leaveType2" ngModel>
+                                <select type="text" placeholder="Enter Username" class="form-control" name="leaveType2" ngModel>
                                                             <option>Special Leave </option>
                                                             <option>Study Leave</option>
                                                             <option >Sick Leave</option>
                                                             <option >Disembarkation leave</option>
                                     </select>
-                                </div>
+                            </div>
                             <label class="col-sm-4">Start Date</label>
                             <div class="form-group col-sm-8">
-                                <input type="date" placeholder="Enter password"  class="form-control" name="startDate" ngModel>
+                                <input type="date" placeholder="Enter password" class="form-control" name="startDate" ngModel>
                             </div>
                             <label class="col-sm-4">Start Date</label>
                             <div class="form-group col-sm-8">
@@ -45,14 +45,13 @@
                             </div>
                             <label class="col-sm-4">Count Days</label>
                             <div class="form-group col-sm-8">
-                                <input type="text" [(ngModel)]="leaveType"  class="form-control" name="countDay" ngModel>
+                                <input type="text" [(ngModel)]="leaveType" class="form-control" name="countDay" ngModel>
                             </div>
                             <label class="col-sm-4"> Comment</label>
                             <div class="form-group col-sm-8">
-                                <!-- <input type="date" placeholder="Enter password" class="form-control" name="endDate" ngModel> -->
-                                <textarea  placeholder="Enter password" class="form-control" name="comment" ngModel>Enter text here...</textarea>
+                                <textarea placeholder="Enter password" class="form-control" name="comment" ngModel>Enter text here...</textarea>
                             </div>
-                             <button type="submit">Login</button>
+                            <button id="button" type="submit">Login</button>
                         </form>
                     </div>
                     <div class="col-sm-2"></div>
@@ -60,8 +59,50 @@
                 </div>
             </div>
         </div>
+
+        <div *ngIf="leaveHistry" class="col-sm-7 mainContainer">
+            <div class="container-fluid container-fluid1 ">
+                <div class="row">
+                    <header id="serchHeader">
+                        <div class="col-sm-4">
+                            <input style="margin-top :5px" type="date" name="" id="">
+                        </div>
+                        <div class="col-sm-4">
+                            <input style="margin-top :5px" type="date" name="" id="">
+                        </div>
+                        <div class="col-sm-4">
+                            <button style="margin-top :5px" type="button">serch</button>
+                        </div>
+                    </header>
+                    <header *ngFor="let headeropt of headerOpts">
+                        <div class="col-sm-3 leavHistry ">{{headeropt}}</div>
+                    </header>
+                    <header *ngFor="let leavHistry of leavsHistry">
+                        <div class="col-sm-3 leavHistry">{{leavHistry.StartDate}}</div>
+                        <div class="col-sm-3 leavHistry">{{leavHistry.EndDate}}</div>
+                        <div class="col-sm-3 leavHistry">{{leavHistry.countDays}}</div>
+                        <div class="col-sm-3 leavHistry">{{leavHistry.leaveType}}</div>
+                    </header>
+                </div>
+
+            </div>
+        </div>
+
         <div class="col-sm-3 right-sidebar">
-            Feed Updates
+            <div class="container-fluid">
+                <div class="row">
+                   <header class="companyLeav">
+                        <div class="col-sm-6">Firstname</div>
+                        <div class="col-sm-6">Lastname</div>
+                   </header>
+                   <header *ngFor="let leavHistry of companyLeaveCelender">
+                        <div class="col-sm-6 companyLeav">{{leavHistry.key}}</div>
+                        <div class="col-sm-6 companyLeav">{{leavHistry.value}}</div>
+                   </header>
+                               
+                            
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -11,10 +11,12 @@ export class LoginService {
   constructor(private http : HttpClient,private _HeaderService : HeaderService) { }
   login(body){
     console.log(body)
-    // const header =this._HeaderService.config_Header(body);
-    // const headers = new HttpHeaders().set("X-CustomHttpHeader", "CUSTOM_VALUE");
-    // return   this.http.post('',body,{headers}).pipe(map(getData => {
-      return true;  
-    // }))
+     const header =this._HeaderService.config_Header(body);
+     const headers = new HttpHeaders().set("X-CustomHttpHeader", "CUSTOM_VALUE");
+      return   this.http.get('http://192.168.0.11:3005/api/leave/101',{headers}).pipe(map(getData => {
+        console.log(getData);
+        
+      return getData;  
+     }))
   }
 }
