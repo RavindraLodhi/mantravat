@@ -11,7 +11,7 @@ img{
     margin-top: 27px;
   }
   .container-fluid{
-    background-color: rgba(65, 19, 230, 0.96);
+    /* background-color: rgba(65, 19, 230, 0.96); */
     height: 42px;
     position: relative;
     width: 100%;
@@ -26,8 +26,7 @@ img{
     padding-top: 10px;
     height: 35px;
   }
-  .container-fluid1 {
-    background-color: #ddd; 
+  .midBox{
     height: auto;
   }
   .A{
@@ -100,7 +99,9 @@ img{
     border-radius: 46px;
 }
 #button{
-  margin-left: 15pc;
+  background: rgba(65, 19, 230, 0.96);
+  margin-left: 321px;
+  /* margin-left: 15pc; */
 }
 
 /* leaveHestry css */
@@ -126,4 +127,14 @@ padding-top: 10px;
   overflow: auto;
   height: 500px;
 }
-  
+ul{
+  background: white
+}
+ .mainContainer{
+  background: white;
+  height: 517px;
+  /* width: 284px */
+} 
+#right-sidebarrow{
+  padding-top: 0px
+}

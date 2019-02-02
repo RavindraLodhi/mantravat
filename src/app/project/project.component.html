@@ -1,0 +1,80 @@
+<div class="container-fluid container-fluid1 ">
+   <div class="row">
+       <div class="col-sm-2 sidebarleft">
+           <ul style="list-style-type:none;">
+               <li id="sidebarleftOpt"><a href="~/address"><span class="glyphicon glyphicon-hom"></span>Dashbord</a></li>
+               <li id="sidebarleftOpt"><a href="~/address">project</a></li>
+               <li id="sidebarleftOpt"><a href="~/address">Task</a></li>
+               <li id="sidebarleftOpt"><a href="~/address">Leave</a></li>
+               <li id="sidebarleftOpt"><a href="~/address">Time Sheet</a></li>
+           </ul>
+       </div>
+       <div class="col-sm-7 mainContainer">
+           <div class="container-fluid container-fluid1 ">
+               <div class="row">
+                   <form #userForm="ngForm" (ngSubmit)="submit(userForm.value)">
+                      
+                      <div class="A">
+                        <div class="col-sm-6">
+                            <label>Project Id</label>
+                          </div>
+                          <div class="col-sm-6">
+                            <select name="userName" ngModel>
+                                <option >Projectid</option>
+                                <option >1</option>
+                                <option >2</option>
+                                <option >3</option>
+                                <option >4</option>
+                              </select>
+                        </div>
+                      </div>
+                      <div class="A">
+                        <div class="col-sm-6">
+                            <label>EmpName</label>
+                          </div>
+                          <div class="col-sm-6">
+                            <select name="userName" ngModel>
+                                <option >Aditya</option>
+                                <option >Ravi</option>
+                                <option >Ram</option>
+                                <option >Joy</option>
+                                <option >Ansul</option>
+                              </select>
+                        </div>
+                      </div>
+                      <div class="A">
+                        <div class="col-sm-6">
+                            <label>Start Time</label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" placeholder="Start time" name="passWord" ngModel />
+                        </div>
+                      </div>
+                   
+                      <div class="A">
+                        <div class="col-sm-6">
+                            <label>End Time</label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" placeholder="Start time" name="passWord" ngModel />
+                        </div>
+                      </div>
+                      <div class="A">
+                        <div class="col-sm-6">
+                            <label>Message</label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" placeholder="Messsage" name="passWord2" ngModel />
+                        </div>
+                      </div>
+                    
+                    <button type="submit">Submit</button> 
+                   </form>
+               </div>
+           </div>
+       </div>
+       <div class="col-sm-3 right-sidebar">
+           Feed Updates
+       </div>
+   </div>
+</div>

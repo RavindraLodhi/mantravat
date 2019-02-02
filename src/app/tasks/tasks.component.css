@@ -83,6 +83,12 @@
     }
     .row{
        padding-top: 6px; 
+      
+    }
+    #row{
+      background: white;
+      /* margin-left: 3px;*/
+      margin-right: 3px; 
     }
     button{
     height: 30px;
@@ -104,7 +110,7 @@
       border-style: solid;
      
     }
-    #sidebarleftOpt:hover { 
+    ul:hover { 
         background-color: #D3D3D0;
         border-width: 0.5px;
       }
@@ -156,15 +162,25 @@
       margin-top: 4px;
     }
     .forn{
-        margin-top: 100px;
+        margin-top: 32px;
     }
     button{
-      margin-left: 15pc;
+      margin-left: 20pc;
       width: 90px;
-      background: green;
+      background:  rgba(65, 19, 230, 0.96);;
       border-radius: 46px;
+      color: white
   }
   .mainContainer1{
    background: white; 
   }
+
+  .right-sidebar{
+    background: white;
+    height: 517px;
+    width: 284px
+}
+ul{
+  background: white;
+}
     

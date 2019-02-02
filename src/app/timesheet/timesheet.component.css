@@ -23,7 +23,15 @@
   button{
     width: 68px;
     border-radius: 8px;
+    background: rgba(65, 19, 230, 0.96)
   }
   .container{
    margin-top: 10px;
+  }
+  input{
+    width: 88px;
+  }
+
+ #select{
+    margin-left: 96px;
   }

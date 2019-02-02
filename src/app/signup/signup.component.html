@@ -1,0 +1,98 @@
+<div class="container-fluid">
+  <div class="row">
+    <form #userForm="ngForm" (ngSubmit)="submit(userForm.value)">
+      <div class="col-md-6">
+        <label>First name :</label><input type="First name" placeholder="First Name" class="form-control" name="FirstName"
+          ngModel> </div>
+      <div class="col-md-6">
+        <label>suffix :</label><input type="suffix" placeholder="Enter suffix" class="form-control" name="suffix"
+          ngModel> </div>
+      <div class="col-md-6">
+        <label>middle name :</label><input type="middle name" placeholder="middle name" class="form-control" name="MiddleName"
+          ngModel> </div>
+      <div class="col-md-6">
+        <label>last name :</label> <input type="Last name" placeholder="last name" class="form-control" name="LastName"
+          ngModel> </div>
+      <div class="col-md-6">
+        <label>gender :</label> <select type="text" placeholder="gender" class="form-control gender" name="gender"
+          ngModel>
+          <option>male </option>
+          <option>female</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label>age :</label> <input type="age" placeholder="age" class="form-control" name="Last name" ngModel> </div>
+      <div class="col-md-12">
+        <label>Email :</label> <input type="email" placeholder="Last name" class="form-control" name="Email" ngModel>
+      </div>
+      <div class="col-md-5">
+        <label>date:</label>
+        <select type="text" placeholder="date" class="form-control" name="Date" ngModel>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+          <option>11</option>
+          <option>12</option>
+          <option>13</option>
+          <option>14</option>
+          <option>15</option>
+          <option>16</option>
+          <option>17</option>
+          <option>18</option>
+          <option>19</option>
+          <option>20</option>
+          <option>21</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label>month:</label>
+        <select type="text" placeholder="date" class="form-control" name="Date" ngModel>
+          <option>jan</option>
+          <option>feb</option>
+          <option>march</option>
+          <option>april</option>
+          <option>may</option>
+          <option>june</option>
+          <option>july</option>
+          <option>august</option>
+          <option>september</option>
+          <option>october</option>
+          <option>november</option>
+          <option>december</option>
+        </select>
+      </div>
+      <div class="col-md-5">
+        <label>year</label>
+        <select type="text" placeholder="date" class="form-control" name="Date" ngModel>
+          <option>1990</option>
+          <option>1991</option>
+          <option>1992</option>
+          <option>1993</option>
+          <option>1994</option>
+          <option>1995</option>
+          <option>1996</option>
+          <option>1997</option>
+          <option>1998</option>
+          <option>1999</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label>password :</label> <input type="password" placeholder="password" class="form-control" name="password"
+          ngModel>
+      </div>
+      <div class="col-md-6">
+        <label>confirm password :</label><input type=" confirm password" placeholder="confirm password" class="form-control"
+          name="password" ngModel> </div>
+      <div class="col-md-6"></div>
+      <button type="submit">signup</button>
+    </form>
+    <div class="col-md-4"></div>
+  </div>
+</div>

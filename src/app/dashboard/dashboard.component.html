@@ -20,117 +20,121 @@
 </header> -->
 
 <div class="container-fluid container-fluid1 ">
-  <div class="row">
-      <div class="col-sm-2 sidebarleft">
-          <ul style="list-style-type:none;">
-              <li id="sidebarleftOpt"><a  routerLink="/leave">
+    <div class="row">
+        <div class="col-sm-2 sidebarleft">
+            <ul style="list-style-type:none;">
+                <li id="sidebarleftOpt"><a routerLink="#">
                               <span class="glyphicon glyphicon-home"></span>
                               Dashbord</a></li>
-              <li id="sidebarleftOpt"><a  routerLink="/leave">
+                <li id="sidebarleftOpt"><a routerLink="/project">
                               <span class="glyphicon glyphicon-magnet"></span>
                               project</a></li>
-              <li id="sidebarleftOpt"><a  routerLink="/task">
+                <li id="sidebarleftOpt"><a routerLink="/task">
                               <span class="glyphicon glyphicon-credit-card"></span>
                               Task</a></li>
-              <li id="sidebarleftOpt"><a routerLink="/leave">
+                <li id="sidebarleftOpt"><a routerLink="/leave">
                               <span class="glyphicon glyphicon-list-alt"></span>
                               Leave</a></li>
-              <li id="sidebarleftOpt"><a  routerLink="/timesheet">
+                <li id="sidebarleftOpt"><a routerLink="/timesheet">
                               <span class="glyphicon glyphicon-time"></span>
                               Time Sheet</a></li>
-          </ul>
-      </div>
-      <div class="col-sm-7 mainContainer">
-          <div class="container-fluid container-fluid1 ">
-              <div class="row">
-                  <div class="col-sm-6 A">
-                      <div class="row">
-                          <div class="col-sm-12 taskBox1">
-                              <div class="col-sm-2">
-                                  <span class="glyphicon glyphicon-credit-card"></span></div>
-                              <div class="col-sm-8 " style="text-align :center"> Login Screen</div>
-                              <div class="col-sm-2">
-                                  <div class="task1"></div>
-                              </div>
+                <li id="sidebarleftOpt"><a (click)="onChang()">
+                                <span class="glyphicon glyphicon-time"></span>
+                                Singup</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-7 mainContainer">
+            <div *ngIf="dashboardMid" class="container-fluid container-fluid1 ">
+                <div class="row">
+                    <div class="col-sm-6 A">
+                        <div class="row">
+                            <div class="col-sm-12 taskBox1">
+                                <div class="col-sm-2">
+                                    <span class="glyphicon glyphicon-credit-card"></span></div>
+                                <div class="col-sm-8 " style="text-align :center"> Login Screen</div>
+                                <div class="col-sm-2">
+                                    <div class="task1"></div>
+                                </div>
 
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-sm-6 A">
-                      <div class="row">
-                          <div class="col-sm-12 taskBox1">
-                              <div class="col-sm-2">
-                                  <span class="glyphicon glyphicon-credit-card"></span></div>
-                              <div class="col-sm-8 " style="text-align :center">Dashbord</div>
-                              <div class="col-sm-2">
-                                  <div class="task2"></div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-sm-6 A">
-                      <div class="row">
-                          <div class="col-sm-12 taskBox1">
-                              <div class="col-sm-2">
-                                  <span class="glyphicon glyphicon-credit-card"></span></div>
-                              <div class="col-sm-8 " style="text-align :center"> Login Screen</div>
-                              <div class="col-sm-2">
-                                  <div class="task3"></div>
-                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 A">
+                        <div class="row">
+                            <div class="col-sm-12 taskBox1">
+                                <div class="col-sm-2">
+                                    <span class="glyphicon glyphicon-credit-card"></span></div>
+                                <div class="col-sm-8 " style="text-align :center">Dashbord</div>
+                                <div class="col-sm-2">
+                                    <div class="task2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 A">
+                        <div class="row">
+                            <div class="col-sm-12 taskBox1">
+                                <div class="col-sm-2">
+                                    <span class="glyphicon glyphicon-credit-card"></span></div>
+                                <div class="col-sm-8 " style="text-align :center"> Login Screen</div>
+                                <div class="col-sm-2">
+                                    <div class="task3"></div>
+                                </div>
 
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-sm-6 A">
-                      <div class="row">
-                          <div class="col-sm-12 taskBox1">
-                              <div class="col-sm-2">
-                                  <span class="glyphicon glyphicon-credit-card"></span></div>
-                              <div class="col-sm-8 " style="text-align :center">Create API</div>
-                              <div class="col-sm-2">
-                                  <div class="task4"></div>
-                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 A">
+                        <div class="row">
+                            <div class="col-sm-12 taskBox1">
+                                <div class="col-sm-2">
+                                    <span class="glyphicon glyphicon-credit-card"></span></div>
+                                <div class="col-sm-8 " style="text-align :center">Create API</div>
+                                <div class="col-sm-2">
+                                    <div class="task4"></div>
+                                </div>
 
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-sm-6 A">
-                      <div class="row">
-                          <div class="col-sm-12 taskBox1">
-                              <div class="col-sm-2">
-                                  <span class="glyphicon glyphicon-list-alt"></span></div>
-                              <div class="col-sm-8 " style="text-align :center">Leave</div>
-                              <div class="col-sm-2">
-                                  <span class="glyphicon glyphicon-list-alt"></span>
-                              </div>
-                              <div class="col-sm-6">
-                                  <svg />
-                              </div>
-                              <div class="col-sm-6">
-                                  Total Leave 30
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-sm-6 A">
-                      <div class="row">
-                          <div class="col-sm-12 taskBox1">
-                              <div class="col-sm-2">
-                                  <span class="glyphicon glyphicon-time"></span></div>
-                              <div class="col-sm-8 " style="text-align :center">Time Sheet</div>
-                              <div class="col-sm-2">
-                                  <span class="glyphicon glyphicon-time"></span>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="col-sm-3 right-sidebar">
-          Feed Updates
-      </div>
-  </div>
-</div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 A">
+                        <div class="row">
+                            <div class="col-sm-12 taskBox1">
+                                <div class="col-sm-2">
+                                    <span class="glyphicon glyphicon-list-alt"></span></div>
+                                <div class="col-sm-8 " style="text-align :center">Leave</div>
+                                <div class="col-sm-2">
+                                    <span class="glyphicon glyphicon-list-alt"></span>
+                                </div>
+                                <div class="col-sm-6">
+                                    <svg />
+                                </div>
+                                <div class="col-sm-6">
+                                    Total Leave 30
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 A">
+                        <div class="row">
+                            <div class="col-sm-12 taskBox1">
+                                <div class="col-sm-2">
+                                    <span class="glyphicon glyphicon-time"></span></div>
+                                <div class="col-sm-8 " style="text-align :center">Time Sheet</div>
+                                <div class="col-sm-2">
+                                    <span class="glyphicon glyphicon-time"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <app-signup *ngIf="singup"></app-signup>
+        </div>
+        <div class="col-sm-3 right-sidebar">
+            Feed Updates
+        </div>
+    </div>
+</div>
 <!-- <app-tasks></app-tasks> -->
 <!-- <app-profile></app-profile>  -->

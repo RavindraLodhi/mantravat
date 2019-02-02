@@ -94,4 +94,12 @@ img{
   
     margin-top: 4px;
   }
+  ul{
+    background: white;
+  }
+  .right-sidebar{
+    background: white;
+    height: 517px;
+    width: 284px
+  }
   

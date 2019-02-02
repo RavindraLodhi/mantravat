@@ -14,6 +14,8 @@ import { HomeLayoutComponent } from "./home-layout/home-layout.component";
 import { LeaveComponent } from "./leave/leave.component";
 import { LoginLayoutComponent } from "./login-layout/login-layout.component";
 import { TimesheetComponent } from './timesheet/timesheet.component';
+import { ProjectComponent } from './project/project.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   providers: [],
@@ -57,6 +59,10 @@ import { TimesheetComponent } from './timesheet/timesheet.component';
           {
             path :"timesheet",
             component :TimesheetComponent
+          },
+          {
+            path :"project",
+            component :ProjectComponent
           }
         ]
       }
@@ -72,7 +78,9 @@ import { TimesheetComponent } from './timesheet/timesheet.component';
     HomeLayoutComponent,
     LeaveComponent,
     LoginLayoutComponent,
-    TimesheetComponent
+    TimesheetComponent,
+    ProjectComponent,
+    SignupComponent
   ]
 })
 export class AppModule {}

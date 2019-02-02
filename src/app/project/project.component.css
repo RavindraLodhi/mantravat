@@ -1,0 +1,35 @@
+   .row{
+     padding-top: 6px;
+  }
+  label{
+    margin-bottom: 0px;
+    margin-left: 100px;
+   }
+   .A{
+    margin-top: 5px;
+    height: 29px;
+    
+   }
+   button{
+    margin-left: 366px;
+    margin-top: 20px;
+    background: rgba(65, 19, 230, 0.96);
+    border-radius: 17px;
+   }
+   form{
+    background: white;
+    width: 499px;
+    margin-left: 124px;
+   }
+   .right-sidebar{
+    background: white;
+    height: 517px;
+    width: 284px
+  }
+  ul{
+    background: white;
+  }
+  li{
+    padding-top: 10px;
+    height: 35px;
+  }

@@ -6,8 +6,13 @@ import * as d3 from "d3";
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  //global variable
+  dashboardMid=true;
+  singup = false;
    staticsDataFromParent :any[] = [];
    ngOnInit() { 
+
+    // statics data
      this.staticsDataFromParent =  [ {
            "EventName": 30-(12+8),
            "NumberOfOccurences": 30/10
@@ -27,7 +32,13 @@ export class DashboardComponent implements OnInit {
    ngOnChanges(){
   
    }
-    
+   //for chang coponent to edit
+   onChang(){
+    this.dashboardMid=false;
+    this.singup = true;
+   }
+
+    // d3 pie char method
      drawPieChart=() => {
        var dataset=[];
        var name = [];
