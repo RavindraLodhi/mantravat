@@ -24,6 +24,12 @@ button {
 button:hover {
   opacity: 0.8;
 }
+h3{
+  padding-left: 160px;
+}
+h1{
+  padding-left: 113px;
+}
 
 .cancelbtn {
   width: auto;
@@ -66,6 +72,6 @@ img.avatar {
 }
 }
 form{
- margin-top: 156px;
+ margin-top: 38px;
  border: none;
 }

@@ -1,98 +1,275 @@
 <div class="container-fluid">
-  <div class="row">
-    <form #userForm="ngForm" (ngSubmit)="submit(userForm.value)">
-      <div class="col-md-6">
-        <label>First name :</label><input type="First name" placeholder="First Name" class="form-control" name="FirstName"
-          ngModel> </div>
-      <div class="col-md-6">
-        <label>suffix :</label><input type="suffix" placeholder="Enter suffix" class="form-control" name="suffix"
-          ngModel> </div>
-      <div class="col-md-6">
-        <label>middle name :</label><input type="middle name" placeholder="middle name" class="form-control" name="MiddleName"
-          ngModel> </div>
-      <div class="col-md-6">
-        <label>last name :</label> <input type="Last name" placeholder="last name" class="form-control" name="LastName"
-          ngModel> </div>
-      <div class="col-md-6">
-        <label>gender :</label> <select type="text" placeholder="gender" class="form-control gender" name="gender"
-          ngModel>
-          <option>male </option>
-          <option>female</option>
-        </select>
+    <div class="row">
+      <div class="col-sm-12 signup" style="text-align: center ">
+        <h4>Signup</h4>
       </div>
-      <div class="col-md-6">
-        <label>age :</label> <input type="age" placeholder="age" class="form-control" name="Last name" ngModel> </div>
-      <div class="col-md-12">
-        <label>Email :</label> <input type="email" placeholder="Last name" class="form-control" name="Email" ngModel>
-      </div>
-      <div class="col-md-5">
-        <label>date:</label>
-        <select type="text" placeholder="date" class="form-control" name="Date" ngModel>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-          <option>6</option>
-          <option>7</option>
-          <option>8</option>
-          <option>9</option>
-          <option>10</option>
-          <option>11</option>
-          <option>12</option>
-          <option>13</option>
-          <option>14</option>
-          <option>15</option>
-          <option>16</option>
-          <option>17</option>
-          <option>18</option>
-          <option>19</option>
-          <option>20</option>
-          <option>21</option>
-        </select>
-      </div>
-      <div class="col-md-2">
-        <label>month:</label>
-        <select type="text" placeholder="date" class="form-control" name="Date" ngModel>
-          <option>jan</option>
-          <option>feb</option>
-          <option>march</option>
-          <option>april</option>
-          <option>may</option>
-          <option>june</option>
-          <option>july</option>
-          <option>august</option>
-          <option>september</option>
-          <option>october</option>
-          <option>november</option>
-          <option>december</option>
-        </select>
-      </div>
-      <div class="col-md-5">
-        <label>year</label>
-        <select type="text" placeholder="date" class="form-control" name="Date" ngModel>
-          <option>1990</option>
-          <option>1991</option>
-          <option>1992</option>
-          <option>1993</option>
-          <option>1994</option>
-          <option>1995</option>
-          <option>1996</option>
-          <option>1997</option>
-          <option>1998</option>
-          <option>1999</option>
-        </select>
-      </div>
-      <div class="col-md-6">
-        <label>password :</label> <input type="password" placeholder="password" class="form-control" name="password"
-          ngModel>
-      </div>
-      <div class="col-md-6">
-        <label>confirm password :</label><input type=" confirm password" placeholder="confirm password" class="form-control"
-          name="password" ngModel> </div>
+      <form #userForm="ngForm" (ngSubmit)="submit(userForm.value)">
+        <div class="col-md-12">
+          <div class="col-md-12">
+            <h1>basic information></h1>
+          </div>
+          <div class="col-md-6">
+            <label>suffix :</label><input type="suffix" placeholder="suffix" class="form-control" name="suffix" ngModel>
+          </div>
+          <div class="col-md-6">
+            <label>First name :</label><input type="suffix" placeholder="First name" class="form-control" name="FirstName"
+              ngModel> </div>
+          <div class="col-md-6">
+            <label>middle name :</label><input type="middle name" placeholder="middle name" class="form-control" name="MiddleName"
+              ngModel> </div>
+          <div class="col-md-6">
+            <label>last name :</label> <input type="Last name" placeholder="last name" class="form-control" name="LastName"
+              ngModel> </div>
+          <div class="col-md-6">
+            <label>gender :</label> <select type="text" placeholder="gender" class="form-control gender" name="gender"
+              ngModel>
+              <option>male </option>
+              <option>female</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label>DOB:</label> <input type="Date" placeholder="date of birth" class="form-control" name="DOB" ngModel>
+          </div>
+          <div class="col-md-6">
+            <label>DOj:</label> <input type="Date" placeholder="DOj" class="form-control" name="DOJ" ngModel> </div>
+          <div class="col-md-6">
+            <label>Email :</label> <input type="email" placeholder="Last name" class="form-control" name="Email" ngModel>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="container">
+            <label>Address</label>
+            <button type="button" data-toggle="collapse" data-target="#demo"><span class="glyphicon glyphicon-triangle-right" id="add"></span></button>
+            <div id="demo" class="collapse">
+              <div class="col-md-4">
+                <h4>current address</h4>
+                <div>
+                  <label>country</label>
+                  <select type="text" placeholder="country" class="form-control" name="country" ngModel>
+                    <option value="Afghanistan">Afghanistan</option>
+                    <option value="Åland Islands">Åland Islands</option>
+                    <option value="Albania">Albania</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
+                  </select>
+                </div>
+                <div class="col-md-8">
+                  <label>State</label>
+                  <select type="text" placeholder="State" class="form-control" name="State" ngModel>
+                    <option value="AL">Alabama</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                  </select>
+                </div>
+                <div class="col-md-8">
+                  <label>city</label><input type="text" placeholder="city" class="form-control" name="city" ngModel>
+                </div>
+                <div class="col-md-8">
+                  <label>Street1</label><input type="text" placeholder="Street1" class="form-control" name="Street1"
+                    ngModel>
+                </div>
+                <div class="col-md-8">
+                  <label>Street2</label><input type="text" placeholder="Street1" class="form-control" name="Street1"
+                    ngModel>
+                </div>
+                <div class="col-md-8">
+                  <label>pin</label><input type="text" placeholder="pincode" class="form-control" name="pin" ngModel>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <h4>permanent address</h4>
+                <div>
+                  <label>country</label>
+                  <select type="text" placeholder="country" class="form-control" name="country" ngModel>
+                    <option value="Afghanistan">Afghanistan</option>
+                    <option value="Åland Islands">Åland Islands</option>
+                    <option value="Albania">Albania</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
+                  </select>
+                </div>
+                <div class="col-md-8">
+                  <label>State</label>
+                  <select type="text" placeholder="State" class="form-control" name="State" ngModel>
+                    <option value="AL">Alabama</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                  </select>
+                </div>
+                <div class="col-md-8">
+                  <label>city</label><input type="text" placeholder="city" class="form-control" name="city" ngModel>
+                </div>
+                <div class="col-md-8">
+                  <label>Street1</label><input type="text" placeholder="Street1" class="form-control" name="Street1"
+                    ngModel>
+                </div>
+                <div class="col-md-8">
+                  <label>Street2</label><input type="text" placeholder="Street1" class="form-control" name="Street1"
+                    ngModel>
+                </div>
+                <div class="col-md-8">
+                  <label>pin</label><input type="text" placeholder="pincode" class="form-control" name="pin" ngModel>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-md-12">
+          <h2>educational qualification</h2>
+          <button type="button" data-toggle="collapse" data-target="#demo3"><span class="glyphicon glyphicon-triangle-right"></span></button>
+          <div id="demo3" class="collapse">
+            <div class="row">
+              <div class="col-md-3">jdhaduhfuhsfhsjfsddsasdgsahjskfjaskhdjhfhksdjahsdjsfhjadbshfkjsbhudhuhuhuhudhdh</div>
+              <div class="col-md-3">jdhaduhfuhsfhsjfsd</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">dsahddad</div> -->
+        <div class="col-md-12">
+          <div class="col-md-12">
+            <div class="contain">
+              <div class="row">
+                <div class="col-md-6">
+                </div>
+              </div>
+              <label>Education:</label>
+              <button type="button" data-toggle="collapse" data-target="#demo3"><span class="glyphicon glyphicon-triangle-right"
+                  id="edu"></span></button>
+              <div id="demo3" class="collapse">
+                <div class="col-md-6">
+                  <label>college</label><input type="text" placeholder="college" class="form-control" name="pin" ngModel>
+                </div>
+                <div class="col-md-6">
+                  <label>Degree :</label> <select type="text" placeholder="Degree" class="form-control Degree" name="Degree"
+                    ngModel>
+                    <option>B.tech </option>
+                    <option>M.tech</option>
+                    <option>MBA</option>
+                    <option>MCA</option>
+                    <option>Mac</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label>Feild of study :</label> <select type="text" placeholder="feild of study" class="form-control feild"
+                    name="Feildofstudy" ngModel>
+                    <option>cse </option>
+                    <option>it</option>
+                    <option>civil</option>
+                    <option>Bussiness</option>
+                    <option>ME</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label>grade</label><input type="text" placeholder="grade" class="form-control" name="grade" ngModel>
+                </div>
+                
+                <div class="col-md-6">
+                  <label>From</label>
+                  <select type="text" placeholder="From" class="form-control" name="From" ngModel>
+                    <option value="AL">2010</option>
+                    <option value="MN">2011</option>
+                    <option value="MS">2012</option>
+                    <option value="AL">2013</option>
+                    <option value="MN">2014</option>
+                    <option value="MS">2015</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label>To year(or expected)</label>
+                  <select type="text" placeholder="From" class="form-control" name="From" ngModel>
+                    <option value="AL">2010</option>
+                    <option value="MN">2011</option>
+                    <option value="MS">2012</option>
+                    <option value="AL">2013</option>
+                    <option value="MN">2014</option>
+                    <option value="MS">2015</option>
+                  </select>
+                </div>
+                <div class="col-md-12">
+                  <label>activities and society :</label><textarea rows="4" cols="80" class="textarea" name="Skill"
+                    ngmodel>
+         </textarea>
+                </div>
+                <div class="col-md-12">
+                  <label>CV</label><input type="file" name="fileupload" accept="file/*" name="file" ngModel>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12" id="table">
+          <label>Experience:</label>
+          <button type="button" data-toggle="collapse" data-target="#demo1"><span class="glyphicon glyphicon-triangle-right"
+              id="ex"></span>
+          </button>
+          <div id="demo1" class="collapse">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>company name</th>
+                  <th>location</th>
+                  <th>From</th>
+                  <th>To</th>
+                  <th>Description</th>
+                  <th>A1</th>
+                  <th>A2</th>
+                  <th>A3</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="text" name="Title" ngModel></td>
+                  <td><input type="text" name="cn" ngModel></td>
+                  <td><input type="text" name="location" ngModel></td>
+                  <td><input type="date" name="From" ngModel></td>
+                  <td><input type="date" name="To" ngModel></td>
+                  <td><input type="text" name="Description" ngModel></td>
+                  <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td>
+                  <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td>
+                  <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td>
+                </tr>
+                <tr>
+                  <td><input type="text"></td>
+                  <td><input type="text"></td>
+                  <td><input type="text"></td>
+                  <td><input type="date"></td>
+                  <td><input type="date"></td>
+                  <td><input type="text"></td>
+                  <td><input type="file" name="fileupload" accept="file/*" /></td>
+                  <td><input type="file" name="fileupload" accept="file/*" /></td>
+                  <td><input type="file" name="fileupload" accept="file/*" /></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- <div class="col-md-12" id="table">
+        <label>work experience:</label>
+      </div> -->
+        <div class="col-md-12">
+          <label>Skill :</label><textarea rows="3" cols="80" class="textarea" name="Skill" ngmodel>
+                </textarea>
+        </div>
+        <div class="col-md-6">
+          <label>password :</label> <input type="password" placeholder="password" class="form-control" name="password"
+            ngModel>
+        </div>
+        <div class="col-md-6">
+          <label>confirm password :</label><input type=" confirm password" placeholder="confirm password" class="form-control"
+            name="password" ngModel>
+        </div>
+        <button type="submit" id="button">signup</button>
+      </form>
       <div class="col-md-6"></div>
-      <button type="submit">signup</button>
-    </form>
-    <div class="col-md-4"></div>
+    </div>
   </div>
-</div>

@@ -21,10 +21,14 @@
                         <form #userForm="ngForm" (ngSubmit)="submit(userForm.value)">
                             <label class="col-sm-4">Leave Type</label>
                             <div class="form-group col-sm-8 ">
-                                <select type="text" placeholder="Enter Username" class="form-control" name="leaveType1" ngModel>
+                                <select type="text" #nameRef="ngModel" minlength="4" class="form-control" name="name" [(ngModel)]="name" required>
                                                         <option >Full</option>
                                                         <option >Half</option>
                                 </select>
+                                <!-- <input type="text" #nameRef="ngModel" minlength="4" class="form-control" name="name" [(ngModel)]="name" required> -->
+                                <div [hidden]="nameRef.valid || nameRef.pristine" class="alert alert-danger">
+                                    please Enter the name
+                                </div>
                             </div>
                             <label class="col-sm-4">Leave Type</label>
                             <div class="form-group col-sm-8 ">
@@ -59,7 +63,22 @@
                 </div>
             </div>
         </div>
-
+        <div *ngIf="leaveStatus" class="col-sm-7 mainContainer">
+            <div class="row">
+                <div class="col-sm-12 leave" style="text-align :center">
+                    <h4>Leave Status</h4>
+                </div>
+            </div>
+ 
+            <header *ngFor="let leaveStatus of leaveStatus1">
+                <div class="col-sm-6 leaveStatus  ">
+                    <label class="box">{{leaveStatus.Name}} is on leave
+                        <h5> FROM {{leaveStatus.StartDate}} To {{leaveStatus.EndDate}}</h5>
+                        <h6>{{leaveStatus.countDays}} days beacuse he has {{leaveStatus.leaveType}} </h6>
+                    </label>
+                </div>
+            </header>
+        </div>
         <div *ngIf="leaveHistry" class="col-sm-7 mainContainer">
             <div class="container-fluid container-fluid1  ">
                 <div class="row midBox">
@@ -77,30 +96,29 @@
                     <header *ngFor="let headeropt of headerOpts">
                         <div class="col-sm-3 leavHistry ">{{headeropt}}</div>
                     </header>
-                    <header *ngFor="let leavHistry of leavsHistry">
-                        <div class="col-sm-3 leavHistry">{{leavHistry.StartDate}}</div>
-                        <div class="col-sm-3 leavHistry">{{leavHistry.EndDate}}</div>
-                        <div class="col-sm-3 leavHistry">{{leavHistry.countDays}}</div>
-                        <div class="col-sm-3 leavHistry">{{leavHistry.leaveType}}</div>
+                    <header *ngFor="let leavHistry of leaveHistry">
+                        <div class="col-sm-3 leavHistry">{{leavHistry.startDate}}</div>
+                        <div class="col-sm-3 leavHistry">{{leavHistry.enddate}}</div>
+                        <div class="col-sm-3 leavHistry">{{leavHistry.countdays}}</div>
+                        <div class="col-sm-3 leavHistry">{{leavHistry.leavetype}}</div>
                     </header>
                 </div>
-
             </div>
         </div>
 
         <div class="col-sm-3 right-sidebar">
             <div class="container-fluid">
                 <div class="row" id="right-sidebarrow">
-                   <header class="companyLeav">
+                    <header class="companyLeav">
                         <div class="col-sm-6">Firstname</div>
                         <div class="col-sm-6">Lastname</div>
-                   </header>
-                   <header *ngFor="let leavHistry of companyLeaveCelender">
+                    </header>
+                    <header *ngFor="let leavHistry of companyLeaveCelender">
                         <div class="col-sm-6 companyLeav">{{leavHistry.key}}</div>
                         <div class="col-sm-6 companyLeav">{{leavHistry.value}}</div>
-                   </header>
-                               
-                            
+                    </header>
+
+
                 </div>
             </div>
         </div>

@@ -1,0 +1,32 @@
+
+<div class="container-fluid container-fluid1 ">
+    <div class="row">
+        <!-- <div class="col-sm-2 sidebarleft">
+            <ul style="list-style-type:none;">
+                <li id="sidebarleftOpt"><a routerLink="#">
+                                <span class="glyphicon glyphicon-home"></span>
+                                Create Project</a></li>
+                <li id="sidebarleftOpt"><a routerLink="#">
+                                <span class="glyphicon glyphicon-magnet"></span>
+                                Change project</a></li>
+                <li id="sidebarleftOpt"><a routerLink="#">
+                                <span class="glyphicon glyphicon-credit-card"></span>
+                                Display Project</a></li>
+            </ul>
+        </div> -->
+        <div class="container">
+            <div class="row">
+              <div *ngFor="let item of tname">
+                <div class="col-sm-4 A">
+                    <label> Project Id:{{item.StartDate}}</label><br/>
+                    <label> EMP Name:{{item.EndDate}}</label><br/>
+                    <label> Start time:{{item.countDays}}</label><br/>
+                    <label> End Time:{{item.leaveType}}</label><br/>
+                </div>
+                
+              </div>
+            </div>
+          
+          </div>
+  </div>
+</div>

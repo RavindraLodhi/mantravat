@@ -1,85 +1,107 @@
 <div class="container-fluid container-fluid1 ">
-    <div class="row">
-        <div class="col-sm-2 sidebarleft">
-            <ul style="list-style-type:none;">
-                <li id="sidebarleftOpt"><a routerLink="#">
+  <div class="row">
+    <div class="col-sm-2 sidebarleft divHight">
+      <ul style="list-style-type:none;">
+        <li id="sidebarleftOpt"><a (click)="ctreate()">
                                 <span class="glyphicon glyphicon-home"></span>
                                 Create Task</a></li>
-                <li id="sidebarleftOpt"><a routerLink="#">
+        <li id="sidebarleftOpt"><a data-toggle="collapse" data-target="#demo">
                                 <span class="glyphicon glyphicon-magnet"></span>
-                                Chnage Task</a></li>
-                <li id="sidebarleftOpt"><a routerLink="#">
+                                Chnage Task</a>
+                                  <div id="demo" class="collapse">
+                                    <ul  style="list-style-type:none;" *ngFor="let dummyArr of dummyArry; let i = index" >
+                                      <li (click)="chengTask(i)">{{dummyArr.shortDec}}</li>
+                                    </ul>
+                                  </div>  
+                              </li>
+        <li id="sidebarleftOpt"><a routerLink="#">
                                 <span class="glyphicon glyphicon-credit-card"></span>
                                 Display Task</a></li>
-            </ul>
-        </div>
-        <div class="col-sm-7 mainContainer">
-            <div class="container-fluid container-fluid1 ">
-                <div class="row "id="row">
-                    <div class="col-sm-2"></div>
-                    <div class="col-sm-8 forn mainContainer1">
-                        <form #userForm="ngForm" (ngSubmit)="submit(userForm.value)">
-                            <div class="row">
-                              <div class="col-sm-4 form-group">
-                                <label>Task Title</label>
-                              </div>
-                              <div class=" col-sm-8 form-group">
-                                <input type="text" placeholder="Enter Username" class="form-control" name="userName" ngModel>
-                              </div>
-                              <div class="col-sm-4 form-group">
-                                <label>Task Discription</label>
-                              </div>
-                              <div class=" col-sm-8 form-group">
-                                <textarea rows="1" cols="5" type="text" placeholder="Enter Username" class="form-control" name="userName" ngModel></textarea>
-                              </div>
-                              <div class="col-sm-4 form-group">
-                                <label>Task Time Line</label>
-                              </div>
-                              <div class=" col-sm-4 form-group">
-                                <input type="date" placeholder="From" class="form-control" name="userName" ngModel>
-                              </div>
-                              <div class=" col-sm-4 form-group">
-                                <input type="date" placeholder="To" class="form-control" name="userName" ngModel>
-                              </div>
-                              <div class="col-sm-4 form-group">
-                                <label>Task Effort</label>
-                              </div>
-                              <div class=" col-sm-8 form-group">
-                                <input type="text" placeholder="Enter Username" class="form-control" name="userName" ngModel>
-                              </div>
-                              <div class="col-sm-4 form-group">
-                                  <label>Task Priority</label>
-                                </div>
-                                <div class=" col-sm-8 form-group">  
-                                  <select type="text" placeholder="Enter Username" class="form-control" name="userName" ngModel>
-                                      <option value="volvo">Very High</option>
-                                      <option value="saab">High</option>
-                                      <option value="opel">Medium</option>
-                                      <option value="audi">Low</option>
-                                  </select>
-                                </div>
-                                <div class="col-sm-4 form-group">
-                                    <label>Task Status</label>
-                                  </div>
-                                  <div class=" col-sm-8 form-group">  
-                                    <select type="text" placeholder="Enter Username" class="form-control" name="userName" ngModel>
-                                        <option value="volvo">Open</option>
-                                        <option value="saab">InProgress</option>
-                                        <option value="opel">Completed</option>
-                                    </select>
-                                  </div>
-                                  <div class=" col-sm-8"> </div>
-                              <button class=" col-sm-2" type="submit">submit</button>
-                            </div>
-                          </form>
-                    </div>
-                    <div class="col-sm-2"></div>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-3 right-sidebar">
-            Feed Updates
-        </div>
+      </ul>
     </div>
+    <div class="col-sm-7">
+      <div class="container-fluid   divHight">
+        <div class="midDiv">
+            <form #userForm="ngForm" (ngSubmit)="submit(userForm.value)">
+                <div class="col-sm-6">
+                    <label>Type</label>
+                    <input type="text" #nameRef="ngModel" class="form-control" name="type" [(ngModel)]="type" required>
+                  </div>
+                <div class="col-sm-6">
+                  <label>Task Title</label>
+                  <input type="text" #nameRef="ngModel" class="form-control" name="title" [(ngModel)]="title" required>
+                </div>
+                <div class="col-sm-6">
+                  <label>Sort Discription</label>
+                  <textarea rows="1" cols="5" type="text" class="form-control" name="sDescription" [(ngModel)]="sDescription" required></textarea>
+                </div>
+                <div class="col-sm-6">
+                    <label>Long Discription</label>
+                    <textarea rows="1" cols="5" type="text" class="form-control" name="sDescription" [(ngModel)]="sDescription" required></textarea>
+                  </div>
+                <div class="col-sm-12">
+                  <!-- <label>Task Time Line</label> -->
+                </div>
+                <div class="col-sm-6">
+                  <label>From</label>
+                  <input type="date" class="form-control" name="timeLine" [(ngModel)]="timeLine" required>
+                </div>
+                <div class="col-sm-6">
+                  <label>To</label>
+                  <input type="date" class="form-control" name="endTime" [(ngModel)]="endTime" required>
+                </div>
+                <div class="col-sm-6">
+                  <label>Task Effort</label>
+                  <input type="text" class="form-control" name="effort" [(ngModel)]="effort" required>
+                </div>
+                <div class="col-sm-6">
+                  <label>Task Priority</label>
+                  <select type="text" class="form-control" name="Priority" [(ngModel)]="priority" required>
+                        <option >Very High</option>
+                        <option >High</option>
+                        <option  [ngValue]="t">Medium</option>
+                        <option >Low</option>
+                    </select>
+                </div>
+                <div class="col-sm-6">
+                  <label>Task Status</label>
+                  <select type="text" class="form-control" name="status" [(ngModel)]="status" required>>
+                        <option value="volvo">Open</option>
+                        <option value="saab">InProgress</option>
+                        <option value="opel">Completed</option>
+                    </select>
+                </div>
+                <div class="col-sm-6">
+                  <label>projectSD</label>
+                  <select type="text" class="form-control" name="status" [(ngModel)]="projectSD" required>>
+                        <option value="volvo">project1</option>
+                        <option value="saab">project2</option>
+                        <option value="opel">project3</option>
+                    </select>
+                </div>
+                <div class="col-sm-6">
+                  <label>Assignment</label>
+                  <select type="text" class="form-control" name="Assignment" [(ngModel)]="Assignment" required>>
+                        <option value="volvo">ravi</option>
+                        <option value="saab">joy</option>
+                        <option value="opel">ansul</option>
+                    </select>
+                </div>
+                <div class="col-sm-6">
+                  <label>chose document</label>
+                  <td><input type="file"  accept="file/*" name="file" ngModel></td>
+                </div>
+                <div class="col-sm-6">
+                  <button class=" col-sm-2" type="submit">submit</button>
+                </div>
+      
+              </form>
+        </div>
+       
+      </div>
+    </div>
+    <div class="col-sm-3 right-sidebar divHight">
+      Feed Updates
+    </div>
+  </div>
 </div>

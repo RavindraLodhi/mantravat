@@ -1,4 +1,4 @@
-   .row{
+/*   .row{
      padding-top: 6px;
   }
   label{
@@ -32,4 +32,86 @@
   li{
     padding-top: 10px;
     height: 35px;
+  }*/
+
+  .row{
+    padding-top: 6px;
+ }
+ label{
+  /* margin-bottom: 0px;
+   margin-left: 100px;*/
+   display: block;
+   font-weight: 50;
+  
   }
+  .A{
+   background-color: white;
+   margin-left: 20px;
+   margin-top: 10px;
+  }
+ /* button{
+   margin-left: 366px;
+   margin-top: 20px;
+   background: rgba(65, 19, 230, 0.96);
+   border-radius: 17px;
+  }*/
+  form{
+   background: white;
+  }
+  .right-sidebar{
+   background: white;
+   height: 517px;
+   width: 284px
+ }
+ ul{
+   background: white;
+ }
+ li{
+   padding-top: 10px;
+   height: 35px;
+ }
+ input[type=text], input[type=password] {
+   width: 100%;
+   padding: 5px 10px;
+   margin: 8px 0;
+   display: inline-block;
+   border: 1px solid #ccc;
+   box-sizing: border-box;
+ }
+ button {
+   
+   background-color: rgba(65, 19, 230, 0.96);
+   height: 31px;;
+   width: 69px;
+   margin-left: 532px;
+   border-radius: 12px;
+ }
+ 
+ button:hover {
+   opacity: 0.8;
+ }
+ select
+ {
+   width: 100%;
+   padding: 5px 10px;
+   margin: 8px 0;
+   display: inline-block;
+   border: 1px solid #ccc;
+   box-sizing: border-box;
+ }
+ textarea{
+   margin: 8px 0;
+   height: 31px;
+ }
+ input[type=file] {
+   width: 100%;
+   padding: 12px 20px;
+   margin: 8px 0;
+   display: inline-block;
+  /* border: 1px solid #ccc;
+   box-sizing: border-box;*/
+ }
+ button:hover {
+   opacity: 0.8;
+ }
+ 

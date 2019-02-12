@@ -16,6 +16,7 @@ import { LoginLayoutComponent } from "./login-layout/login-layout.component";
 import { TimesheetComponent } from './timesheet/timesheet.component';
 import { ProjectComponent } from './project/project.component';
 import { SignupComponent } from './signup/signup.component';
+import { DisplayprojectComponent } from './displayproject/displayproject.component';
 
 @NgModule({
   providers: [],
@@ -63,6 +64,10 @@ import { SignupComponent } from './signup/signup.component';
           {
             path :"project",
             component :ProjectComponent
+          },
+          {
+            path :"displayproject",
+            component :DisplayprojectComponent
           }
         ]
       }
@@ -80,7 +85,8 @@ import { SignupComponent } from './signup/signup.component';
     LoginLayoutComponent,
     TimesheetComponent,
     ProjectComponent,
-    SignupComponent
+    SignupComponent,
+    DisplayprojectComponent
   ]
 })
 export class AppModule {}
