@@ -32,7 +32,7 @@ export class LeaveComponent implements OnInit {
     //assign the value insise the headerOpts array for sidebar option
     this.headerOpts=["Start Date","End Date","countDays","leaveType"];
     //assign the value insise the leavsHistry array for the leave histry table
-    this.leaveStatus1=[
+    this.leaveStatus=[
       {
         "Name" :      "Ravi",
         "StartDate" : "2-10-2019",
@@ -75,6 +75,7 @@ export class LeaveComponent implements OnInit {
         "countDays" : 4,
         "leaveType" : "Study leave"
       },
+    ]
 
      this.companyLeaveCelender=[
        {
@@ -144,9 +145,10 @@ export class LeaveComponent implements OnInit {
        {
          "key" : "31 Dec Tuesday",
          "value"   : "New Year's Eve",
-       },
+       }
      ]
- }
+    }
+
    //assign the value insise the leavsHistry array for the company leave calender
   
 
