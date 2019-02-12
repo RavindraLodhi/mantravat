@@ -14,6 +14,7 @@ export class LeaveComponent implements OnInit {
   leaveHistry;
   leaveStatus;
   companyLeaveCelender :any =[];
+  leaveStatus1 :any[] = [];
   //creat object of import class
  constructor(private formBuilder :FormBuilder, private _LeaveService : LeaveService) {}
  
@@ -75,7 +76,7 @@ export class LeaveComponent implements OnInit {
         "countDays" : 4,
         "leaveType" : "Study leave"
       },
-
+    ];
      this.companyLeaveCelender=[
        {
          "key" : "14 Jan Monday",
