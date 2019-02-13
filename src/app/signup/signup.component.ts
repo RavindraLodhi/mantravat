@@ -10,6 +10,7 @@ export class SignupComponent implements OnInit {
 
  suffix;
  firstname;
+ 
  middlename;
  lastname;
  gender;
