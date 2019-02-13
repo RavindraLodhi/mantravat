@@ -4,3 +4,10 @@
     overflow: auto;
     overflow-x: hidden;
 }
+@media screen and (max-width: 600px) {
+    .wrapper{
+       
+        height: auto;
+      
+    }
+}

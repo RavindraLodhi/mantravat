@@ -103,3 +103,24 @@ img{
     width: 284px
   }
   
+
+
+@media screen and (max-width: 600px) {
+
+  .right-sidebar{
+     width: 81px;
+     height: 224px;
+  }
+  .col-xs-2 {
+    width: 16.666667%;
+    margin: 0px;
+    padding: 0px;
+}
+ul{
+  padding-left: 1px;
+  font-size: 12px;
+}
+.sidebarleft{
+  padding: 0px;
+}
+}

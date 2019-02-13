@@ -21,7 +21,7 @@
 
 <div class="container-fluid container-fluid1 ">
     <div class="row">
-        <div class="col-sm-2 sidebarleft">
+        <div class="col-sm-2 col-xs-3 sidebarleft">
             <ul style="list-style-type:none;">
                 <li id="sidebarleftOpt"><a routerLink="#">
                               <span class="glyphicon glyphicon-home"></span>
@@ -43,7 +43,7 @@
                                 Singup</a></li>
             </ul>
         </div>
-        <div class="col-sm-7 mainContainer">
+        <div class="col-sm-7 col-xs-6 mainContainer">
             <div *ngIf="dashboardMid" class="container-fluid container-fluid1 ">
                 <div class="row">
                     <div class="col-sm-6 A">
@@ -131,7 +131,7 @@
             </div>
             <app-signup *ngIf="singup"></app-signup>
         </div>
-        <div class="col-sm-3 right-sidebar">
+        <div class="col-sm-3 col-xs-3 right-sidebar">
             Feed Updates
         </div>
     </div>
