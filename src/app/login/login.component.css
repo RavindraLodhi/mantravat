@@ -13,14 +13,14 @@ input[type=text], input[type=password] {
   border-radius: 17px;
 }
 
-button {
- margin-left: 146px;
- height: 30px;
- border-radius: 21px;
- width: 83px;
- background: green;
+button[_ngcontent-c2] {
+  /* margin-left: 146px; */
+  height: 30px;
+  border-radius: 79px;
+  width: 151px;
+  /* background: green; */
+  margin-left: 112px;
 }
-
 button:hover {
   opacity: 0.8;
 }
@@ -38,13 +38,15 @@ h1{
 }
 
 .imgcontainer {
-  text-align: center;
   margin: 24px 0 12px 0;
+  height: 49px;
 }
 
 img.avatar {
     width: 11%;
     border-radius: 11%;
+    margin-left: 163px;
+
 }
 
 .container {
@@ -69,9 +71,21 @@ span.psw {
 img.avatar {
     width: 35%;
     border-radius: 11%;
+    
 }
 }
-form{
- margin-top: 38px;
- border: none;
+form[_ngcontent-c2] {
+    margin-top: 38px;
+    border: none;
+    background: yellowgreen;
+    height: 500px;
+    margin-left: 29px;
 }
+
+
+/* forget{
+  margin-left: 103px;
+    width: 165px;
+    border-radius: 46px;
+}
+ */
