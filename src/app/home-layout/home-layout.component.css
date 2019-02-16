@@ -1,8 +1,8 @@
 .wrapper{
     background-color: #ddd;
     height: 569px;
-    overflow: auto;
-    overflow-x: hidden;
+    /* overflow: auto;
+    overflow-x: hidden; */
 }
 @media screen and (max-width: 600px) {
     .wrapper{

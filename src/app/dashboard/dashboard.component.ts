@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,HostListener } from '@angular/core';
 import * as d3 from "d3";
 @Component({
   selector: 'app-dashboard',
@@ -119,4 +119,57 @@ export class DashboardComponent implements OnInit {
 
      }
 
+
+    //  myFunction() {
+    //   var modal = document.getElementById('myTopnav');
+    //   console.log(modal.className);
+    //   var iconObj = document.getElementById('icon');
+    //   // When the user clicks anywhere outside of the modal, close it
+    //   window.onclick = function(event) {
+    //     console.log(event.target);
+    //       if (event.target == iconObj) {
+    //         console.log("running");
+    //         modal.className = "sidebarleftB"
+    //       }
+    //       else{
+    //         modal.className = "sidebarleft";
+    //       }
+    //   }
+      
+    // }
+    // @HostListener('document:click', ['$event'])
+    // documentClick(event: MouseEvent) {
+    //   var modal = document.getElementById('myTopnav');
+    //   console.log(modal.className);
+    //   var iconObj = document.getElementById('icon');
+    //   // When the user clicks anywhere outside of the modal, close it
+    //   window.onclick = function(event) {
+    //     console.log(event.target);
+    //       if (event.target == iconObj) {
+    //         console.log("running");
+    //         modal.className = "sidebarleftA"
+    //       }
+    //       else{
+    //         modal.className = "sidebarleftB";
+    //       }
+    //   }
+    // }
+    myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "col-sm-2 sidebarleft") {
+        x.className = "sidebarleftB";
+      } else {
+        x.className = "col-sm-2 sidebarleft";
+      }
+    }
+
+     myFunctionFeedBack() {
+      var x = document.getElementById("Feed");
+      console.log(x)
+      if (x.className === "col-sm-3  right-sidebar") {
+         x.className = "right-sidebarB";
+      } else {
+         x.className = "col-sm-3  right-sidebar";
+      }
+    }
 }
