@@ -1,6 +1,16 @@
-<div class="container-fluid container-fluid1 ">
+<div class="container container-fluid1 ">
   <div class="row">
-    <div class="col-sm-2 sidebarleft divHight">
+    <div class=" col-xs-6  topnav">
+      <a href="javascript:void(0);" class="icon">
+           <i class="glyphicon glyphicon-menu-hamburger"(click)="myFunction()" id="icon"></i>
+          </a>
+    </div>
+    <div class=" col-xs-6 topnav">
+      <a href="javascript:void(0);" class="icon1">
+           <i class="glyphicon glyphicon-menu-hamburger"(click)=" myFunctionFeedBack()" id="icon"></i>
+          </a>
+    </div>
+    <div class="col-sm-2 sidebarleft divHight2" id="myTopnav">
       <ul style="list-style-type:none;">
         <li id="sidebarleftOpt"><a (click)="ctreate()">
                                 <span class="glyphicon glyphicon-home"></span>
@@ -8,12 +18,12 @@
         <li id="sidebarleftOpt"><a data-toggle="collapse" data-target="#demo">
                                 <span class="glyphicon glyphicon-magnet"></span>
                                 Chnage Task</a>
-                                  <div id="demo" class="collapse">
-                                    <ul  style="list-style-type:none;" *ngFor="let dummyArr of dummyArry; let i = index" >
-                                      <li (click)="chengTask(i)">{{dummyArr.shortDec}}</li>
-                                    </ul>
-                                  </div>  
-                              </li>
+          <div id="demo" class="collapse">
+            <ul style="list-style-type:none;" *ngFor="let dummyArr of dummyArry; let i = index">
+              <li (click)="chengTask(i)">{{dummyArr.shortDec}}</li>
+            </ul>
+          </div>
+        </li>
         <li id="sidebarleftOpt"><a routerLink="#">
                                 <span class="glyphicon glyphicon-credit-card"></span>
                                 Display Task</a></li>
@@ -22,85 +32,96 @@
     <div class="col-sm-7">
       <div class="container-fluid   divHight">
         <div class="midDiv">
-            <form #userForm="ngForm" (ngSubmit)="submit(userForm.value)">
-                <div class="col-sm-6">
-                    <label>Type</label>
-                    <input type="text" #nameRef="ngModel" class="form-control" name="type" [(ngModel)]="type" required>
-                  </div>
-                <div class="col-sm-6">
-                  <label>Task Title</label>
-                  <input type="text" #nameRef="ngModel" class="form-control" name="title" [(ngModel)]="title" required>
+          <form [formGroup]="form" id="form" >
+            <div class="form-group custom-form custom-formNonIntervel col-md-6 col-xs-6 col-sm-6 ">
+              <label class="control-label  label-name" for="template">Type:</label>
+              <input type="text" formControlName="type" class="form-control" id="productname" name="type">
+            </div>
+            <div class="form-group custom-form custom-formNonIntervel col-md-6 col-xs-6 col-sm-6 ">
+              <label class="control-label  label-name" for="template">Task Title:</label>
+              <input type="text" formControlName="title" class="form-control" id="productname" name="title">
+            </div>
+            <div class="form-group custom-form custom-formNonIntervel col-md-6 col-xs-6 col-sm-6 ">
+              <label>Sort Discription</label>
+              <textarea rows="1" formControlName="sDescription" cols="5" type="text" class="form-control" name="sDescription" required></textarea>
+            </div>
+            <div class="form-group custom-form custom-formNonIntervel col-md-6 col-xs-6 col-sm-6 ">
+              <label>Long Discription</label>
+              <textarea rows="1" formControlName="LDescription" cols="5" type="text" class="form-control" name="LDescription" required></textarea>
+            </div>
+            <div class="form-group custom-form custom-formNonIntervel col-md-6 col-xs-6 col-sm-6 ">
+              <label class="control-label  label-name" for="template">Start Date:</label>
+              <input type="Date" formControlName="startDate" class="form-control" id="productname" name="startDate">
+            </div>
+            <div class="form-group custom-form custom-formNonIntervel col-md-6 col-xs-6 col-sm-6 ">
+              <label class="control-label  label-name" for="template">End Date:</label>
+              <input type="Date" formControlName="endDate" class="form-control" id="productname" name="endDate">
+            </div>
+            <div class="form-group custom-form custom-formNonIntervel col-md-6 col-xs-6 col-sm-6 ">
+              <label>Task Priority</label>
+              <select type="text" class="form-control" formControlName="Priority" name="Priority" required>
+                          <option >Very High</option>
+                          <option >High</option>
+                          <option  [ngValue]="t">Medium</option>
+                          <option >Low</option>
+                      </select>
+            </div>
+            <div class="form-group custom-form custom-formNonIntervel col-md-6 col-xs-6 col-sm-6 ">
+              <label>Task Status</label>
+              <select type="text" class="form-control" formControlName="status" name="status" required>>
+                          <option value="volvo">Open</option>
+                          <option value="saab">InProgress</option>
+                          <option value="opel">Completed</option>
+                      </select>
+            </div>
+            <div class="form-group custom-form custom-formNonIntervel col-md-6 col-xs-6 col-sm-6 ">
+              <label>projectSD</label>
+              <select type="text" class="form-control" name="projectSD" formControlName="projectSD" required>>
+                          <option value="volvo">project1</option>
+                          <option value="saab">project2</option>
+                          <option value="opel">project3</option>
+                      </select>
+            </div>
+            <div class="form-group custom-form custom-formNonIntervel col-md-6 col-xs-6 col-sm-6 ">
+              <label>projectLD</label>
+              <select type="text" class="form-control" name="projectLD" formControlName="projectLD" required>>
+                            <option value="volvo">project1</option>
+                            <option value="saab">project2</option>
+                            <option value="opel">project3</option>
+                        </select>
+            </div>
+            <div class="form-group custom-form custom-formNonIntervel col-md-12 col-xs-12 col-sm-12 ">
+              <div class="container1">
+                <div class="row">
+                  <form class="form-inline" formArrayName="products" *ngFor="let product of form.get('products').controls; let i=index">
+                    <div class="form-group ">
+                      <div [formGroupName]='i'>
+                        <div class="col-md-8 col-xs-8 col-sm-8">
+                          <input type="file" title="Browse Document" formControlName="documentAttechments" name="documentAttechments" required>
+                          <!-- (change)="fileSelectionEvent($event,i)" -->
+                        </div>
+                        <div *ngIf="i!=productsLength" class="col-md-4 col-xs-4 col-sm-4">
+                          <button (click)="deleteFieldValue(i)" type="button" class="btn btn-warning glyphicon glyphicon-minus btnwarning "></button>
+                        </div>
+                        <div *ngIf="i==productsLength" class="col-md-4 col-xs-4 col-sm-4">
+                          <button type="button" (click)="addProduct()" class="btn btn-warning glyphicon glyphicon-plus btnwarning"></button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
                 </div>
-                <div class="col-sm-6">
-                  <label>Sort Discription</label>
-                  <textarea rows="1" cols="5" type="text" class="form-control" name="sDescription" [(ngModel)]="sDescription" required></textarea>
-                </div>
-                <div class="col-sm-6">
-                    <label>Long Discription</label>
-                    <textarea rows="1" cols="5" type="text" class="form-control" name="sDescription" [(ngModel)]="sDescription" required></textarea>
-                  </div>
-                <div class="col-sm-12">
-                  <!-- <label>Task Time Line</label> -->
-                </div>
-                <div class="col-sm-6">
-                  <label>From</label>
-                  <input type="date" class="form-control" name="timeLine" [(ngModel)]="timeLine" required>
-                </div>
-                <div class="col-sm-6">
-                  <label>To</label>
-                  <input type="date" class="form-control" name="endTime" [(ngModel)]="endTime" required>
-                </div>
-                <div class="col-sm-6">
-                  <label>Task Effort</label>
-                  <input type="text" class="form-control" name="effort" [(ngModel)]="effort" required>
-                </div>
-                <div class="col-sm-6">
-                  <label>Task Priority</label>
-                  <select type="text" class="form-control" name="Priority" [(ngModel)]="priority" required>
-                        <option >Very High</option>
-                        <option >High</option>
-                        <option  [ngValue]="t">Medium</option>
-                        <option >Low</option>
-                    </select>
-                </div>
-                <div class="col-sm-6">
-                  <label>Task Status</label>
-                  <select type="text" class="form-control" name="status" [(ngModel)]="status" required>>
-                        <option value="volvo">Open</option>
-                        <option value="saab">InProgress</option>
-                        <option value="opel">Completed</option>
-                    </select>
-                </div>
-                <div class="col-sm-6">
-                  <label>projectSD</label>
-                  <select type="text" class="form-control" name="status" [(ngModel)]="projectSD" required>>
-                        <option value="volvo">project1</option>
-                        <option value="saab">project2</option>
-                        <option value="opel">project3</option>
-                    </select>
-                </div>
-                <div class="col-sm-6">
-                  <label>Assignment</label>
-                  <select type="text" class="form-control" name="Assignment" [(ngModel)]="Assignment" required>>
-                        <option value="volvo">ravi</option>
-                        <option value="saab">joy</option>
-                        <option value="opel">ansul</option>
-                    </select>
-                </div>
-                <div class="col-sm-6">
-                  <label>chose document</label>
-                  <td><input type="file"  accept="file/*" name="file" ngModel></td>
-                </div>
-                <div class="col-sm-6">
-                  <button class=" col-sm-2" type="submit">submit</button>
-                </div>
-      
-              </form>
+              </div>
+            </div>
+            <div class="col-md-12 col-xs-12 col-sm-12">
+              <button (click)="addSprinkling()" type="button" class="btn btn-default pull-right btn-btn">Submit</button>
+            </div>
+          </form>
+
         </div>
-       
+
       </div>
     </div>
-    <div class="col-sm-3 right-sidebar divHight">
+    <div class="col-sm-3 right-sidebar" id="Feed">
       Feed Updates
     </div>
   </div>

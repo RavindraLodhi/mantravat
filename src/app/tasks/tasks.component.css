@@ -1,241 +1,140 @@
-/* img{
-    width: 30px;
-    height: 30px;
-   
-  }
-  #img{
-    width: 85px;
-    height: 85px;
-    border-radius: 44px;
-    margin-top: 27px;
-  }
-  .header{
-    background-color: rgba(65, 19, 230, 0.96);
-    height: 42px;
-    position: relative;
-    width: 100%;
-  }
-  form{
-    margin-top: 56px;
-  }
-
-  .row{
-     padding-top: 6px; 
-  }
- 
-   #input {
-    width: 339px;
-    height: 30px;
-  }
-
-  .container-fluid1 {
-    font-family: inherit;
-    background-color: #e9ebee; 
-    height: auto;
-  }
-  .A{
-    background-color : white;
-    height: 170px; 
-    margin-top: 3px;
-    border-color:#ddd;
-    border-width: 6px; 
-    border-style: solid;
-   
-  }
-  .right-sidebar{
-    border-color:red;
-    border-width: 2px;
-    border-style: solid;
-  }
-  .sidebarleft{
-    border-color:red;
-    border-width: 2px;
-    border-style: solid;
-  }
-  #sidebarleftOpt:hover { 
-      background-color: yellow;
-      border-width: 0.5px; 
-      border-style: solid;
-      text-align: center;
-     
-    }
-    a{
-      text-decoration: none;
-    } */
-
-
-
-
-
-    /* jnbhjbjhjkbhjgbjgjkgh */
-
-    /* img{
-      width: 30px;
-      height: 30px;
-      margin-left: 26px;
-          border-radius: 17px;
-    }
-    #img{
-      width: 85px;
-      height: 85px;
-      border-radius: 44px;
-      margin-top: 27px;
-    } */
-    /* .container-fluid{
-      background-color: rgba(65, 19, 230, 0.96);
-      height: 42px;
-      position: relative;
-      width: 100%;
-    } */
-  
-    /* #row{
-      background: white;
-      margin-right: 3px; 
-    } */
-    /* button{
-    height: 30px;
-    }
-    li{
-      padding-top: 10px;
-      height: 35px;
-    }
-    .container-fluid1 {
-      background-color: #ddd; 
-      height: auto;
-    }
-    .A{
-      background-color : rgba(255, 255, 255, 0.86);
-      height: 170px; 
-      margin-top: 3px;
-      border-color:#ddd;
-      border-width: 6px; 
-      border-style: solid;
-     
-    } */
-   
-     /* .taskBox1{
-        padding: 0px;
-        margin-top: -5px;
-      } */
-      /* .task1{
-        height: 15px;
-        width: 15px;
-        margin-top: 1px;
-        border-radius: 8px;
-        background: red;
-      } */
-      /* .task2{
-        height: 15px;
-        width: 15px;
-        margin-top: 1px;
-        border-radius: 8px;
-        background: #00FF37;
-      }
-      .task3{
-        height: 15px;
-        width: 15px;
-        margin-top: 1px;
-        border-radius: 8px;
-        background: #EEFF00;
-      }
-      .task4{
-        height: 15px;
-        width: 15px;
-        margin-top: 1px;
-        border-radius: 8px;
-        background: red;
-      }
-    svg{
-      margin-top: 13px;
-    } */
-    /* .wrapper {
-      display:flex;
-      justify-content: center;
-      background: #000;
-      border-radius: 10px;
-      margin: 0;
-    
-      margin-top: 4px;
-    }
-    .forn{
-        margin-top: 32px;
-    }
-    button{
-      margin-left: 20pc;
-      width: 90px;
-      background:  rgba(65, 19, 230, 0.96);;
-      border-radius: 46px;
-      color: white
-  } */
-  /* .mainContainer1{
-    background: red;
-    height: 405px;
-  } */
-/* 
-input[type=date]::-webkit-inner-spin-button,
-input[type=date]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-
-}
-input[type=date]{
-  padding-left: 0px;
-  padding-right: 0px;
-} */
-
-button{
+button {
   background: rgba(65, 19, 230, 0.96);
   width: 69px;
   border-radius: 16px;
-  margin-left: 160px;
-  margin-top: 13px;
 }
-
-form{
-  margin-top: 20px;
+.divHight {
+  height: auto;
   background: white;
-  height: 400px;
+  margin-top: 26px;
 }
-.divHight{
-  height: 517px;
-
-}
-.right-sidebar{
+.right-sidebar {
   background: white;
-  width: 284px
+  width: 284px;
 }
-ul{
-background: white;
+ul {
+  background: white;
 }
 
-li{
+li {
   padding-top: 10px;
   height: auto;
-} 
-/* ul:hover { 
-    background-color: #D3D3D0;
-    border-width: 0.5px;
-  } */
-  a{
-    text-decoration: none;
-  }
-  .row{
-    padding-top: 6px; 
- }
- label{
+}
+a {
+  text-decoration: none;
+}
+.row {
+  padding-top: 6px;
+}
+label {
   font-weight: 100;
- }
- input{
+}
+input {
   font-weight: 400;
   transition-duration: 334ms;
-  transition-property: border-color,box-shadow;
+  transition-property: border-color, box-shadow;
   box-shadow: none;
   border-radius: 2px;
-  border: 1px solid rgba(0,0,0,.6);
+  border: 1px solid rgba(0, 0, 0, 0.6);
   padding: 0 10px;
   width: 100%;
   outline: 0;
   height: 32px;
   box-sizing: border-box;
   background-color: transparent;
-  color: rgba(0,0,0,.9);
- }
+  color: rgba(0, 0, 0, 0.9);
+}
+textarea {
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  background-color: transparent;
+}
+select {
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  background-color: transparent;
+}
+.container1 {
+  height: 118px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  background-color: transparent;
+}
+.topnav .icon {
+  display: none;
+}
+.topnav .icon1 {
+  display: none;
+}
+.docomentAttech {
+  background: red;
+  height: 62px;
+  border-radius: 24px;
+}
+#form {
+  background-color: red !important;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav {
+    background: black;
+    margin-top: -5px;
+  }
+  .sidebarleft {
+    display: none !important;
+    padding: 0px;
+  }
+  .sidebarleftA {
+    display: none !important;
+  }
+  .sidebarleftB {
+    display: block !important;
+  }
+  .topnav a.icon {
+    float: left;
+    display: block;
+  }
+  .topnav a.icon1 {
+    float: right;
+    display: block;
+  }
+
+  .right-sidebar {
+    width: 81px;
+    height: 224px;
+    display: none;
+  }
+  .col-xs-2 {
+    width: 16.666667%;
+    margin: 0px;
+    padding: 0px;
+  }
+  ul {
+    padding-left: 1px;
+    font-size: 12px;
+  }
+
+  .glyphicon-menu-hamburger {
+    font-size: 25px;
+  }
+  #myTopnav {
+    position: absolute;
+    z-index: 2;
+    width: 100px;
+    margin-top: 28px;
+  }
+  #Feed {
+    position: absolute;
+    z-index: 2;
+    width: 100px;
+    margin-top: 28px;
+    margin-left: 311px;
+    font-size: 11px;
+    margin-top: -533px;
+  }
+  .col-sm-3 right-sidebar {
+    display: none;
+  }
+  .right-sidebarB {
+    background: white;
+    height: 200px;
+    width: 284px;
+  }
+}
