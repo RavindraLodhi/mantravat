@@ -14,6 +14,7 @@ export class LeaveComponent implements OnInit {
   leaveHistry;
   leaveStatus;
   companyLeaveCelender :any =[];
+  leaveStatus1 :any[] = [];
   //creat object of import class
  constructor(private formBuilder :FormBuilder, private _LeaveService : LeaveService) {}
  
@@ -32,7 +33,7 @@ export class LeaveComponent implements OnInit {
     //assign the value insise the headerOpts array for sidebar option
     this.headerOpts=["Start Date","End Date","countDays","leaveType"];
     //assign the value insise the leavsHistry array for the leave histry table
-    this.leaveStatus=[
+    this.leaveStatus1=[
       {
         "Name" :      "Ravi",
         "StartDate" : "2-10-2019",

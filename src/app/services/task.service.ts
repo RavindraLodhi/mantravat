@@ -52,7 +52,15 @@ export class TaskService {
         })
       );
      }
+
+     
     
    }
+   displayTask(){
+    const headers = new HttpHeaders().set("X-CustomHttpHeader", "CUSTOM_VALUE");
+    return this.http.get('http://192.168.0.16:3005/api/getTasks',{headers}).pipe(map(getData => {
+    return getData;  
+   }))
+  }
  
 }

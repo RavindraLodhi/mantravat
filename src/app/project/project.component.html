@@ -1,3 +1,5 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="container-fluid container-fluid1 ">
   <div class="row">
     <div class="col-sm-2 sidebarleft">
@@ -40,10 +42,10 @@
             <option >Joy</option>
             <option >Ansul</option>
            </select></div>
-          <div class="col-sm-6"><label>Start Time</label> <input type="text" placeholder="Start time" name="passWord" ngModel /></div>
-          <div class="col-sm-6"> <label>End Time</label><input type="text" placeholder="End time" name="passWord" ngModel /></div>
+          <div class="col-sm-6"><label>Start Date</label> <input type="Date" autocorrect=off  placeholder="Start Date" name="sd" ngModel /></div>
+          <div class="col-sm-6"> <label>End Date</label><input type="Date" autocorrect=off  placeholder="End Date" name="ed" ngModel /></div>
           <div class="col-sm-6"><label>Short Description</label> <input type="text" placeholder="Short Message" name="passWord" ngModel /></div>
-          <div class="col-sm-6"> <label>Long Description</label><textarea  rows="1" cols="40" placeholder="Long Message" name="passWord" ngModel ></textarea></div>
+          <div class="col-sm-6"> <label>Long Description</label><textarea  rows="1" cols="40" autocorrect=off placeholder="Long Message" name="passWord" ngModel  ></textarea></div>
           <div class="col-sm-6"> <label>Total Effort</label><input type="text" placeholder="Total Effort" name="passWord" ngModel /></div>
           <div class="col-sm-6"><label>Atachment</label>  <input type="file" name="pic" accept="image/*"></div>
         
@@ -55,7 +57,7 @@
       </div>
       <!-- <app-displayproject></app-displayproject> -->
     </div>
-    <div class="col-sm-3 right-sidebar">
+    <div class="col-sm-3 right-sidebar" >
       Feed Updates
     </div>
   </div>

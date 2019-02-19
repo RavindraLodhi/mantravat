@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {TaskService} from '../services/task.service';
 
 @Component({
   selector: 'app-displaytask',
@@ -12,9 +12,18 @@ export class DisplaytaskComponent implements OnInit {
 
   
   //creat object of import class
- constructor() {}
+ constructor(private  _TaskService :TaskService) {
+
+
+ }
 
   ngOnInit() {
+    this._TaskService.displayTask().subscribe(data =>{
+
+    },
+    error => {
+        
+    })
     this.tname=[
       {
         "StartDate" : "RAVI",

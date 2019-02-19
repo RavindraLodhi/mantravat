@@ -1,203 +1,201 @@
+
 <div class="container-fluid">
     <div class="row">
       <div class="col-sm-12 signup" style="text-align: center ">
         <h4>Signup</h4>
       </div>
-      <form #userForm="ngForm" (ngSubmit)="submit(userForm.value)">
+      <form #userForm="ngForm" (ngSubmit)="submit(userForm.value)" (ngSubmit)="onSubmit()" #testForm="ngForm" ngNativeValidate>
         <div class="col-md-12">
           <div class="col-md-12">
-            <h1>basic information></h1>
+            <h1>basic information</h1>
+          </div>
+          <div class="col-md-6 ">
+            <label>suffix :</label><input type="suffix" placeholder="suffix" required class="form-control" name="suffix" ngModel>
           </div>
           <div class="col-md-6">
-            <label>suffix :</label><input type="suffix" placeholder="suffix" class="form-control" name="suffix" ngModel>
-          </div>
-          <div class="col-md-6">
-            <label>First name :</label><input type="suffix" placeholder="First name" class="form-control" name="FirstName"
+            <label>First name :</label><input type="FirstName" placeholder="First name" class="form-control" name="FirstName" required
               ngModel> </div>
           <div class="col-md-6">
-            <label>middle name :</label><input type="middle name" placeholder="middle name" class="form-control" name="MiddleName"
+            <label>middle name :</label><input type="middle name" placeholder="middle name" class="form-control" name="middleName" required
               ngModel> </div>
           <div class="col-md-6">
-            <label>last name :</label> <input type="Last name" placeholder="last name" class="form-control" name="LastName"
-              ngModel> </div>
-          <div class="col-md-6">
-            <label>gender :</label> <select type="text" placeholder="gender" class="form-control gender" name="gender"
+            <label>last name :</label> <input type="Last name" placeholder="lastname" class="form-control" name="lastName"
+            required ngModel> </div>
+          <div class="col-md-6" style="margin-top: 7px;">
+            <label>gender :</label> <select type="text" placeholder="gender" class="form-control gender" name="gender" required
               ngModel>
               <option>male </option>
               <option>female</option>
             </select>
           </div>
           <div class="col-md-6">
-            <label>DOB:</label> <input type="Date" placeholder="date of birth" class="form-control" name="DOB" ngModel>
+            <label>DOB:</label> <input type="Date" placeholder="date of birth" class="form-control" name="DOB" ngModel  required >
+            <font  color="green" id="demo6"></font>
+            <font color="red" id="demo7"></font>
+            
+
           </div>
-          <div class="col-md-6">
-            <label>DOj:</label> <input type="Date" placeholder="DOj" class="form-control" name="DOJ" ngModel> </div>
-          <div class="col-md-6">
-            <label>Email :</label> <input type="email" placeholder="Last name" class="form-control" name="Email" ngModel>
+          <div class="col-md-6" style="margin-top: -7px;">
+            <label>DOj:</label> <input type="Date" placeholder="DOj" class="form-control" name="DOJ" required ngModel> </div>
+          <div class="col-md-6" style="margin-top: -23px;">
+            <label>Email :</label> <input type="text" placeholder="Email" class="form-control" name="Email" ng-pattern=" /(\W|^)[\w.+\-]*@gmail\.com(\W|$)/" required ngModel>
+            <label id="em1"></label>
+            <label id="em2"></label>
           </div>
         </div>
         <div class="col-md-12">
           <div class="container">
-            <label>Address</label>
-            <button type="button" data-toggle="collapse" data-target="#demo"><span class="glyphicon glyphicon-triangle-right" id="add"></span></button>
+            <label>Address:</label>
+            <button type="button" data-toggle="collapse" data-target="#demo" style="margin-left: 18px;"><span class="glyphicon glyphicon-triangle-right" id="add"></span></button>
             <div id="demo" class="collapse">
-              <div class="col-md-4">
+              <div class="col-md-6">
                 <h4>current address</h4>
-                <div>
+                <div class="col-md-12">
                   <label>country</label>
-                  <select type="text" placeholder="country" class="form-control" name="country" ngModel>
+                  <select type="text" placeholder="country" class="form-control" name="country" required ngModel>
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
                     <option value="Albania">Albania</option>
                     <option value="Zimbabwe">Zimbabwe</option>
                   </select>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-12">
                   <label>State</label>
-                  <select type="text" placeholder="State" class="form-control" name="State" ngModel>
+                  <select type="text" placeholder="State" class="form-control" name="State" required ngModel>
                     <option value="AL">Alabama</option>
                     <option value="MN">Minnesota</option>
                     <option value="MS">Mississippi</option>
                   </select>
                 </div>
-                <div class="col-md-8">
-                  <label>city</label><input type="text" placeholder="city" class="form-control" name="city" ngModel>
+                <div class="col-md-12">
+                  <label>city</label><input type="text" placeholder="city" class="form-control" name="city"  required ngModel>
                 </div>
-                <div class="col-md-8">
-                  <label>Street1</label><input type="text" placeholder="Street1" class="form-control" name="Street1"
+                <div class="col-md-12">
+                  <label>Street1</label><input type="text" placeholder="Street1" class="form-control" required name="Street1"
                     ngModel>
                 </div>
-                <div class="col-md-8">
-                  <label>Street2</label><input type="text" placeholder="Street1" class="form-control" name="Street1"
+                <div class="col-md-12">
+                  <label>Street2</label><input type="text" placeholder="Street2" class="form-control"required  name="Street2"
                     ngModel>
                 </div>
-                <div class="col-md-8">
-                  <label>pin</label><input type="text" placeholder="pincode" class="form-control" name="pin" ngModel>
+                <div class="col-md-12">
+                  <label>pin</label><input type="number" placeholder="pincode" class="form-control" name="pin" required  maxlength="6" ngModel>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-6">
                 <h4>permanent address</h4>
-                <div>
+                <div class="col-md-12">
                   <label>country</label>
-                  <select type="text" placeholder="country" class="form-control" name="country" ngModel>
+                  <select type="text" placeholder="country" class="form-control" name="countryp"  required ngModel>
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
                     <option value="Albania">Albania</option>
                     <option value="Zimbabwe">Zimbabwe</option>
                   </select>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-12">
                   <label>State</label>
-                  <select type="text" placeholder="State" class="form-control" name="State" ngModel>
+                  <select type="text" placeholder="State" class="form-control" name="Statep"  required ngModel>
                     <option value="AL">Alabama</option>
                     <option value="MN">Minnesota</option>
                     <option value="MS">Mississippi</option>
                   </select>
                 </div>
-                <div class="col-md-8">
-                  <label>city</label><input type="text" placeholder="city" class="form-control" name="city" ngModel>
-                </div>
-                <div class="col-md-8">
-                  <label>Street1</label><input type="text" placeholder="Street1" class="form-control" name="Street1"
-                    ngModel>
-                </div>
-                <div class="col-md-8">
-                  <label>Street2</label><input type="text" placeholder="Street1" class="form-control" name="Street1"
-                    ngModel>
-                </div>
-                <div class="col-md-8">
-                  <label>pin</label><input type="text" placeholder="pincode" class="form-control" name="pin" ngModel>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="col-md-12">
-          <h2>educational qualification</h2>
-          <button type="button" data-toggle="collapse" data-target="#demo3"><span class="glyphicon glyphicon-triangle-right"></span></button>
-          <div id="demo3" class="collapse">
-            <div class="row">
-              <div class="col-md-3">jdhaduhfuhsfhsjfsddsasdgsahjskfjaskhdjhfhksdjahsdjsfhjadbshfkjsbhudhuhuhuhudhdh</div>
-              <div class="col-md-3">jdhaduhfuhsfhsjfsd</div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">dsahddad</div> -->
-        <div class="col-md-12">
-          <div class="col-md-12">
-            <div class="contain">
-              <div class="row">
-                <div class="col-md-6">
-                </div>
-              </div>
-              <label>Education:</label>
-              <button type="button" data-toggle="collapse" data-target="#demo3"><span class="glyphicon glyphicon-triangle-right"
-                  id="edu"></span></button>
-              <div id="demo3" class="collapse">
-                <div class="col-md-6">
-                  <label>college</label><input type="text" placeholder="college" class="form-control" name="pin" ngModel>
-                </div>
-                <div class="col-md-6">
-                  <label>Degree :</label> <select type="text" placeholder="Degree" class="form-control Degree" name="Degree"
-                    ngModel>
-                    <option>B.tech </option>
-                    <option>M.tech</option>
-                    <option>MBA</option>
-                    <option>MCA</option>
-                    <option>Mac</option>
-                  </select>
-                </div>
-                <div class="col-md-6">
-                  <label>Feild of study :</label> <select type="text" placeholder="feild of study" class="form-control feild"
-                    name="Feildofstudy" ngModel>
-                    <option>cse </option>
-                    <option>it</option>
-                    <option>civil</option>
-                    <option>Bussiness</option>
-                    <option>ME</option>
-                  </select>
-                </div>
-                <div class="col-md-6">
-                  <label>grade</label><input type="text" placeholder="grade" class="form-control" name="grade" ngModel>
-                </div>
-                
-                <div class="col-md-6">
-                  <label>From</label>
-                  <select type="text" placeholder="From" class="form-control" name="From" ngModel>
-                    <option value="AL">2010</option>
-                    <option value="MN">2011</option>
-                    <option value="MS">2012</option>
-                    <option value="AL">2013</option>
-                    <option value="MN">2014</option>
-                    <option value="MS">2015</option>
-                  </select>
-                </div>
-                <div class="col-md-6">
-                  <label>To year(or expected)</label>
-                  <select type="text" placeholder="From" class="form-control" name="From" ngModel>
-                    <option value="AL">2010</option>
-                    <option value="MN">2011</option>
-                    <option value="MS">2012</option>
-                    <option value="AL">2013</option>
-                    <option value="MN">2014</option>
-                    <option value="MS">2015</option>
-                  </select>
+                <div class="col-md-12">
+                  <label>city</label><input type="text" placeholder="city" class="form-control" name="cityp"  required ngModel>
                 </div>
                 <div class="col-md-12">
-                  <label>activities and society :</label><textarea rows="4" cols="80" class="textarea" name="Skill"
-                    ngmodel>
-         </textarea>
+                  <label>Street1</label><input type="text" placeholder="Street1" class="form-control"required  name="Street1p"
+                    ngModel>
                 </div>
                 <div class="col-md-12">
-                  <label>CV</label><input type="file" name="fileupload" accept="file/*" name="file" ngModel>
+                  <label>Street2</label><input type="text" placeholder="Street2" class="form-control" required name="Street1p"
+                    ngModel>
+                </div>
+                <div class="col-md-12">
+                  <label>pin</label><input type="number" placeholder="pincode" class="form-control" name="pinp" required maxlength="6" ngModel>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-12" id="table">
-          <label>Experience:</label>
-          <button type="button" data-toggle="collapse" data-target="#demo1"><span class="glyphicon glyphicon-triangle-right"
+       
+        <div class="col-md-12" id="table" style="margin-left: 16px;">
+          <label> Education:</label>
+          <button type="button" data-toggle="collapse" data-target="#demo2" style="margin-left: 5px;"><span class="glyphicon glyphicon-triangle-right"
+              id="ex"></span>
+          </button>
+          <div id="demo2" class="collapse">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Courses</th>
+                  <th>College</th>
+                  <th>University</th>
+                  <th>Degree</th>
+                  <th>Percentage/CGPA</th>
+                  <th>Start Date</th>
+                  <th>End Date</th>
+                  <th>Certificate</th>
+                  <th>A2</th>
+                  <th>A3</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>PG</td>
+                  <td><input type="text" name="collegepg" ngModel></td>
+                  <td><input type="text" name="universitypg" ngModel></td>
+                  <td><input type="text" name="Degreepg" ngModel></td>
+                  <td><input type="number" name="percentagepg" ngModel></td>
+                  <td><input type="date" name="frompg" ngModel></td>
+                  <td><input type="date" name="topg" ngModel></td>
+                  <td><input type="file" name="Certificatepg" accept="file/*" name="file" ngModel></td>
+                  <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td>
+                  <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td>
+                </tr>
+                <tr>
+                    <td>UG</td>
+                    <td><input type="text" name="collegeug" required ngModel></td>
+                    <td><input type="text" name="universityug"required  ngModel></td>
+                    <td><input type="text" name="Degreeug" required  ngModel></td>
+                    <td><input type="number" name="percentageug" ngModel></td>
+                    <td><input type="date" name="fromug" required  ngModel></td>
+                    <td><input type="date" name="toug"required  ngModel></td>
+                    <td><input type="file" name="Certificateug" required  accept="file/*" name="file" ngModel></td>
+                  <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td>
+                  <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td>
+                </tr>
+                <tr>
+                    <td>PUC</td>
+                    <td><input type="text" name="college12" required ngModel></td>
+                    <td><input type="text" name="university12" requiredngModel></td>
+                    <td><input type="text" name="Degree12" required ngModel></td>
+                    <td><input type="number" name="percentage12" required  ngModel></td>
+                    <td><input type="date" name="from12" required ngModel></td>
+                    <td><input type="date" name="to12" required ngModel></td>
+                    <td><input type="file" name="Certificate12" required  accept="file/*" name="file" ngModel></td>
+                  <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td>
+                  <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td>
+                </tr>
+                <tr>
+                    <td>10th</td>
+                    <td><input type="text" name="college10" required  ngModel></td>
+                    <td><input type="text" name="university10" required  ngModel></td>
+                    <td><input type="text" name="Degree10" required  ngModel></td>
+                    <td><input type="number" name="percentage10" required ngModel></td>
+                    <td><input type="date" name="from10" required  ngModel></td>
+                    <td><input type="date" name="to10" required ngModel></td>
+                    <td><input type="file" name="Certificate" required accept="file/*" name="file" ngModel></td>                 <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td>
+                  <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-12" id="table" style="margin-left: 16px;">
+          <label> Experience:</label>
+          <button type="button" data-toggle="collapse" data-target="#demo1" style="margin-left: -1px;"><span class="glyphicon glyphicon-triangle-right"
               id="ex"></span>
           </button>
           <div id="demo1" class="collapse">
@@ -217,26 +215,26 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><input type="text" name="Title" ngModel></td>
-                  <td><input type="text" name="cn" ngModel></td>
-                  <td><input type="text" name="location" ngModel></td>
-                  <td><input type="date" name="From" ngModel></td>
-                  <td><input type="date" name="To" ngModel></td>
-                  <td><input type="text" name="Description" ngModel></td>
-                  <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td>
-                  <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td>
-                  <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td>
+                  <td><input type="text" name="Title1" ngModel></td>
+                  <td><input type="text" name="cn1" ngModel></td>
+                  <td><input type="text" name="location1" ngModel></td>
+                  <td><input type="date" name="From1" ngModel></td>
+                  <td><input type="date" name="To1" ngModel></td>
+                  <td><input type="text" name="Description1" ngModel></td>
+                  <td><input type="file" name="fileupload11" accept="file/*" name="file" ngModel></td>
+                  <td><input type="file" name="fileupload12" accept="file/*" name="file" ngModel></td>
+                  <td><input type="file" name="fileupload13" accept="file/*" name="file" ngModel></td>
                 </tr>
                 <tr>
-                  <td><input type="text"></td>
-                  <td><input type="text"></td>
-                  <td><input type="text"></td>
-                  <td><input type="date"></td>
-                  <td><input type="date"></td>
-                  <td><input type="text"></td>
-                  <td><input type="file" name="fileupload" accept="file/*" /></td>
-                  <td><input type="file" name="fileupload" accept="file/*" /></td>
-                  <td><input type="file" name="fileupload" accept="file/*" /></td>
+                  <td><input type="text" name="Title"  ngModel></td>
+                  <td><input type="text" name="cn"  ngModel></td>
+                  <td><input type="text" name="location"  ngModel></td>
+                  <td><input type="date" name="From"  ngModel></td>
+                  <td><input type="date" name="To"  ngModel></td>
+                  <td><input type="text" name="Description"  ngModel></td>
+                  <td><input type="file" name="fileupload1" accept="file/*"  ngModel ></td>
+                  <td><input type="file" name="fileupload2" accept="file/*"  ngModel /></td>
+                  <td><input type="file" name="fileupload3" accept="file/*"  ngModel /></td>
                 </tr>
                 <tr>
                   <td></td>
@@ -253,23 +251,34 @@
             </table>
           </div>
         </div>
-        <!-- <div class="col-md-12" id="table">
-        <label>work experience:</label>
-      </div> -->
-        <div class="col-md-12">
-          <label>Skill :</label><textarea rows="3" cols="80" class="textarea" name="Skill" ngmodel>
+       
+        <div class="col-md-12" style="margin-left: 16px;">
+          <label>Skill :</label><textarea rows="3" cols="80" class="textarea" name="Skill" required ngModel>
                 </textarea>
         </div>
-        <div class="col-md-6">
-          <label>password :</label> <input type="password" placeholder="password" class="form-control" name="password"
-            ngModel>
+        <div class="col-md-6" style="margin-left: 16px;">
+          <label>Password :</label> <input type="password" placeholder="password" required  name="password" id="p"
+            ngModel><br/>
+          <font  color="green" id="demo5"></font>
+          <font color="red" id="demo6"></font>
+          
         </div>
-        <div class="col-md-6">
-          <label>confirm password :</label><input type=" confirm password" placeholder="confirm password" class="form-control"
-            name="password" ngModel>
+        <div class="col-md-6" style=" width: 48%;">
+          <label>Confirm Password</label><input type="password" placeholder="confirm password" id="cp" onclick="validate()" required
+            name="confirmpassword" ngModel>
+            <font  color="green" id="demo3"></font>
+            <font color="red" id="demo4"></font>
         </div>
-        <button type="submit" id="button">signup</button>
+       
+        <button type="submit" id="button" >signup</button>
       </form>
       <div class="col-md-6"></div>
     </div>
   </div>
+   
+   <!-- <form (ngSubmit)="onSubmit()" #testForm="ngForm" ngNativeValidate>
+    <input type="text" id="test1" name="test1" [(ngModel)]="test" required>
+    <input type="text" id="test2" name="test2" [(ngModel)]="test" [required]="true">
+    <input type="text" id="test3" name="test3" [(ngModel)]="test" [attr.required]="true">
+    <button type="submit">submit</button>
+  </form> -->
