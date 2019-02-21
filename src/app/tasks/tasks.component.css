@@ -1,4 +1,4 @@
-button {
+/* button {
   background: rgba(65, 19, 230, 0.96);
   width: 69px;
   border-radius: 16px;
@@ -137,4 +137,219 @@ select {
     height: 200px;
     width: 284px;
   }
+} */
+
+button {
+  background: rgba(65, 19, 230, 0.96);
+  width: 69px;
+  border-radius: 16px;
+  margin-top: 10px;
+}
+.divHight {
+  height: auto;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  /* background: white; */
+  /* margin-top: 26px; */
+}
+
+.right-sidebar {
+  background: white;
+  width: 284px;
+}
+ul {
+  background: white;
+}
+
+li {
+  padding-top: 10px;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}
+.row {
+  padding-top: 6px;
+}
+label {
+  font-weight: 100;
+  font-family: "Times New Roman", Times, serif;
+  
+}
+input {
+  height: 26px;
+  
+  /* border-radius: 15px; */
+}
+
+select {
+  height: 26px;
+}
+.container1 {
+  height: 118px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  background-color: transparent;
+}
+.topnav .icon {
+  display: none;
+}
+.topnav .icon1 {
+  display: none;
+}
+.docomentAttech {
+  background: red;
+  height: 62px;
+  border-radius: 24px;
+}
+#form {
+  /* background-color: red !important; */
+}
+
+@media screen and (max-width: 600px) {
+
+  .inputFild[_ngcontent-c3] {
+    height: 497px;
+    background: white;
+    padding-left: 0px;
+     padding-right: 35px; 
+}
+ 
+.headertext[_ngcontent-c3]{
+  margin-top: 26px;
+  height: 50px;
+  padding-top: 2px;
+}
+.form-control[_ngcontent-c3] {
+  padding: 3px 12px;
+  width: 100%;
+}
+.commentBox[_ngcontent-c3] {
+  margin-top: 9px;
+}
+  .headertext[_ngcontent-c1] {
+    margin-top: 30px;
+    /* text-align: center; */
+    background-color: white;
+    height: 40px;
+    padding-top: 0.5px;
+}
+  .topnav {
+    background: black;
+    margin-top: -5px;
+  }
+  .sidebarleft {
+    display: none !important;
+    padding: 0px;
+    padding-left: 1px !important;
+    padding-right: 1px !important;
+  }
+  .sidebarleftA {
+    display: none !important;
+  }
+  .sidebarleftB {
+    display: block !important;
+  }
+  .topnav a.icon {
+    float: left;
+    display: block;
+  }
+  .topnav a.icon1 {
+    float: right;
+    display: block;
+  }
+
+  .right-sidebar {
+    width: 81px;
+    height: 224px;
+    display: none;
+  }
+  .col-xs-2 {
+    width: 16.666667%;
+    margin: 0px;
+    padding: 0px;
+  }
+  ul {
+    padding-left: 1px;
+    font-size: 12px;
+  }
+
+  .glyphicon-menu-hamburger {
+    font-size: 25px;
+  }
+  #myTopnav {
+    position: absolute;
+    z-index: 2;
+    width: 100px;
+    margin-top: 28px;
+   
+
+  }
+  #Feed {
+    position: absolute;
+    z-index: 2;
+    width: 100px;
+    margin-top: 28px;
+    margin-left: 311px;
+    font-size: 11px;
+    margin-top: -533px;
+  }
+  .col-sm-3 right-sidebar {
+    display: none;
+  }
+  .right-sidebarB {
+    background: white;
+    height: 200px;
+    width: 284px;
+  }
+  .inputFild[_ngcontent-c1] {
+    height: 497px;
+    background: white;
+    padding-left: 12px;
+    padding-right: 45px;
+}
+}
+
+/* new css  */
+.form-group {
+  margin-top: 18px;
+  padding-top: 21px;
+}
+.inputFild{
+  height: 497px; 
+  background: white;
+  padding-left: 56px;
+  padding-right: 178px; 
+}
+.commentBox{
+  margin-top: 19px;
+  background: white;
+  height: 170px;
+  width: 100%;
+} 
+.pad{
+  margin-top: 9px;
+  text-align: right;
+}
+.headertext{
+  text-align: center;
+  background-color: white;
+  height: 21px;
+}
+.form-groupfirstRow{
+  margin-top: 1px;
+}
+.midDiv{
+  height: 450px;
+  overflow: auto;
+}
+.form-control {
+  padding: 3px 12px;
+   width: auto; 
+}
+textarea {
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  background-color: transparent;
+  width: 100%;
+
 }
