@@ -17,14 +17,28 @@ import { RouterModule, Router } from "@angular/router";
 export class LoginComponent implements OnInit {
   userName;
   passWord;
-  constructor(private _LoginService: LoginService, private router1: Router) {}
+  constructor(private _LoginService: LoginService, private router: Router) {}
   ngOnInit() {}
   submit(value: any) {
-    this.router1.navigate(["/dashboard"]);
+
+  
+    
     this.userName = value.userName;
     this.passWord = value.password;
     console.log("this.userName" + this.userName);
     console.log("this.passWord" + this.passWord);
+    
+      if(this.userName == "Ravi" && this.passWord =="12"){
+        this.router.navigate(["/dashboard"]);
+      }
+      else if(this.userName == "r" && this.passWord =="r"){
+        this.router.navigate(["/dashboard"]);
+      }
+      else{
+        alert("incorrecr user Name or Password")
+        return false
+      }
+
     //prepaire body
     let body = {
       _userid: this.userName,

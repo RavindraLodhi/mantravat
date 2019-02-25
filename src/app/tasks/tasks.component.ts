@@ -1,3 +1,4 @@
+/***********created by Ravindra Lodhi*********** */
 import { Component, OnInit, Input } from "@angular/core";
 import { TaskService } from "../services/task.service";
 import {
@@ -8,248 +9,194 @@ import {
   FormBuilder,
   FormArray
 } from "@angular/forms";
+import { Task } from "../model/task";
 @Component({
   selector: "app-tasks",
   templateUrl: "./tasks.component.html",
   styleUrls: ["./tasks.component.css"]
 })
+
 export class TasksComponent implements OnInit {
+  /****************** global bariable *********************/
   dummyArry: any[] = [];
-  // globle variable
-//   menu: any[] = [];
-//   title;  
-//   discription;
-//   timeLine;
-//   endTime;
-//   effort;
-//   priority;
-//   dummyArry: any[] = [];
-//   isPut =false;
-
-//   // constructor for creating object
-//   constructor(private _TaskService: TaskService) {}
+  isPut = false;
+  atttechments: any[] = [];
+  attechmentArray: any[] = [];
+  form: any;
+  productsLength: number = 0;
+  dummyTask1: Task = new Task();
+  taskList: Task[] = [];
 
 
-// //it will call after constructor
-//   ngOnInit() {
+  /****************** contructor for create object *********************/
+  constructor(
+    private _TaskService: TaskService,
+    private _FormBuilder: FormBuilder
+  ) {}
 
-//     //call task Service method for taking task Id
-//     this._TaskService.getShortDes().subscribe(
-//       data => {
-//       },
-//       error => {
-//       }
-//     );
+  /****************** methode will run after constructor *********************/
+  ngOnInit() {
+    this.initialiseTaskForm();
+  }
+  get f() { return this.form.controls; }
 
-//     //static array we have to convert to dynemic Array
-//     this.dummyArry = [
-//       {
-//         id: 1,
-//         shortDec: "Login"
-//       },
-//       {
-//         id: 2,
-//         shortDec: "Dashbord"
-//       },
-//       {
-//         id: 3,
-//         shortDec: "Dashbord"
-//       },
-//       {
-//         id: 4,
-//         shortDec: "Admin"
-//       }
-//     ];
+  private initialiseTaskForm() {
+    /****************** create form control null array *********************/
+    this.form = this._FormBuilder.group({
+      t_type: [this.dummyTask1.t_type, [Validators.required]],
+      t_Category: [this.dummyTask1.t_Category, [Validators.required]],
+      t_Name: [this.dummyTask1.t_Name, [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
+      t_SDate: [new Date(), [Validators.required]],
+      t_EDate: [new Date(), [Validators.required]],
+      t_EstimetedHr: [this.dummyTask1.t_EstimetedHr, [Validators.required]],
+      t_Priority: [this.dummyTask1.t_Priority, [Validators.required]],
+      t_Status: [this.dummyTask1.t_Status, [Validators.required]],
+      t_parentId: [this.dummyTask1.t_parentId, [Validators.required]],
+      projectId: [this.dummyTask1.projectId, [Validators.required]],
+      t_CreateBy: [this.dummyTask1.t_CreateBy, [Validators.required]],
+      t_Assign: [this.dummyTask1.t_Assign, [Validators.required]],
+      t_LongDescription: [
+        this.dummyTask1.t_LongDescription,
+        [Validators.required]
+      ]
+    });
+  }
 
-// // dynemic Array for left menu bar
-//     this.menu = [
-//       "Create Task",
-//       "Chnage Task",
-//       "Display Task",
-//       "Time Sheet",
-//       "task"
-//     ];
-//   }
-
-//   //methode will run click on chang task button
-//   submit(item) {
-//     let body = {
-//       startDate: "01-02-2019",
-//       endDate: "01-07-2019",
-//       sortDes: "HRMS Case Study",
-//       longDes: "Document.doc",
-//       effort: "3 month",
-//       attechOp: "01-07-2019",
-//       status: "open",
-//       priority: "very high",
-//       projectSD: "HRMS Case Study",
-//       assignment: "ravi",
-//       attechment: "Document.doc"
-//     };
-
-//     //call task service method for put and post data
-//     this._TaskService.submitTask(body,this.isPut).subscribe(
-//       data => {},
-//       error => {
-//         console.log(error);
-//       }
-//     );
-//   }
-
-//   //call for chang task according to TaskId  to chng the task
-//   chengTask(index) { 
-//     this.isPut = true;
-//        this._TaskService.changTask(this.dummyArry[index].id).subscribe(data =>{
-//        },
-//        error => {
-//        }
-//      )
-
-//      //call local setData Method
-//     this.setData();
-//   }
-
-// //to set dat using two-way data binding
-//   setData() {
-//     var data = [
-//       { Priority: "saab" },
-//       { discription: "qsqd" },
-//       { effort: "qq" },
-//       { endTime: "2019-02-05" },
-//       { status: "saab" },
-//       { timeLine: "2019-02-21" },
-//       { title: "wqwr" }
-//     ];
-
-//     this.title = "ravi";
-//     this.discription = "working on login Screen";
-//     this.timeLine = "2019-02-21";
-//     this.endTime = "2019-02-21";
-//     this.effort = "2d";
-//     this.priority = "open";
-//   }
-
-//   ctreate() {
-//     this.isPut = false;
-//     this.title = " ";
-//     this.discription = " ";
-//     this.timeLine = " ";
-//     this.endTime = " ";
-//     this.effort = " ";
-//     this.priority = " ";
-//   }
-
-//   myFunction() { 
-//     var x = document.getElementById("myTopnav");
-//     if (x.className === "col-sm-2 sidebarleft divHight") {
-//       console.log("if");
-//       x.className = "sidebarleftB";
-//     } else {
-//       console.log("else");
-//       x.className = "col-sm-2 sidebarleft divHight";
-//     }
-//   }
-
-//    myFunctionFeedBack() {
-//     var x = document.getElementById("Feed");
-//     if (x.className === "col-sm-3 right-sidebar") {
-//       console.log("if");
-//        x.className = "right-sidebarB";
-//     } else {
-//       console.log("else");
-//        x.className = "col-sm-3 right-sidebar";
-//     }
-//   }
-form: any;
-productsLength: number = 0;
-constructor(
-  private _FormBuilder: FormBuilder
-) {
- 
-}
-ngOnInit() {
-
-  this.dummyArry = [
-           {
-             id: 1,
-             shortDec: "Login"
-           },
-           {
-             id: 2,
-             shortDec: "Dashbord"
-           },
-           {
-             id: 3,
-             shortDec: "Dashbord"
-           },
-           {
-             id: 4,
-             shortDec: "Admin"
-           }
-         ];
-
-  this.form = this._FormBuilder.group({
-    type: new FormControl("", Validators.required),
-    title: new FormControl("", Validators.required),
-    sDescription: new FormControl("", Validators.required),
-    LDescription: new FormControl("", Validators.required),
-    startDate: new FormControl("", Validators.required),
-    endDate: new FormControl("", Validators.required),
-    Priority: new FormControl("", Validators.required),
-    status : new FormControl("", Validators.required),
-    projectSD : new FormControl("", Validators.required),
-    projectLD :  new FormControl("", Validators.required),
-    products: this._FormBuilder.array([this.createProduct()])
-  });
-}
-
-addProduct() {
-  const product = this.createProduct();
-  this.products.push(product);
-  this.productsLength++;
-}
-
-deleteFieldValue(index) {
-  this.products.removeAt(index);
-  this.productsLength--;
-}
-
-get products() {
-  return this.form.get("products") as FormArray;
-}
-
-createProduct(): FormGroup {
+  /****************** runs click on submit button *********************/
   
-    return this._FormBuilder.group({
-      documentAttechments: new FormControl("", Validators.required)
-    })
-}
-addSprinkling(){
-  console.log("running");
-  console.log(this.form.value);
-  
-  
-}
-
-myFunction() { 
-       var x = document.getElementById("myTopnav");
-       if (x.className === "col-sm-2 sidebarleft divHight2") {
-         console.log("if");
-         x.className = "sidebarleftB";
-       } else {
-         console.log("else");
-         x.className = "col-sm-2 sidebarleft divHight2";
-       }
-     }
-  
-      myFunctionFeedBack() {
-       var x = document.getElementById("Feed");
-       if (x.className === "col-sm-3 right-sidebar") {
-         console.log("if");
-          x.className = "right-sidebarB";
-       } else {
-         console.log("else");
-          x.className = "col-sm-3 right-sidebar";
-       }
+  addTask() {
+    // this.validation();
+    let newTask = this.form.value;
+    newTask.attachements=this.attechmentArray;
+    console.log(JSON.stringify(newTask));
+    this._TaskService.addTask(newTask).subscribe(
+      data => {
+        console.log(" response is :: "+data);
+      },
+      error => {
+        console.log(error);
       }
+    );
+  }
+
+
+
+
+
+  /****************** it is for mobile
+   *  runs when click on left 
+   * manu use to give dynemic
+   * */
+  myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "col-sm-2 sidebarleft divHight2") {
+      console.log("if");
+      x.className = "sidebarleftB";
+    } else {
+      console.log("else");
+      x.className = "col-sm-2 sidebarleft divHight2";
+    }
+  }
+
+  /****************** it is for mobile
+   *  runs when click on right 
+   * manu use to give dynemic class
+   *  *********************/
+  myFunctionFeedBack() {
+    var x = document.getElementById("Feed");
+    if (x.className === "col-sm-3 right-sidebar") {
+      console.log("if");
+      x.className = "right-sidebarB";
+    } else {
+      console.log("else");
+      x.className = "col-sm-3 right-sidebar";
+    }
+  }
+
+  getAllTasks() {
+      this._TaskService.getAllTasks().subscribe( response=>{
+            this.taskList=response;
+      },error=>{
+          console.log("Error occured");
+        })
+  }
+ 
+  updateTask(taskName) {
+      for(let task of this.taskList){
+        if(taskName==task.t_Name){
+          this.dummyTask1=task;
+          this.initialiseTaskForm();
+          break;
+        }
+      }
+}
+
+  ctreate() {
+    this.dummyTask1 = new Task();
+    this.initialiseTaskForm();
+  }
+
+  /****************** 
+   * to use validation for all field
+   *  *********************/
+  validation() {
+    if (this.form.t_Name == null) {
+      // document.getElementById("t_NameFont").innerHTML =
+      //   "*Enter task Name";
+      document.getElementById("t_Name").style.border = "1px solid #FC0606";
+      alert("Enter task Name");
+      return false;
+    } else {
+      if (!isNaN(this.form.t_Name)) {
+        document.getElementById("t_NameFont").innerHTML =
+          "*Accept charector only";
+        document.getElementById("t_Name").style.border = "1px solid #FC0606";
+        return false;
+      }
+    }
+    if (this.form.t_type == null) {
+    }
+  }
+
+  /****************** 
+   * use for multiple Attechment 
+   *  *********************/
+  modo(value) {
+    this.attechmentArray.push({ documentAttechments: value.target.value });
+    var obj = { value: value.target.files[0].name };
+    this.atttechments.push(obj);
+  }
+
+  /****************** 
+   * use to remove atteched 
+   * file 
+   *  *********************/
+  remove(index) {
+    console.log(index);
+    this.attechmentArray.splice(index, 1);
+    this.atttechments.splice(index, 1);
+  }
+  toChangBorderColor() {}
+  
+  // addProduct() {
+  //   const product = this.createProduct();
+  //   this.products.push(product);
+  //   this.productsLength++;
+  // }
+
+  // deleteFieldValue(index) {
+  //   this.products.removeAt(index);
+  //   this.productsLength--;
+  // }
+
+  // get products() {
+  //   return this.form.get("products") as FormArray;
+  // }
+
+  // createProduct(): FormGroup {
+  //   return this._FormBuilder.group({
+  //     documentAttechments: new FormControl("", Validators.required)
+  //   });
+  // }
+
 }
