@@ -15,9 +15,8 @@ import { Task } from "../model/task";
   templateUrl: "./tasks.component.html",
   styleUrls: ["./tasks.component.css"]
 })
-
 export class TasksComponent implements OnInit {
-  /****************** global bariable *********************/
+  /****************** global bariable *********************/  
   dummyArry: any[] = [];
   isPut = false;
   atttechments: any[] = [];
@@ -26,8 +25,7 @@ export class TasksComponent implements OnInit {
   productsLength: number = 0;
   dummyTask1: Task = new Task();
   taskList: Task[] = [];
-
-
+  isDisplayTask: boolean = false;
   /****************** contructor for create object *********************/
   constructor(
     private _TaskService: TaskService,
@@ -38,14 +36,21 @@ export class TasksComponent implements OnInit {
   ngOnInit() {
     this.initialiseTaskForm();
   }
-  get f() { return this.form.controls; }
+  get f() {
+    return this.form.controls;
+  }
+
+  
 
   private initialiseTaskForm() {
     /****************** create form control null array *********************/
     this.form = this._FormBuilder.group({
       t_type: [this.dummyTask1.t_type, [Validators.required]],
       t_Category: [this.dummyTask1.t_Category, [Validators.required]],
-      t_Name: [this.dummyTask1.t_Name, [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
+      t_Name: [
+        this.dummyTask1.t_Name,
+        [Validators.required, Validators.pattern("[a-zA-Z ]*")]
+      ],
       t_SDate: [new Date(), [Validators.required]],
       t_EDate: [new Date(), [Validators.required]],
       t_EstimetedHr: [this.dummyTask1.t_EstimetedHr, [Validators.required]],
@@ -63,25 +68,21 @@ export class TasksComponent implements OnInit {
   }
 
   /****************** runs click on submit button *********************/
-  
+
   addTask() {
     // this.validation();
     let newTask = this.form.value;
-    newTask.attachements=this.attechmentArray;
+    newTask.attachements = this.attechmentArray;
     console.log(JSON.stringify(newTask));
     this._TaskService.addTask(newTask).subscribe(
       data => {
-        console.log(" response is :: "+data);
+        console.log(" response is :: " + data);
       },
       error => {
         console.log(error);
       }
     );
   }
-
-
-
-
 
   /****************** it is for mobile
    *  runs when click on left 
@@ -114,24 +115,35 @@ export class TasksComponent implements OnInit {
   }
 
   getAllTasks() {
-      this._TaskService.getAllTasks().subscribe( response=>{
-            this.taskList=response;
-      },error=>{
+    this.DisplaycreateChangTask();
+    if(this.taskList.length==0){
+      this._TaskService.getAllTasks().subscribe(
+        response => {
+          this.taskList = response;
+        },
+        error => {
           console.log("Error occured");
-        })
-  }
- 
-  updateTask(taskName) {
-      for(let task of this.taskList){
-        if(taskName==task.t_Name){
-          this.dummyTask1=task;
-          this.initialiseTaskForm();
-          break;
         }
+      );  
+    }
+   
+  }
+
+  updateTask(taskName) {
+    console.log("running update");
+    
+    for (let task of this.taskList) {
+      if (taskName == task.t_Name) {
+        console.log("if");
+        this.dummyTask1 = task;
+        this.initialiseTaskForm();
+        break;
       }
-}
+    }
+  }
 
   ctreate() {
+    this.DisplaycreateChangTask();
     this.dummyTask1 = new Task();
     this.initialiseTaskForm();
   }
@@ -176,8 +188,25 @@ export class TasksComponent implements OnInit {
     this.attechmentArray.splice(index, 1);
     this.atttechments.splice(index, 1);
   }
-  toChangBorderColor() {}
-  
+  DisplayTask() {
+    this.isDisplayTask = true;
+    console.log(this.taskList);
+    
+    if (this.taskList.length == 0) {
+      this._TaskService.getAllTasks().subscribe(
+        response => {
+          this.taskList = response;
+        },
+        error => {
+          console.log("Error occured");
+        }
+      );
+    }
+  }
+  DisplaycreateChangTask() {
+    this.isDisplayTask = false;
+  }
+
   // addProduct() {
   //   const product = this.createProduct();
   //   this.products.push(product);
@@ -198,5 +227,4 @@ export class TasksComponent implements OnInit {
   //     documentAttechments: new FormControl("", Validators.required)
   //   });
   // }
-
 }

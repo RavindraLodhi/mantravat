@@ -144,6 +144,8 @@ select {
 #mobileHeader{
  position: fixed;
  z-index: 2;
+ padding-right: 0px;
+ padding-left: 0px;
 }
 button {
   background: rgba(65, 19, 230, 0.96);
@@ -241,12 +243,14 @@ input#file {
   margin-top: 4px;
 }
 #Feed{
-  margin-left: 865px;
+  margin-left: 897px;
   position: fixed;
   z-index: 2;
 }
 
 @media screen and (max-width: 600px) {
+
+  
   input#file[_ngcontent-c3] {
     margin-left: 80px;
     margin-bottom: 5px;
@@ -360,6 +364,11 @@ input#file {
     padding-right: 45px;
    
 } */
+.col-sm-7{
+  margin-left: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 43px !important;
+} 
 }
 #overlay {
   position: fixed;
@@ -376,6 +385,8 @@ input#file {
 .form-group {
   margin-top: 18px;
   padding-top: 21px;
+  height: 24px;
+
 }
 .inputFild {
   height: 576px;
@@ -425,4 +436,30 @@ textarea {
 .invalid-feedback{
   color: red;
   border-color: blue;
+}
+
+/* this css for display task */
+.High{
+  border-top: 2px solid rgb(194, 11, 11);
+}
+.col-sm-7{
+  padding-right: 31px;
+  margin-left: 15px;
+  height: auto !important;
+  background: white !important;
+}
+#card{
+  margin-left: 46px;
+  margin-top: 20px;
+  height: 136px;
+  font-size: 10px;
+}
+.Low{
+  border-top: 2px solid rgb(186, 243, 111);
+}
+.Medium{
+  border-top: 2px solid rgb(10, 9, 9);
+}
+.Very{
+  border-top: 2px solid #ff0000;
 }

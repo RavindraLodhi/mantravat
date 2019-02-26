@@ -30,16 +30,17 @@
                 </ul>
               </div>
             </li>
-            <li id="sidebarleftOpt"><a routerLink="#">
+            <li id="sidebarleftOpt"><a (click)="DisplayTask()">
                 <span class="glyphicon glyphicon-credit-card"></span>
-                Display Task</a></li>
+                Display Task</a>
+            </li>
           </ul>
         </div>
       </div>
     </div>
     <div class="col-sm-7">
-      <div id="content2">
-      <div  class="container-fluid   divHight">
+      <div id="content2 ">
+        <div *ngIf="!isDisplayTask" class="container-fluid   divHight">
           <div class="headertext">
             <h4>Create Task</h4>
           </div>
@@ -69,6 +70,10 @@
                   <div class="col-md-6 col-xs-6 col-sm-6 ">
                     <textarea placeholder="please enter the task comment......" formControlName="t_LongDescription"
                       cols="10" type="text" id="t_LongDescription" name="t_LongDescription" required></textarea>
+                    <div *ngIf=" f.t_LongDescription.touched && f.t_LongDescription.errors" class="invalid-feedback">
+                      <div *ngIf="f.t_LongDescription.errors.required" class="error-msg">First Name is required</div>
+                      <!-- <div *ngIf="f.t_LongDescription.errors.pattern">Only alphabets allowed</div> -->
+                    </div>
                   </div>
                 </div>
                 <div class="form-group">
@@ -118,6 +123,9 @@
                   <div class="col-md-6 col-xs-6 col-sm-6 ">
                     <input type="number" id="t_EstimetedHr" formControlName="t_EstimetedHr" class="form-control"
                       name="t_EstimetedHr">
+                    <div *ngIf=" f.t_EstimetedHr.touched && f.t_EstimetedHr.errors" class="invalid-feedback">
+                      <div *ngIf="f.t_EstimetedHr.errors.required" class="error-msg">Estimeted Hr is required</div>
+                    </div>
                   </div>
                 </div>
                 <div class="form-group">
@@ -173,20 +181,17 @@
                     </select>
                   </div>
                 </div>
-                <!-- <div class="form-group">
-                        <div class="col-md-6 col-xs-6 col-sm-6 pad">
-                          <label class="control-label  label-name" for="template">Created By</label>
-                        </div>
-                        <div class="col-md-6 col-xs-6 col-sm-6 ">
-                          <input type="text" id="t_CreateBy" formControlName="t_CreateBy" class="form-control" [(ngModel)]="form.t_CreateBy" name="t_CreateBy">
-                        </div>
-                      </div> -->
+
                 <div class="form-group">
                   <div class="col-md-6 col-xs-6 col-sm-6 pad">
                     <label class="control-label  label-name" for="template">Assign To</label>
                   </div>
                   <div class="col-md-6 col-xs-6 col-sm-6 ">
                     <input type="text" id="t_Assign" formControlName="t_Assign" class="form-control" name="t_Assign">
+                    <div *ngIf=" f.t_Assign.touched && f.t_Assign.errors" class="invalid-feedback">
+                      <div *ngIf="f.t_Assign.errors.required" class="error-msg">Assign Tois required</div>
+                      <div *ngIf="f.t_Assign.errors.pattern">Only alphabets allowed</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -218,16 +223,39 @@
                   <button (click)="addTask()" type="button" class="btn btn-default pull-right btn-btn">Submit</button>
                 </div> -->
         </div>
-           <div>
-              <div class="container">
-                  <h2>Card Header and Footer</h2>
-                  <div class="card">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">Content</div> 
-                    <div class="card-footer">Footer</div>
+        <div *ngIf="isDisplayTask" class="DishplayTask">
+          <div class="headertext">
+            <h4>Display Task</h4>
+          </div>
+          <div *ngFor="let task of taskList ">
+            <div id="card" class="col-sm-5" [ngClass]="task.t_Priority">
+              <div class="card-header " style="height: 27px;">
+                <div class="flude-container ">
+                  <div class="row ">
+                    <div class="col-sm-4  col-xs-4" style="padding :0px; text-align: left">Priority :{{task.t_Priority}}
+                    </div>
+                    <div class="col-sm-4 col-xs-4" style="padding :0px ; text-align: center">{{task.t_Name}}</div>
+                    <div class="col-sm-4 col-xs-4" style="padding :0px ;  text-align: right">Status : {{task.t_Status}}
+                    </div>
                   </div>
                 </div>
-           </div>
+              </div>
+              <div class="card-body" style="height: 82px;">
+                <div class="row">
+                  <div class="col-sm-4 col-xs-4" style="padding :0px"></div>
+                  <div class="col-sm-4 col-xs-4" style="padding :0px; text-align: center"></div>
+                  <div class="col-sm-4 col-xs-4" style="padding :0px ; text-align:right">From -
+                    {{task.t_SDate | date: 'dd/MM/yyyy'}} To -{{task.t_EDate | date: 'dd/MM/yyyy'}}</div>
+
+                </div>
+              </div>
+              <div class="card-footer" style="height: 27px;">
+
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
 
