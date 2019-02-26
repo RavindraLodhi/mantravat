@@ -1,4 +1,81 @@
-<header class="container-fluid">
+<div class="container-fluid container-fluid1 ">
+  <div class="row">
+      <div class=" col-xs-6  topnav">
+              <a href="javascript:void(0);" class="icon" >
+               <i class="glyphicon glyphicon-menu-hamburger"(click)="myFunction()" id="icon"></i>
+              </a>
+      </div>
+      <div class=" col-xs-6 topnav">
+              <a href="javascript:void(0);" class="icon1">
+               <i class="glyphicon glyphicon-menu-hamburger"(click)=" myFunctionFeedBack()" id="icon"></i>
+              </a>
+      </div>
+      <div class="col-sm-2 sidebarleft" id="myTopnav">
+          <ul style="list-style-type:none;">
+              <li id="sidebarleftOpt"><a routerLink="#">
+                            <span class="glyphicon glyphicon-home"></span>
+                            Dashbord</a></li>
+              <li id="sidebarleftOpt"><a routerLink="/project">
+                            <span class="glyphicon glyphicon-magnet"></span>
+                            project</a></li>
+              <li id="sidebarleftOpt"><a routerLink="/task">
+                            <span class="glyphicon glyphicon-credit-card"></span>
+                            Task</a></li>
+              <li id="sidebarleftOpt"><a routerLink="/leave">
+                            <span class="glyphicon glyphicon-list-alt"></span>
+                            Leave</a></li>
+              <li id="sidebarleftOpt"><a routerLink="/timesheet">
+                            <span class="glyphicon glyphicon-time"></span>
+                            Time Sheet</a></li>
+              <li id="sidebarleftOpt"><a (click)="onChang()">
+                              <span class="glyphicon glyphicon-time"></span>
+                              Singup</a></li>
+          </ul>
+      </div>
+      <div _ngcontent-c4="" class="col-sm-7 mainContainer">
+        <div _ngcontent-c4="" class="container-fluid container-fluid">
+          <div _ngcontent-c4="" class="row">
+       <form ngModel >
+         <div  class="col-sm-6">
+           <label >
+             <b>tim_id</b>
+             </label>
+            <label  style=" margin-left: 48px; margin-top: -25px;">
+                <b>1</b>
+                </label>
+            
+              </div>
+               <div  class="col-sm-6"><label >tim_des</label><input type="text" name="td" id="td" ngModel/>
+              </div>
+              <div  class="col-sm-6"><label >tim_date</label><input type="Date" name="tdt" id="tdt" ngModel/>
+              </div>
+              <div  class="col-sm-6"><label>Taskid</label>
+              </div>
+              <div  class="col-sm-6"><label >Short Description</label>
+              </div>
+              <div  class="col-sm-6"><label >Long Description</label>
+              </div>
+              <div class="col-sm-6"><label >Total Effort</label>
+              </div>
+              <div  class="col-sm-6"></div>
+              <button  type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+        <div _ngcontent-c4="">
+
+        </div>
+      </div>
+
+      
+
+
+      <div class="col-sm-3  right-sidebar" id="Feed">
+        Feed Updates
+    </div>
+</div>
+</div>
+<!-- <header class="container-fluid">
   <div class="row">
     <div class="col-md-3">
       <select id="select">
@@ -61,4 +138,4 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->

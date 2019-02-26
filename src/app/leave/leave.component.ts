@@ -190,4 +190,23 @@ callComponentMethodHere(value){
   }
  
 }
+myFunctionFeedBack() {
+  console.log("runncsadsff");
+  
+  var x = document.getElementById("Feed");
+  console.log(x)
+  if (x.className === "col-sm-3  right-sidebar") {
+     x.className = "right-sidebarB";
+  } else {
+     x.className = "col-sm-3  right-sidebar";
+  }
+}
+myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "col-sm-2 sidebarleft") {
+    x.className = "sidebarleftB";
+  } else {
+    x.className = "col-sm-2 sidebarleft";
+  }
+}
 }

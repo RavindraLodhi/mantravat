@@ -1,21 +1,32 @@
 <div class="container-fluid container-fluid1 ">
     <div class="row">
-        <div class="col-sm-2 sidebarleft">
+            <div class=" col-xs-6  topnav">
+                    <a href="javascript:void(0);" class="icon" >
+                     <i class="glyphicon glyphicon-menu-hamburger"(click)="myFunction()" id="icon"></i>
+                    </a>
+            </div>
+            <div class=" col-xs-6 topnav">
+                    <a href="javascript:void(0);" class="icon1">
+                     <i class="glyphicon glyphicon-menu-hamburger"(click)="myFunctionFeedBack()" id="icon"></i>
+                    </a>
+            </div>
+        <div class="col-sm-2 sidebarleft" id="myTopnav">
             <ul style="list-style-type:none;">
-                <li id="sidebarleftOpt"><a (click)="callComponentMethodHere(1)">
-                                <span class="glyphicon glyphicon-home"></span>
-                                Apply Leave</a></li>
-                <li id="sidebarleftOpt"><a (click)="callComponentMethodHere(2)">
-                                <span class="glyphicon glyphicon-magnet"></span>
-                                Leave Histry</a></li>
-                <li id="sidebarleftOpt"><a (click)="callComponentMethodHere(3)">
-                                <span class="glyphicon glyphicon-credit-card"></span>
-                                Leave Status</a></li>
+                <li id="sidebarleftOpt"><a routerLink="#">
+                              <span class="glyphicon glyphicon-home"></span>
+                              Apply Leave </a></li>
+                <li id="sidebarleftOpt"><a routerLink="/display">
+                              <span class="glyphicon glyphicon-magnet"></span>
+                              Display Leave</a></li>
+                <li id="sidebarleftOpt"><a routerLink="/task">
+                              <span class="glyphicon glyphicon-credit-card"></span>
+                              Leave history</a></li>
+              
             </ul>
         </div>
-        <div *ngIf="applyLeave" class="col-sm-7 mainContainer">
+        <div *ngIf="applyLeave" class="col-sm-7 mainContainer" >
             <div class="container-fluid container-fluid1 ">
-                <div class="row">
+                <div class="row" id="d1">
                     <div class="col-sm-2"></div>
                     <div class="col-sm-8 forn">
                         <form #userForm="ngForm" (ngSubmit)="submit(userForm.value)">
@@ -106,7 +117,7 @@
             </div>
         </div>
 
-        <div class="col-sm-3 right-sidebar">
+        <div class="col-sm-3  right-sidebar" id="Feed">
             <div class="container-fluid">
                 <div class="row" id="right-sidebarrow">
                     <header class="companyLeav">

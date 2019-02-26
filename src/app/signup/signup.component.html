@@ -1,57 +1,101 @@
-<div class="container-fluid">
+<head><title>Signup</title></head>
+<div class="container-fluid" >
     <div class="row">
-      <div class="col-sm-12 signup" style="text-align: center ">
-        <h4>Signup</h4>
+      <div class="col-sm-12 signup" style="text-align: center; margin-left: 15px; margin-right: 10px;width:97%">
+        <h3>Signup</h3>
       </div>
+     
+        
+      <div class="col-md-12" >
       <form #userForm="ngForm" (ngSubmit)="submit(userForm.value)" (ngSubmit)="onSubmit()" #testForm="ngForm" ngNativeValidate>
         <div class="col-md-12">
           <div class="col-md-12">
             <h1>Basic Information</h1>
           </div>
           <div class="col-md-6 ">
-            <label>Suffix :</label><input type="suffix" placeholder="suffix" required class="form-control" name="suffix" ngModel>
+              <label>Type :</label><input type="suffix" placeholder="Type"  class="form-control" id="type" name="type"  ngModel>
+            </div>
+            
+            <div class="col-md-6">
+              <label>Cataegory :</label><input type="FirstName" placeholder="Cataegory" class="form-control" name="cat" id="cat"
+                ngModel> </div>
+          <div class="col-md-6 ">
+            <label>Suffix :</label><input type="suffix" placeholder="suffix"  class="form-control" id="suffix" name="suffix"  ngModel>
           </div>
+          
           <div class="col-md-6">
-            <label>First name :</label><input type="FirstName" placeholder="First name" class="form-control" name="FirstName" required
+            <label>First name :</label><input type="FirstName" placeholder="First name" class="form-control" name="FirstName" id="fn"
+              ngModel> </div>
+
+
+             
+
+          <div class="col-md-6">
+            <label>Middle name :</label><input type="middle name" placeholder="middle name" class="form-control" name="middleName" id="mn" 
               ngModel> </div>
           <div class="col-md-6">
-            <label>Middle name :</label><input type="middle name" placeholder="middle name" class="form-control" name="middleName" required
-              ngModel> </div>
-          <div class="col-md-6">
-            <label>Last name :</label> <input type="Last name" placeholder="lastname" class="form-control" name="lastName"
-            required ngModel> </div>
+            <label>Last name :</label> <input type="Last name" placeholder="lastname" class="form-control" name="lastName" id="ln"
+            ngModel> </div>
           <div class="col-md-6" style="margin-top: 7px;">
-            <label>gender :</label> <select type="text" placeholder="gender" class="form-control gender" name="gender" required
+            <label>Gender :</label> <select type="text" placeholder="gender" class="form-control gender" name="gender" 
               ngModel>
               <option>male </option>
               <option>female</option>
             </select>
           </div>
           <div class="col-md-6">
-            <label>DOB:</label> <input type="Date" placeholder="date of birth" class="form-control" name="DOB" ngModel  required >
-            <font  color="green" id="demo6"></font>
-            <font color="red" id="demo7"></font>
+            <label>DOB:</label> <input type="Date" placeholder="date of birth"  class="form-control" name="DOB" id="dob"
+           ngModel   >
+            <font  color="green" id="demo7"></font>
+            <font color="red" id="demo8"></font>
             
 
           </div>
-          <div class="col-md-6" style="margin-top: -7px;">
-            <label>DOj:</label> <input type="Date" placeholder="DOj" class="form-control" name="DOJ" required ngModel> </div>
           <div class="col-md-6" style="margin-top: -23px;">
-            <label>Email :</label> <input type="text" placeholder="Email" class="form-control" name="Email" ng-pattern=" /(\W|^)[\w.+\-]*@gmail\.com(\W|$)/" required ngModel>
-            <label id="em1"></label>
-            <label id="em2"></label>
+            <label>DOJ:</label> <input type="Date" placeholder="DOj" class="form-control" name="DOJ" id="doj" ngModel> 
+            <font id="doj1" color="green"></font>
+            <font id="doj2" color="red" ></font>
+          </div>
+          <div class="col-md-6" style="margin-top: -23px;">
+            <label>Email:</label> <input type="text" placeholder="Email" class="form-control" name="Email" id="em" ngModel>
+            <font id="em1" color="green"></font>
+            <font id="em2" color="red" ></font>
           </div>
         </div>
-        <div class="col-md-12">
-          <div class="container">
+        <div class="col-md-8">
+          <div class="container" style="width: 1000px;">
             <label>Address:</label>
             <button type="button" data-toggle="collapse" data-target="#demo" style="margin-left: 18px;"><span class="glyphicon glyphicon-triangle-right" id="add"></span></button>
             <div id="demo" class="collapse">
               <div class="col-md-6">
                 <h4>current address</h4>
                 <div class="col-md-12">
+                  
+                    <label>Addressid</label>
+                    <input type="text" placeholder="Addressid" class="form-control" name="aid"  ngModel>
+                      
+                  </div>
+                  <div class="col-md-12">
+                  
+                      <label>Mobile Number1</label>
+                      <input type="text" placeholder="Mobile Number1" class="form-control" name="aid"  ngModel>
+                        
+                    </div>
+                    <div class="col-md-12">
+                  
+                        <label>Mobile Number2</label>
+                        <input type="text" placeholder="Mobile Number2" class="form-control" name="aid"  ngModel>
+                          
+                      </div>
+                      <div class="col-md-12" >
+                          <label>Email:</label> <input type="text" placeholder="Email" class="form-control" name="Emailc" id="emc" ngModel>
+                          <font id="emc1" color="green"></font>
+                          <font id="emc2" color="red" ></font>
+                        </div>
+
+                <div class="col-md-12">
                   <label>country</label>
-                  <select type="text" placeholder="country" class="form-control" name="country" required ngModel>
+                  <select type="text" placeholder="country" class="form-control" name="countryp"   ngModel>
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
                     <option value="Albania">Albania</option>
@@ -60,32 +104,56 @@
                 </div>
                 <div class="col-md-12">
                   <label>State</label>
-                  <select type="text" placeholder="State" class="form-control" name="State" required ngModel>
+                  <select type="text" placeholder="State" class="form-control" name="Statep"   ngModel>
                     <option value="AL">Alabama</option>
                     <option value="MN">Minnesota</option>
                     <option value="MS">Mississippi</option>
                   </select>
                 </div>
                 <div class="col-md-12">
-                  <label>city</label><input type="text" placeholder="city" class="form-control" name="city"  required ngModel>
+                  <label>city</label><input type="text" placeholder="city" class="form-control" name="cityp"   ngModel>
                 </div>
                 <div class="col-md-12">
-                  <label>Street1</label><input type="text" placeholder="Street1" class="form-control" required name="Street1"
+                  <label>Street1</label><input type="text" placeholder="Street1" class="form-control" name="Street1p"
                     ngModel>
                 </div>
                 <div class="col-md-12">
-                  <label>Street2</label><input type="text" placeholder="Street2" class="form-control"required  name="Street2"
+                  <label>Street2</label><input type="text" placeholder="Street2" class="form-control"  name="Street1p"
                     ngModel>
                 </div>
                 <div class="col-md-12">
-                  <label>pin</label><input type="number" placeholder="pincode" class="form-control" name="pin" required  maxlength="6" ngModel>
+                  <label>pin</label><input type="number" placeholder="pincode" class="form-control" name="pinp"  maxlength="6" ngModel>
                 </div>
               </div>
               <div class="col-md-6">
                 <h4>permanent address</h4>
                 <div class="col-md-12">
+                  
+                    <label>Addressid</label>
+                    <input type="text" placeholder="Addressid" class="form-control" name="aid"  ngModel>
+                      
+                  </div>
+                  <div class="col-md-12">
+                  
+                      <label>Mobile Number1</label>
+                      <input type="text" placeholder="Mobile Number1" class="form-control" name="aid"  ngModel>
+                        
+                    </div>
+                    <div class="col-md-12">
+                  
+                        <label>Mobile Number2</label>
+                        <input type="text" placeholder="Mobile Number2" class="form-control" name="aid"  ngModel>
+                          
+                      </div>
+                      <div class="col-md-12">
+                          <label>Email:</label> <input type="text" placeholder="Email" class="form-control" name="Emailp" id="emp" ngModel>
+                          <font id="emp1" color="green"></font>
+                          <font id="emp2" color="red" ></font>
+                        </div>
+
+                <div class="col-md-12">
                   <label>country</label>
-                  <select type="text" placeholder="country" class="form-control" name="countryp"  required ngModel>
+                  <select type="text" placeholder="country" class="form-control" name="countryp"   ngModel>
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
                     <option value="Albania">Albania</option>
@@ -94,25 +162,25 @@
                 </div>
                 <div class="col-md-12">
                   <label>State</label>
-                  <select type="text" placeholder="State" class="form-control" name="Statep"  required ngModel>
+                  <select type="text" placeholder="State" class="form-control" name="Statep"   ngModel>
                     <option value="AL">Alabama</option>
                     <option value="MN">Minnesota</option>
                     <option value="MS">Mississippi</option>
                   </select>
                 </div>
                 <div class="col-md-12">
-                  <label>city</label><input type="text" placeholder="city" class="form-control" name="cityp"  required ngModel>
+                  <label>city</label><input type="text" placeholder="city" class="form-control" name="cityp"   ngModel>
                 </div>
                 <div class="col-md-12">
-                  <label>Street1</label><input type="text" placeholder="Street1" class="form-control"required  name="Street1p"
+                  <label>Street1</label><input type="text" placeholder="Street1" class="form-control" name="Street1p"
                     ngModel>
                 </div>
                 <div class="col-md-12">
-                  <label>Street2</label><input type="text" placeholder="Street2" class="form-control" required name="Street1p"
+                  <label>Street2</label><input type="text" placeholder="Street2" class="form-control"  name="Street1p"
                     ngModel>
                 </div>
                 <div class="col-md-12">
-                  <label>pin</label><input type="number" placeholder="pincode" class="form-control" name="pinp" required maxlength="6" ngModel>
+                  <label>pin</label><input type="number" placeholder="pincode" class="form-control" name="pinp"  maxlength="6" ngModel>
                 </div>
               </div>
             </div>
@@ -149,44 +217,45 @@
                   <td><input type="number" name="percentagepg" ngModel></td>
                   <td><input type="date" name="frompg" ngModel></td>
                   <td><input type="date" name="topg" ngModel></td>
-                  <td><input type="file" name="Certificatepg" accept="file/*" name="file" ngModel></td>
-                  <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td>
-                  <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td>
-                </tr>
+                  <td><input type="file" name="Certificatepg" accept="file/*"  ngModel></td>
+                  <!-- <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td>
+                  <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td>-->
+                </tr> 
                 <tr>
                     <td>UG</td>
-                    <td><input type="text" name="collegeug" required ngModel></td>
-                    <td><input type="text" name="universityug"required  ngModel></td>
-                    <td><input type="text" name="Degreeug" required  ngModel></td>
+                    <td><input type="text" name="collegeug"  ngModel></td>
+                    <td><input type="text" name="universityug"  ngModel></td>
+                    <td><input type="text" name="Degreeug"   ngModel></td>
                     <td><input type="number" name="percentageug" ngModel></td>
-                    <td><input type="date" name="fromug" required  ngModel></td>
-                    <td><input type="date" name="toug"required  ngModel></td>
-                    <td><input type="file" name="Certificateug" required  accept="file/*" name="file" ngModel></td>
-                  <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td>
-                  <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td>
+                    <td><input type="date" name="fromug"   ngModel></td>
+                    <td><input type="date" name="toug"  ngModel></td>
+                    <td><input type="file" name="Certificateug"  accept="file/*"  ngModel></td>
+                  <!-- <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td>
+                  <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td> -->
                 </tr>
                 <tr>
                     <td>PUC</td>
-                    <td><input type="text" name="college12" required ngModel></td>
-                    <td><input type="text" name="university12" requiredngModel></td>
-                    <td><input type="text" name="Degree12" required ngModel></td>
-                    <td><input type="number" name="percentage12" required  ngModel></td>
-                    <td><input type="date" name="from12" required ngModel></td>
-                    <td><input type="date" name="to12" required ngModel></td>
-                    <td><input type="file" name="Certificate12" required  accept="file/*" name="file" ngModel></td>
-                  <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td>
-                  <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td>
+                    <td><input type="text" name="college12"  ngModel></td>
+                    <td><input type="text" name="university12" ngModel></td>
+                    <td><input type="text" name="Degree12"  ngModel></td>
+                    <td><input type="number" name="percentage12"   ngModel></td>
+                    <td><input type="date" name="from12"  ngModel></td>
+                    <td><input type="date" name="to12"  ngModel></td>
+                    <td><input type="file" name="Certificate12"   accept="file/*"  ngModel></td>
+                  <!-- <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td>
+                  <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td> -->
                 </tr>
                 <tr>
                     <td>10th</td>
-                    <td><input type="text" name="college10" required  ngModel></td>
-                    <td><input type="text" name="university10" required  ngModel></td>
-                    <td><input type="text" name="Degree10" required  ngModel></td>
-                    <td><input type="number" name="percentage10" required ngModel></td>
-                    <td><input type="date" name="from10" required  ngModel></td>
-                    <td><input type="date" name="to10" required ngModel></td>
-                    <td><input type="file" name="Certificate" required accept="file/*" name="file" ngModel></td>                 <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td>
-                  <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td>
+                    <td><input type="text" name="college10"   ngModel></td>
+                    <td><input type="text" name="university10"   ngModel></td>
+                    <td><input type="text" name="Degree10"   ngModel></td>
+                    <td><input type="number" name="percentage10"  ngModel></td>
+                    <td><input type="date" name="from10"   ngModel></td>
+                    <td><input type="date" name="to10"  ngModel></td>
+                    <td><input type="file" name="Certificate"  accept="file/*"  ngModel></td>         
+                            <!-- <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td>
+                  <td><input type="file" name="fileupload" accept="file/*" name="file" ngModel></td> -->
                 </tr>
               </tbody>
             </table>
@@ -252,18 +321,18 @@
         </div>
        
         <div class="col-md-12" style="margin-left: 16px;">
-          <label>Skill :</label><textarea rows="3" cols="80" class="textarea" name="Skill" required ngModel>
+          <label>Skill :</label><textarea rows="3" cols="80" class="textarea" name="Skill"  ngModel>
                 </textarea>
         </div>
         <div class="col-md-6" style="margin-left: 16px;">
-          <label>Password :</label> <input type="password" placeholder="password" required  name="password" id="p"
+          <label>Password :</label> <input type="password" placeholder="password"    name="password" id="p"
             ngModel><br/>
           <font  color="green" id="demo5"></font>
           <font color="red" id="demo6"></font>
           
         </div>
         <div class="col-md-6" id="dc1" >
-          <label>Confirm Password</label><input type="password" placeholder="confirm password" id="cp" onclick="validate()" required
+          <label>Confirm Password</label><input type="password" placeholder="confirm password" id="cp" 
             name="confirmpassword" ngModel>
             <font  color="green" id="demo3"></font>
             <font color="red" id="demo4"></font>
@@ -271,6 +340,7 @@
        
         <button type="submit" id="button" >signup</button>
       </form>
+    </div>
       <div class="col-md-6"></div>
     </div>
   </div>

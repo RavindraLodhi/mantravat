@@ -1,8 +1,14 @@
+alert{
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
 form{
    background: white;
    margin-top: 55px;
-   height:500px;
-   overflow-x: scroll;
+   /*height:500px;*/
+   /* overflow-x: scroll; */
 }
 
 .signup{
@@ -91,7 +97,7 @@ margin-top: -241px;
    margin-top: 66px;
    margin-left: -14px;
 } */
-input[type=text], input[type=password] ,input[type=Date],input[type=password],input[type=email],input[type=number]{
+input[type=text], input[type=password] ,input[type=Date],input[type=password],input[type=email],input[type=number],input[type=select]{
   width: 100%;
   padding: 5px 10px;
   margin: 8px 0;

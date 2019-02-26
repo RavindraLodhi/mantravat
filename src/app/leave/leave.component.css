@@ -1,3 +1,14 @@
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: none;
+  font-family: "Glyphicons Halflings";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 img{
   width: 30px;
   height: 30px;
@@ -160,4 +171,93 @@ margin-right: 156px;
 }
 .leaveStatus{
 padding-right: 50px;
+}
+@media screen and (max-width: 600px) {
+  .topnav{
+    background: black;
+    margin-top: -5px; 
+  }
+  .sidebarleft {
+    display: none !important;
+    padding: 0px;
+  
+  }
+  .sidebarleftA {
+    display: none !important;
+  }
+  .sidebarleftB {
+    display: block !important;
+  }
+  .topnav a.icon {
+    float: left;
+    display: block;
+  }
+  .topnav a.icon1 {
+    float: right;
+    display: block;
+  }
+  
+
+  .right-sidebar {
+    width: 81px;
+    height: 224px;
+    display: none;
+  }
+  .col-xs-2 {
+    width: 16.666667%;
+    margin: 0px;
+    padding: 0px;
+  }
+  ul {
+    padding-left: 1px;
+    font-size: 12px;
+  }
+
+  .glyphicon-menu-hamburger {
+    font-size: 25px;
+  }
+  #myTopnav {
+    position: absolute;
+    z-index: 2;
+    width: 100px;
+    margin-top: 28px;
+  }
+/* #Feed{
+  position: absolute;
+  z-index: 2;
+  width: 100px;
+  margin-top: 28px;
+  margin-left: 311px;
+  font-size: 11px;
+  } */
+  .col-sm-3  right-sidebar{
+    display: none;
+  }
+  .right-sidebarB{
+    background: white;
+    height: 200px;
+    width: 284px;
+  }
+  #d1{
+    margin-top: 15px;
+  }
+  #button{
+    margin-left: 200px;
+  }
+  .glyphicon {
+    position: relative;
+    top: 1px;
+    display:inline-block;
+    font-family: "Glyphicons Halflings";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+   #Feed{
+    margin-top: -525px;
+    /* margin-left: -73px; */
+  } 
+  
 }
