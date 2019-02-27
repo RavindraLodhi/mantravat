@@ -1,21 +1,22 @@
 <div class="container-fluid container-fluid1 ">
     <div class="row">
-        <div class="col-sm-2 sidebarleft">
+        <div class="col-sm-2 sidebarleft" id="myTopnav">
             <ul style="list-style-type:none;">
                 <li id="sidebarleftOpt"><a (click)="callComponentMethodHere(1)">
-                                <span class="glyphicon glyphicon-home"></span>
-                                Apply Leave</a></li>
+                        <span class="glyphicon glyphicon-home"></span>
+                        Apply Leave</a></li>
                 <li id="sidebarleftOpt"><a (click)="callComponentMethodHere(2)">
-                                <span class="glyphicon glyphicon-magnet"></span>
-                                Leave Histry</a></li>
+                        <span class="glyphicon glyphicon-magnet"></span>
+                        Leave Histry</a></li>
                 <li id="sidebarleftOpt"><a (click)="callComponentMethodHere(3)">
-                                <span class="glyphicon glyphicon-credit-card"></span>
-                                Leave Status</a></li>
+                        <span class="glyphicon glyphicon-credit-card"></span>
+                        Leave Status</a></li>
             </ul>
         </div>
         <div *ngIf="applyLeave" class="col-sm-7 mainContainer">
-            <div class="container-fluid container-fluid1 ">
-                <div class="row">
+            <!-- <div class="container-fluid container-fluid1 ">
+
+                 <!-- <div class="row">
                     <div class="col-sm-2"></div>
                     <div class="col-sm-8 forn">
                         <form #userForm="ngForm" (ngSubmit)="submit(userForm.value)">
@@ -26,7 +27,7 @@
                                                         <option >Half</option>
                                 </select>
                                 <!-- <input type="text" #nameRef="ngModel" minlength="4" class="form-control" name="name" [(ngModel)]="name" required> -->
-                                <div [hidden]="nameRef.valid || nameRef.pristine" class="alert alert-danger">
+            <!-- <div [hidden]="nameRef.valid || nameRef.pristine" class="alert alert-danger">
                                     please Enter the name
                                 </div>
                             </div>
@@ -53,35 +54,151 @@
                             </div>
                             <label class="col-sm-4"> Comment</label>
                             <div class="form-group col-sm-8">
-                                <textarea placeholder="Enter password" class="form-control" name="comment" ngModel>Enter text here...</textarea>
-                            </div>
+                                <textarea placeholder="comment" class="form-control" name="comment" ngModel>Enter text here...</textarea>
+                            </div> 
                             <button id="button" type="submit">Login</button>
                         </form>
                     </div>
                     <div class="col-sm-2"></div>
-
                 </div>
             </div>
+        </div> -->
+
+            <div class="row">
+                <div class="col-sm-12 leave" style="text-align :center" id="head1">
+                    <h4>apply leave</h4>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-6 col-xs-6 col-sm-6 pad">
+                    <label class="control-label  label-name" for="template">Leave Type:</label>
+                </div>
+                <div class="col-md-6 col-xs-6 col-sm-6 ">
+                    <select type="L_type" class="form-control" [(ngModel)]="form.L_type" id="L_type" formControlName="L_type"
+                        name="L_type" required>
+                        <option>Special Leave </option>
+                        <option>Study Leave</option>
+                        <option>Sick Leave</option>
+                        <option>Disembarkation leave</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-6 col-xs-6 col-sm-6 pad">
+                    <label class="control-label  label-name" for="template">Day:</label>
+                </div>
+                <div class="col-md-6 col-xs-6 col-sm-6 ">
+                    <select type="Day" class="form-control" [(ngModel)]="form.Day" id="Day" formControlName="Day" name="Day"
+                        required>
+                        <option>Half</option>
+                        <option>full</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-6 col-xs-6 col-sm-6 pad">
+                    <label class="control-label  label-name" for="template"> countDay</label>
+                </div>
+                <div class="col-md-6 col-xs-6 col-sm-6 ">
+                    <input type="text" id="ClientName" formControlName="ClientName" class="form-control" [(ngModel)]="form.ClientName"
+                        name="ClientName">
+                    <font color="red" id="cn1"></font>
+                    <font color="red" id="cn2"></font>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-6 col-xs-6 col-sm-6 pad ">
+                    <label class="control-label  label-name" for="template">Start Date:</label>
+                </div>
+                <div class="col-md-6 col-xs-6 col-sm-6 ">
+                    <input type="Date" id="sd" formControlName="startDate" class="form-control" [(ngModel)]="form.p_SDate"
+                        name="startDate">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-6 col-xs-6 col-sm-6 pad ">
+                    <label class="control-label  label-name" for="template">EndDate :</label>
+                </div>
+                <div class="col-md-6 col-xs-6 col-sm-6 ">
+                    <input type="Date" id="ed" formControlName="EndDate" class="form-control" [(ngModel)]="form.l_EndDate"
+                        name="EndDate">
+                </div>
+            </div>
+
+            <!-- <div class="form-group">
+                <div class="col-md-6 col-xs-6 col-sm-6 pad">
+                    <label class="control-label  label-name" for="template"> ClientName</label>
+                </div>
+                <div class="col-md-6 col-xs-6 col-sm-6 ">
+                    <input type="text" id="ClientName" formControlName="ClientName" class="form-control" [(ngModel)]="form.ClientName"
+                        name="ClientName">
+                    <font color="red" id="cn1"></font>
+                    <font color="red" id="cn2"></font>
+                </div>
+            </div> -->
+
+
+            <!-- 
+            <div class="form-group">
+                <div class="col-md-6 col-xs-6 col-sm-6 pad">
+                        <label class="control-label  label-name" for="template"> Comment</label>
+                    </div>
+                    <div class="col-md-6 col-xs-6 col-sm-6 ">
+                            <textarea placeholder="comment" class="form-control" name="comment" ngModel>Enter text here...</textarea>
+                        </div> 
+            
+                    </div> -->
+
+
+            <div class="form-group " id="textarea">
+                <div class="col-md-6 col-md-6  col-xs-6 col-sm-6 pad">
+                    <label class="control-label  label-name" for="template">Long Description:</label>
+                </div>
+                <div class="col-md-6 col-xs-6 col-sm-6 ">
+                    <textarea placeholder="please enter the project comment......" formControlName="LDescription" cols="10"
+                        type="LDescription" id="l_LongDescription" [(ngModel)]="form.l_LongDescription" name="LDescription"
+                        required></textarea>
+                </div>
+            </div>
+
+
+            <div class="col-md-11 col-xs-12 col-sm-12">
+                <button (click)="addSprinkling()" type="button" class="btn btn-default pull-right btn-btn">Submit</button>
+            </div>
         </div>
-        <div *ngIf="leaveStatus" class="col-sm-7 mainContainer">
+
+
+        <div *ngIf="leaveStatus" class="col-sm-7 mainContainer" id="mainContainer">
             <div class="row">
                 <div class="col-sm-12 leave" style="text-align :center">
                     <h4>Leave Status</h4>
                 </div>
             </div>
- 
-            <header *ngFor="let leaveStatus of leaveStatus1">
+            <div class="col-sm-6" *ngFor="let leaveStatus of leaveStatus1" id="leave1">
+                <label class="box">{{leaveStatus.Name}} is on leave
+                    <h5> FROM {{leaveStatus.StartDate}} To {{leaveStatus.EndDate}}</h5>
+                    <h6>{{leaveStatus.countDays}} days beacuse he has {{leaveStatus.leaveType}} </h6>
+                </label>
+            </div>
+
+
+            <!-- <header *ngFor="let leaveStatus of leaveStatus1">
                 <div class="col-sm-6 leaveStatus  ">
                     <label class="box">{{leaveStatus.Name}} is on leave
                         <h5> FROM {{leaveStatus.StartDate}} To {{leaveStatus.EndDate}}</h5>
                         <h6>{{leaveStatus.countDays}} days beacuse he has {{leaveStatus.leaveType}} </h6>
                     </label>
                 </div>
-            </header>
+            </header> -->
         </div>
         <div *ngIf="leaveHistry" class="col-sm-7 mainContainer">
             <div class="container-fluid container-fluid1  ">
                 <div class="row midBox">
+
                     <header id="serchHeader">
                         <div class="col-sm-4">
                             <input style="margin-top :5px" type="date" name="" id="">
@@ -90,7 +207,7 @@
                             <input style="margin-top :5px" type="date" name="" id="">
                         </div>
                         <div class="col-sm-4">
-                            <button style="margin-top :5px" type="button">serch</button>
+                            <button style="margin-top :5px" type="button">search</button>
                         </div>
                     </header>
                     <header *ngFor="let headeropt of headerOpts">

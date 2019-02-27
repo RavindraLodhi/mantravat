@@ -23,8 +23,10 @@ button{
 height: 30px;
 }
 li{
-  padding-top: 10px;
-  height: 35px;
+  padding-top: 21px;
+    height: auto;
+    margin-top: 23px;
+    margin-bottom: -35px;
 }
 .midBox{
   height: auto;
@@ -141,14 +143,19 @@ height: 517px;
 #right-sidebarrow{
 padding-top: 0px
 }
-.leave{
-text-align: center;
+.leave[_ngcontent-c3] {
+  text-align: center;
   background: white;
   height: 39px;
-  margin-top: 3px;
+  margin-top: -57px;
 }
 form[_ngcontent-c3] {
 background: white;
+}
+#mainContainer {
+  height: 567px;
+   background: lightgrey; 
+  margin-top: 96px;
 }
 .box{
 margin-right: 156px;
@@ -158,6 +165,83 @@ margin-right: 156px;
   margin-top: 5px;
   height: 110px;
 }
-.leaveStatus{
-padding-right: 50px;
+.leaveStatus[_ngcontent-c3][_ngcontent-c3] {
+  padding-right: 50px;
+  margin-left: -109px;
+  margin-top: 30px;
+}
+.form-control[_ngcontent-c3][_ngcontent-c3][_ngcontent-c3] {
+  display: block;
+  height: 30px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 186px;
+  margin-top: 20px;
+}
+/* label{
+  margin-top: 24px;
+    font-size: small;
+    /* margin-left: 262px; */
+    /* margin-left:47px; */
+/* } */ */
+label[_ngcontent-c3] {
+  margin-top: 24px;
+  font-size: small;
+  margin-left: 234px;
+}
+label {
+  display: inline-block;
+  max-width: 67%;
+  margin-bottom: 5px;
+  font-weight: 700;
+  margin-left: 263px;
+  font-size: smaller;
+  margin-top: 25px;
+}
+.mainContainer[_ngcontent-c3] {
+  height: 567px;
+ background: white;
+  margin-top: 96px;
+}
+#leave1{
+  margin-left: -109px;
+}
+/* #leave1{
+  margin-left: -228px;
+} */
+/* #status{
+  background: blue;
+} */
+
+textarea {
+  background-color: transparent;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  height: 104px;
+  width: 295px;
+  margin-top: 21px;
+}
+/* .h4, .h5, .h6, h4, h5, h6 {
+  margin-top: -57px;
+  margin-bottom: 14px;
+  background: white;
+  height: 31px;
+} */
+button[_ngcontent-c3] {
+  width: 90px;
+  background: white;
+  background: blue;
+  margin-top: 20px;
+}
+select {
+  height: 26px;
+}
+#s1{
+  margin-top: 30px;
 }
