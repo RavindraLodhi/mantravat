@@ -1,12 +1,13 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { LeaveService } from "../services/leave.service";
 @Component({
-  selector: "app-leave",
-  templateUrl: "./leave.component.html",
-  styleUrls: ["./leave.component.css"]
+  selector: 'app-leavehistory',
+  templateUrl: './leavehistory.component.html',
+  styleUrls: ['./leavehistory.component.css']
 })
-export class LeaveComponent implements OnInit {
+export class 
+LeavehistoryComponent implements OnInit {
   //   //declearation globle variable
   //   leavsHistry :any[] = [];
      headerOpts :any =[];

@@ -392,6 +392,9 @@ Enter text here...</textarea
             </form>
           </div>
         </div>
+        <div *ngIf="leaveHistry" style="margin-left: 207px; margin-top: -16px;">
+          <h2>Leave History</h2>
+        </div>
         <div *ngIf="leaveHistry">
           <div class="container-fluid ">
             <div class="row">
@@ -449,10 +452,34 @@ Enter text here...</textarea
               </div>
             </div> -->
         </div>
-        <div *ngIf="leaveStatus">
+        <div *ngIf="leaveStatus" id="l" style=" height: 44px; margin-top: -16px;">
           <h2 style="margin-left: 207px;">leaveStatus</h2>
-          
-        </div>
+
+          <div class="col-sm-12 A">
+              <div class="row">
+                  <div class="col-sm-12 " *ngFor="let item1 of headerOpts1" >
+                      <div class="col-sm-2">
+                          <span class="glyphicon glyphicon-credit-card"></span></div>
+                      <div class="col-sm-8 " style="text-align :center">{{item1}}</div>
+                      <!-- <div class="col-sm-2">
+                          <div class="task4"></div> -->
+                      </div>
+                      <div *ngFor="let item of tname" ng-show="$first">
+                          <div class="col-sm-6 A">
+                             <div class="col-sm-6 A"><label> Start Date:{{item.StartDate}}</label></div> 
+                             <div class="col-sm-6 A">  <label> End Date:{{item.EndDate}}</label><br/></div>
+                              <div class="col-sm-6 A"> <label> Reason:{{item.Reason}}</label></div>
+                              <div class="col-sm-6 A"> <label> total Days :{{item.total}}</label></div>
+                              
+                          </div>
+
+                  </div>
+              </div>
+          </div>
+        
+        
+        
+        
       </div>
     </div>
     <div class="col-sm-3 right-sidebar" id="Feed">

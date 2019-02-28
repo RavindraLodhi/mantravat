@@ -31,7 +31,7 @@
                  <i class="glyphicon glyphicon-menu-hamburger"(click)=" myFunctionFeedBack()" id="icon"></i>
                 </a>
         </div>
-        <div class="col-sm-2 sidebarleft" id="myTopnav">
+        <div class="col-sm-2 sidebarleft" id="myTopnav" style="margin-top: 50px;">
             <ul style="list-style-type:none;">
                 <li id="sidebarleftOpt"><a routerLink="#">
                               <span class="glyphicon glyphicon-home"></span>
@@ -55,16 +55,66 @@
         </div>
         <div class="col-sm-7 col-xs-12 mainContainer">
             <div *ngIf="dashboardMid" class="container-fluid container-fluid1 ">
-                <div class="row">
+                <div class="row" style="margin-top: 35px;">
                     <div class="col-sm-6 A">
                         <div class="row">
                             <div class="col-sm-12  taskBox1">
                                 <div class="col-sm-2">
                                     <span class="glyphicon glyphicon-credit-card"></span></div>
-                                <div class="col-sm-8 " style="text-align :center"> Login Screen</div>
-                                <div class="col-sm-2">
-                                    <div class="task1"></div>
+                                <div class="col-sm-8 " style="text-align :center"> User Details</div>
+                                <!-- <div class="col-sm-2">
+                                    <div class="task1">
+                                       
+                                    </div>  -->
                                 </div>
+                                <div ngFor="let item of tname" ng-show="$first" style="width: 538px; margin-left: -5px;">
+                                    <div class="col-sm-12 A" style="    width: 101%">
+                                        <label> UserName:Aditya</label><br/>
+                                        <label> EMPid:199</label><br/>
+                                        <label> DOB:02-02-1996</label><br/>
+                                        <label> DOJ:03-02-2019</label><br/>
+                                    </div>
+                                    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 A">
+                        <div class="row">
+                            <div class="col-sm-12 taskBox1">
+                                <div class="col-sm-2">
+                                    <span class="glyphicon glyphicon-credit-card"></span></div>
+                                <div class="col-sm-8 " style="text-align :center">Tasks</div>
+                                <!-- <div class="col-sm-2">
+                                    <div class="task2"></div> -->
+                                </div> 
+                                <div ngFor="let item of tname" ng-show="$first" style="width: 538px; margin-left: -5px;">
+                                    <div class="col-sm-12 A" style="    width: 101%">
+                                        <label> Number of Tasks:3</label><br/>
+                                        <label> Number of Inprocess Tasks:1</label><br/>
+                                        <label> Number of Open Tasks:1</label><br/>
+                                        <label> Number of Compeleted Tasks:1</label><br/>
+                                    </div>
+                                    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 A">
+                        <div class="row">
+                            <div class="col-sm-12 taskBox1">
+                                <div class="col-sm-2">
+                                    <span class="glyphicon glyphicon-credit-card"></span></div>
+                                <div class="col-sm-8 " style="text-align :center"> Project</div>
+                                <!-- <div class="col-sm-2">
+                                    <div class="task3"></div> -->
+                                </div>
+                                <div ngFor="let item of tname" ng-show="$first" style="width: 538px; margin-left: -5px;">
+                                    <div class="col-sm-12 A" style="    width: 101%">
+                                        <label> Project Status:Open</label><br/>
+                                        <label> Number of  Tasks:5</label><br/>
+                                        <label> Start Date:02-02-2019</label><br/>
+                                        <label> Estimated hours:10</label><br/>
+                                        <label> Log hours:10</label><br/>
+                                    </div>
 
                             </div>
                         </div>
@@ -74,35 +124,19 @@
                             <div class="col-sm-12 taskBox1">
                                 <div class="col-sm-2">
                                     <span class="glyphicon glyphicon-credit-card"></span></div>
-                                <div class="col-sm-8 " style="text-align :center">Dashbord</div>
-                                <div class="col-sm-2">
-                                    <div class="task2"></div>
+                                <div class="col-sm-8 " style="text-align :center">Leave</div>
+                                <!-- <div class="col-sm-2">
+                                    <div class="task4"></div> -->
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 A">
-                        <div class="row">
-                            <div class="col-sm-12 taskBox1">
-                                <div class="col-sm-2">
-                                    <span class="glyphicon glyphicon-credit-card"></span></div>
-                                <div class="col-sm-8 " style="text-align :center"> Login Screen</div>
-                                <div class="col-sm-2">
-                                    <div class="task3"></div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 A">
-                        <div class="row">
-                            <div class="col-sm-12 taskBox1">
-                                <div class="col-sm-2">
-                                    <span class="glyphicon glyphicon-credit-card"></span></div>
-                                <div class="col-sm-8 " style="text-align :center">Create API</div>
-                                <div class="col-sm-2">
-                                    <div class="task4"></div>
-                                </div>
+                                <div ngFor="let item of tname" ng-show="$first" style="width: 538px; margin-left: -5px;">
+                                    <div class="col-sm-12 A" style="    width: 101%">
+                                        <label> Upcoming Holiday:04-03-2019</label><br/>
+                                        <label> Upcoming BirthDay:02-06-2019</label><br/>
+                                        <label> Number of Open Tasks:1</label><br/>
+                                        <label> Reamaining Leave :15</label><br/>
+                                        <label style="    margin-bottom: 0px"> Approved Leave :5</label> <br/>
+                                        <label>  Pending Leave :1</label><br/>
+                                    </div>
 
                             </div>
                         </div>
@@ -112,20 +146,27 @@
                             <div class="col-sm-12 taskBox1">
                                 <div class="col-sm-2">
                                     <span class="glyphicon glyphicon-list-alt"></span></div>
-                                <div class="col-sm-8 " style="text-align :center">Leave</div>
-                                <div class="col-sm-2">
-                                    <span class="glyphicon glyphicon-list-alt"></span>
-                                </div>
-                                <div class="col-sm-6">
+                                <div class="col-sm-8 " style="text-align :center">Timesheet</div>
+                                <!-- <div class="col-sm-2">
+                                    <span class="glyphicon glyphicon-list-alt"></span>-->
+                                </div> 
+                                <!-- <div class="col-sm-6">
                                     
                                 </div>
                                 <div class="col-sm-6">
-                                    Total Leave 30
-                                </div>
+                                    
+                                </div> -->
                             </div>
+                            <div ngFor="let item of tname" ng-show="$first" style="width: 538px; margin-left: -20px;">
+                                <div class="col-sm-12 A" style="    width: 101%">
+                                    <label> Pending Month:Feb</label><br/>
+                                    <label> Number of Days Pending:1</label><br/>
+                                    <label> Current Month:feb</label><br/>
+                                    <label> Number of Days pending:1</label><br/>
+                                </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 A">
+                    <div class="col-sm-6 A" style="    height: 200px;">
                         <div class="row">
                             <div class="col-sm-12 taskBox1">
                                 <div class="col-sm-2">
@@ -141,7 +182,7 @@
             </div>
             <app-signup *ngIf="singup"></app-signup>
         </div>
-        <div class="col-sm-3  right-sidebar" id="Feed">
+        <div class="col-sm-3  right-sidebar" id="Feed" style="margin-top: 50px;">
             Feed Updates
         </div>
     </div>

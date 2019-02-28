@@ -18,6 +18,7 @@ import { ProjectComponent } from './project/project.component';
 import { SignupComponent } from './signup/signup.component';
 import { DisplayprojectComponent } from './displayproject/displayproject.component';
 import { CreatetimesheetComponent } from './createtimesheet/createtimesheet.component';
+import { LeavehistoryComponent } from './leavehistory/leavehistory.component';
 
 @NgModule({
   providers: [],
@@ -74,6 +75,10 @@ import { CreatetimesheetComponent } from './createtimesheet/createtimesheet.comp
             path :"createtimesheet",
             component :CreatetimesheetComponent
           }
+          {
+            path :"leavehistory",
+            component :LeavehistoryComponent
+          }
         ]
       }
     ])
@@ -92,7 +97,8 @@ import { CreatetimesheetComponent } from './createtimesheet/createtimesheet.comp
     ProjectComponent,
     SignupComponent,
     DisplayprojectComponent,
-    CreatetimesheetComponent
+    CreatetimesheetComponent,
+    LeavehistoryComponent
   ]
 })
 export class AppModule {}
