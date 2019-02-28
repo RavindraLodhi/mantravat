@@ -38,6 +38,9 @@ export class ProjectComponent implements OnInit {
   isPut =false;
   atttechments : any[] = [];
   attechmentArray : any[] = [];project_Name: string;
+   ProjectList: any;
+   _ProjectService: any;
+   isDisplayProject: boolean;
 
   
   constructor(
@@ -70,38 +73,38 @@ export class ProjectComponent implements OnInit {
       {
         "StartDate" : "12-01-2019",
         "EndDate"   : "14-01-2019",
-        "countDays" : "2",
-        "leaveType" : "sick Leave"
+        "projectname" : "hrms",
+        "status" : "progress"
       },
       {
         "StartDate" : "12-01-2019",
         "EndDate"   : "14-01-2019",
-        "countDays" : "2",
-        "leaveType" : "sick Leave"
+        "projectname" : "abc",
+        "status" : "open"
       },
       {
         "StartDate" : "12-01-2019",
         "EndDate"   : "14-01-2019",
-        "countDays" : "2",
-        "leaveType" : "sick Leave"
+        "projectname" : "frms",
+        "status" : "complete"
       },
       {
         "StartDate" : "12-01-2019",
         "EndDate"   : "14-01-2019",
-        "countDays" : "2",
-        "leaveType" : "sick Leave"
+        "projectname" : "study",
+        "status" : "in process"
       },
       {
         "StartDate" : "12-01-2019",
         "EndDate"   : "14-01-2019",
-        "countDays" : "2",
-        "leaveType" : "sick Leave"
+        "projectname" : "abc",
+        "status" : "open"
       },
       {
         "StartDate" : "12-01-2019",
         "EndDate"   : "14-01-2019",
-        "countDays" : "2",
-        "leaveType" : "sick Leave"
+        "projectname" : "hrms",
+        "status" : "progress"
       },
     ];
   }
@@ -339,6 +342,25 @@ remove(index){
   console.log(index);
   this.attechmentArray.splice(index, 1);
   this.atttechments.splice(index, 1);
+}
+
+Displayproject() {
+  this.isDisplayProject = true;
+  console.log(this.ProjectList);
+  
+  if (this.ProjectList.length == 0) {
+    this._ProjectService.getAllproject().subscribe(
+      response => {
+        this.ProjectList = response;
+      },
+      error => {
+        console.log("Error occured");
+      }
+    );
+  }
+}
+DisplaycreateChangTask() {
+  this.isDisplayProject = false;
 }
 
 
