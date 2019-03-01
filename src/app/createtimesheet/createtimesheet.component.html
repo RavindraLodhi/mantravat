@@ -47,6 +47,7 @@
              <table border="2" style="width: 100%;">
                 
                <tr>
+                 <th>Select</th>
                  <th>Date</th>
                  <th>Days</th>
                  <th>project</th>
@@ -54,11 +55,12 @@
                  <th>Description</th>
                 </tr>
                 <tr *ngFor= "let day of days ; let week of weeks ,let k=index" >
+                    <td><input type="checkbox" name="cb1"/> </td>
                     <td [ngClass]="avf" >{{day}}</td>
                     <td id="{{'day-'+day}}">{{weeks[k]}}</td>
-                    <td ><input #p type="text" name="p"/></td>
-                    <td><input #t type="text" name="t"/></td>
-                    <td><input #des type="text" name="Des"/></td>
+                    <td ><input #p type="text" name="p" placeholder="Enter  Your Project Name"/></td>
+                    <td><input #t type="text" name="t" placeholder="Enter Your Task Name"/></td>
+                    <td><input #des type="text" name="Des" placeholder="Enter Description"/></td>
                    </tr>
              </table>
              

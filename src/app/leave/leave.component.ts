@@ -458,63 +458,79 @@ validate(value)
   }
 
   leaveHistryDummy() {
-    this.headerOpts=["Start Date","End Date","countDays","leaveType"];
+    this.headerOpts=["Requested Date","LeaveType","Days","RequestStatus","Start Date","End Date","leavereasons"];
       this.leaveStatus1=[
          {
-          "Name" :      "Ravi",
-           "StartDate" : "2-10-2019",
+          "Rdate" :      "2-10-2019",
+          "leaveType" : "sick leave",
+          "Days" : 4,
+          "Rstatus":" Approved",
+          "StartDate" : "2-10-2019",
           "EndDate"   : "6-10-2019",
-           "countDays" : 4,
-           "leaveType" : "sick leave"
-         },
-         {
-           "Name" :      "Anshul",
-           "StartDate" : "2-10-2019",
-           "EndDate"   : "6-10-2019",
-           "countDays" : 5,
-           "leaveType" : "sick leave"
-         },
-         {
-           "Name" :      "smita",
-           "StartDate" : "2-10-2019",
-           "EndDate"   : "6-10-2019",
-           "countDays" : 4,
-           "leaveType" : "Study leave"
-         },
-         {
-           "Name" :      "Garima",
-           "StartDate" : "4-02-2019",
-           "EndDate"   : "5-02-2019",
-           "countDays" : 1,
-           "leaveType" : "Study leave"
-        },
-         {
-           "Name" :      "Aditya",
-           "StartDate" : "2-02-2019",
-           "EndDate"   : "7-02-2019",
-           "countDays" : 5,
-           "leaveType" : "Transfer leave"
-         },
-         {
-           "Name" :      "sonal",
-           "StartDate" : "10-02-2019",
-           "EndDate"   : "12-02-2019",
-           "countDays" : 4,
-           "leaveType" : "Study leave"
-         },
-         {
-          "Name" :      "Aditya1",
-          "StartDate" : "2-02-2019",
-          "EndDate"   : "7-02-2019",
-          "countDays" : 5,
-          "leaveType" : "Transfer leave"
+          "lreasons":"Fever"
         },
         {
-          "Name" :      "sonal1",
-          "StartDate" : "10-02-2019",
-          "EndDate"   : "12-02-2019",
-          "countDays" : 4,
-          "leaveType" : "Study leave"
+          "Rdate" :      "2-10-2019",
+          "leaveType" : "sick leave",
+          "Days" : 4,
+          "Rstatus":" Approved",
+          "StartDate" : "2-10-2019",
+          "EndDate"   : "6-10-2019",
+          "lreasons":"Fever"
+        },
+        {
+          "Rdate" :      "2-10-2019",
+          "leaveType" : "sick leave",
+          "Days" : 4,
+          "Rstatus":" Approved",
+          "StartDate" : "2-10-2019",
+          "EndDate"   : "6-10-2019",
+          "lreasons":"Fever"
+        },
+        {
+          "Rdate" :      "2-10-2019",
+          "leaveType" : "sick leave",
+          "Days" : 4,
+          "Rstatus":" Approved",
+          "StartDate" : "2-10-2019",
+          "EndDate"   : "6-10-2019",
+          "lreasons":"Fever"
+        },
+        {
+          "Rdate" :      "2-10-2019",
+          "leaveType" : "sick leave",
+          "Days" : 4,
+          "Rstatus":" Approved",
+          "StartDate" : "2-10-2019",
+          "EndDate"   : "6-10-2019",
+          "lreasons":"Fever"
+        },
+        {
+          "Rdate" :      "2-10-2019",
+          "leaveType" : "sick leave",
+          "Days" : 4,
+          "Rstatus":" Approved",
+          "StartDate" : "2-10-2019",
+          "EndDate"   : "6-10-2019",
+          "lreasons":"Fever"
+        },
+        {
+          "Rdate" :      "2-10-2019",
+          "leaveType" : "sick leave",
+          "Days" : 4,
+          "Rstatus":" Approved",
+          "StartDate" : "2-10-2019",
+          "EndDate"   : "6-10-2019",
+          "lreasons":"Fever"
+        },
+        {
+          "Rdate" :      "2-10-2019",
+          "leaveType" : "sick leave",
+          "Days" : 4,
+          "Rstatus":" Approved",
+          "StartDate" : "2-10-2019",
+          "EndDate"   : "6-10-2019",
+          "lreasons":"Fever"
         },
        ];
   }

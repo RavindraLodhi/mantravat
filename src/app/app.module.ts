@@ -74,7 +74,7 @@ import { LeavehistoryComponent } from './leavehistory/leavehistory.component';
           , {
             path :"createtimesheet",
             component :CreatetimesheetComponent
-          }
+          },
           {
             path :"leavehistory",
             component :LeavehistoryComponent

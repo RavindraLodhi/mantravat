@@ -457,21 +457,20 @@ Enter text here...</textarea
 
           <div class="col-sm-12 A">
               <div class="row">
-                  <div class="col-sm-12 " *ngFor="let item1 of headerOpts1" >
+                  <div class="col-sm-6 " *ngFor="let item1 of headerOpts1" >
                       <div class="col-sm-2">
                           <span class="glyphicon glyphicon-credit-card"></span></div>
                       <div class="col-sm-8 " style="text-align :center">{{item1}}</div>
-                      <!-- <div class="col-sm-2">
-                          <div class="task4"></div> -->
-                      </div>
                       <div *ngFor="let item of tname" ng-show="$first">
-                          <div class="col-sm-6 A">
-                             <div class="col-sm-6 A"><label> Start Date:{{item.StartDate}}</label></div> 
-                             <div class="col-sm-6 A">  <label> End Date:{{item.EndDate}}</label><br/></div>
-                              <div class="col-sm-6 A"> <label> Reason:{{item.Reason}}</label></div>
-                              <div class="col-sm-6 A"> <label> total Days :{{item.total}}</label></div>
-                              
-                          </div>
+                        <div class="col-sm-6 A">
+                           <div class="col-sm-12 A" style=" width: 147%;"><label> Start Date:{{item.StartDate}}</label></div> 
+                           <div class="col-sm-12 A"style=" width: 147%;">  <label> End Date:{{item.EndDate}}</label><br/></div>
+                            <div class="col-sm-12 A" style=" width: 151%;"> <label> Reason:{{item.Reason}}</label></div>
+                            <div class="col-sm-12 A" style=" width: 127%;"> <label> total Days :{{item.total}}</label></div>
+                            
+                        </div>
+                      </div>
+                      
 
                   </div>
               </div>
@@ -482,7 +481,7 @@ Enter text here...</textarea
         
       </div>
     </div>
-    <div class="col-sm-3 right-sidebar" id="Feed">
+    <div class="col-sm-3 right-sidebar" id="Feed" >
       <div id="overlay1">
         <div id="sidebar1">
           <div class="container-fluid">
