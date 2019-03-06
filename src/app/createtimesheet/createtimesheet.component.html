@@ -85,9 +85,9 @@
   
         <div class="col-sm-3  right-sidebar" id="Feed" style="margin-left: 10px; margin-top: 44px;" >
          <header>Feed Updates</header> 
-          <marquee width="75%" direction="up" height="93%" >
-              <br/><br/><label width="75%" direction="up" height="30%" *ngFor= "let f of feed">
-                  {{f}}
+          <marquee width="75%" direction="up" height="93%" onmousedown="this.stop();" onmouseup="this.start();">
+              <br/><br/><label width="75%" direction="up" height="30%" *ngFor= "let f of feed,let k=index">
+                {{k+1}}  {{f}}
               </label><br/><br/>
           </marquee>
           
