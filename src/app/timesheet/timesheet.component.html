@@ -36,27 +36,26 @@
         <!-- <div _ngcontent-c4="" class="container-fluid container-fluid"> -->
           <div _ngcontent-c4="" class="row">
            
-         <div  class="col-sm-12" style="background-color: white; margin-top: 65px;">
-                         <h2 style=" margin-left: 419px"> Timesheet</h2>
-           Month<input #firstNameInput type="month" name="d"/><br/>
+         <div  class="col-sm-12" style="background-color: white; margin-top: 40px;">
+                         <h2 align="center">Display Timesheet</h2>
+           Month<input #firstNameInput type="month"  value="{{today1}}" name="d" style="width:160px"/>
         
 
-           <button (click)="date(firstNameInput)">Display</button>
-           <button >Submit</button>
-           <button >Save</button>
+           <button (click)="date(firstNameInput)" >Display</button>
+           <button  style="margin-left:578px">Submit</button>
+           <button >Save</button><br/><br/>
            <table border="2" style="width: 100%;">
               
              <tr>
                <th>Date</th>
                <th>Days</th>
-               <th>project</th>
+               <th>Project</th>
                <th>Tasks</th>
                <th>Description</th>
               </tr>
-              <tr *ngFor= "let day of days ; let week of weeks ,let k=index" >
+              <tr id="object-{{weeks[k]}}" *ngFor= "let day of days ; let week of weeks ,let k=index" >
                   <td [ngClass]="avf" >{{day}}</td>
-                  
-                   <td>{{weeks[k]}}</td>
+                   <td id="object-{{weeks[k]}}">{{weeks[k]}}</td>
                   <td >project</td>
                   <td>Timesheet</td>
                   <td>Screen alignment</td>
@@ -76,7 +75,13 @@
 
 
       <div class="col-sm-3  right-sidebar" id="Feed" style="margin-left: 10px; margin-top: 44px;">
-          Feed Updates
+          <header>Feed Updates</header> 
+          <marquee width="75%" direction="up" height="93%" >
+              <br/><br/><label width="75%" direction="up" height="30%" *ngFor= "let f of feed">
+                  {{f}}
+              </label><br/><br/>
+          </marquee>
+          
       </div>
 </div>
 </div>

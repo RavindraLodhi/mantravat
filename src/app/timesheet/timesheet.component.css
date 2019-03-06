@@ -305,3 +305,20 @@ ul {
 .sunday{
   background: red;
 }
+.col-sm-3  right-sidebar{
+  display: none;
+}
+.right-sidebarB{
+  background: white;
+  height: 200px;
+  width: 284px;
+}
+
+#object-sunday{
+background-color:   red;
+}
+#object-monday{
+background-color:  red;
+}
+th{padding:20px 7px; font-size:15px; color:#444; background:#66C2E0;}
+td{padding:5px 10px; height:35px;}

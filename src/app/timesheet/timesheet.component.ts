@@ -7,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TimesheetComponent implements OnInit {
   days: any[] = [];
-  weeks: any[] = [];;
+  weeks: any[] = [];today1: string;
+  feed: string[];
+;
   constructor() { }
 
   ngOnInit() {
+    var today = new Date();
+    this.today1=today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2);
+    this.feed=["Every project has deadline","Please fill Timesheet Regulary","You can see the Timesheet By Display timshhet","This is Feed Screen","You cant Enter any thing"]
+   
     // this.days =[1,2,3,4,5,6,7,8,9,10,11,12,13,14,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31];
 
     // this.weeks = [
@@ -210,6 +216,8 @@ export class TimesheetComponent implements OnInit {
     }
     if(firstNameInput.value.substr(5, 2) == "11")
     {
+      var today = new Date();
+      
       this.days = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30];
       var j=0;
       for(var i=new Date(firstNameInput.value).getDay();i<=30+new Date(firstNameInput.value).getDay();i++)

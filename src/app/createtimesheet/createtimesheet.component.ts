@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { d } from '@angular/core/src/render3';
 
 @Component({
   selector: 'app-createtimesheet',
@@ -8,10 +9,20 @@ import { Component, OnInit } from '@angular/core';
 export class CreatetimesheetComponent implements OnInit {
 
   days: any[] = [];
-  weeks: any[] = [];;
+  weeks: any[] = [];today1: string;
+  names: string[];
+  feed: string[];
+;
+  today: Date;
   constructor() { }
-
+    
   ngOnInit() {
+    var today = new Date();
+    document.getElementById("m").innerHTML=String(today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2));
+    this.today1=today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2);
+    this.names=["Please select a Project","HRMS","TMS","Farm Manager","SAP ABAP","PHP","HMS","CMS"]
+    this.feed=["Every project has deadline","Please fill Timesheet Regulary","You can see the Timesheet By Display timshhet","This is Feed Screen","You cant Enter any thing"]
+   
     // this.days =[1,2,3,4,5,6,7,8,9,10,11,12,13,14,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31];
 
     // this.weeks = [
@@ -55,10 +66,14 @@ export class CreatetimesheetComponent implements OnInit {
       "name": "Cook  Tyson"
     }
   ];
+  
 
   date(firstNameInput) {
+    var today=new Date();
+    console.log(today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2));
+    document.getElementById("m").innerHTML=today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2);
     
-    console.log(new Date(firstNameInput.value).getDay());
+    console.log(firstNameInput.value);
     console.log("running date" + firstNameInput.value.substr(5, 2));
      this.weeks=["sunday","monday","tuesday","wednusday","thursday","friday","saturday","sunday","monday","tuesday","wednusday","thursday","friday","saturday","sunday","monday","tuesday","wednusday","thursday","friday","saturday","sunday","monday","tuesday","wednusday","thursday","friday","saturday","sunday","monday","tuesday","wednusday","thursday","friday","saturday"];
     console.log(this.weeks[5])
@@ -92,6 +107,7 @@ export class CreatetimesheetComponent implements OnInit {
          this.weeks[j]=this.weeks[i];
          j++
        }
+      
  
      }
      if (firstNameInput.value.substr(5, 2) == "01" ) {
@@ -225,7 +241,10 @@ export class CreatetimesheetComponent implements OnInit {
        }
  
      }
- 
+    
+        document.getElementById("object-monday").style.color="red";
+       document.getElementById("object-sunday").style.color="red";
+     
      // console.log(this.days);
      // console.log(this.weeks);
      
@@ -238,4 +257,6 @@ console.log(p.value,t.value,des.value);
 
 
   }
+ 
+  
 }

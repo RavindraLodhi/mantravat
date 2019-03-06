@@ -302,6 +302,13 @@ ul {
     width: 284px;
   }
 }
-.sunday{
-  background: red;
+#object-sunday{
+  color:black;
+ background-color:   red;
 }
+#object-monday{
+  color:black;
+  background-color:  red;
+}
+th{padding:20px 7px; font-size:15px; color:#444; background:#66C2E0;}
+td{padding:5px 10px; height:35px;}

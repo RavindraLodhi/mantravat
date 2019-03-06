@@ -36,36 +36,41 @@
           <!-- <div _ngcontent-c4="" class="container-fluid container-fluid"> -->
             <div _ngcontent-c4="" class="row">
             
-           <div  class="col-sm-12" style="background-color: white; margin-top: 65px;">
-                           <h2 style=" margin-left: 419px">  Create Timesheet</h2>
-             Month<input #firstNameInput type="month" name="d"/><br/>
+           <div  class="col-sm-12" style="background-color: white; margin-top: 40px;" >
+            <form >
+                           <h2 align="center">  Create Timesheet</h2>
+             Month<input #firstNameInput type="month" name="d" value="{{today1}}"  id="m" (click)="Date()"/>
           
   
              <button (click)="date(firstNameInput)">Create</button>
-             <button (click)="create(p,t,des)">Submit</button>
-             <button >Save</button>
+             
+             <button (click)="create(p,t,des)" ng-disabled="true"
+             style="margin-left:578px">Submit</button>
+             <button >Save</button><br/><br/>
              <table border="2" style="width: 100%;">
                 
                <tr>
                  <th>Select</th>
                  <th>Date</th>
                  <th>Days</th>
-                 <th>project</th>
+                 <th>Project</th>
                  <th>Tasks</th>
                  <th>Description</th>
                 </tr>
-                <tr *ngFor= "let day of days ; let week of weeks ,let k=index" >
+                <tr id="object-{{weeks[k]}}"   *ngFor= "let day of days ; let week of weeks ,let k=index" >
                     <td><input type="checkbox" name="cb1"/> </td>
-                    <td [ngClass]="avf" >{{day}}</td>
-                    <td id="{{'day-'+day}}">{{weeks[k]}}</td>
-                    <td ><input #p type="text" name="p" placeholder="Enter  Your Project Name"/></td>
-                    <td><input #t type="text" name="t" placeholder="Enter Your Task Name"/></td>
-                    <td><input #des type="text" name="Des" placeholder="Enter Description"/></td>
+                    <td style="color:black;" >{{day}}</td>
+                    <td id="object-{{weeks[k]}}">{{weeks[k]}}</td>
+                    <td ><select id="object-{{day}}" style="color:black;">
+                      <option *ngFor=" let x of names">{{x}}</option>
+                    </select></td>
+                    <td><input #t type="text" name="t" placeholder="Enter Your Task Name" id="object1-{{day}}"/></td>
+                    <td><input #des type="text" name="Des" placeholder="Enter Description" id="object2-{{day}}"/></td>
                    </tr>
              </table>
+            </form>
              
-             
-           </div>
+          </div>
           
                
                
@@ -78,8 +83,14 @@
         
   
   
-        <div class="col-sm-3  right-sidebar" id="Feed" style="margin-left: 10px; margin-top: 44px;">
-          Feed Updates
+        <div class="col-sm-3  right-sidebar" id="Feed" style="margin-left: 10px; margin-top: 44px;" >
+         <header>Feed Updates</header> 
+          <marquee width="75%" direction="up" height="93%" >
+              <br/><br/><label width="75%" direction="up" height="30%" *ngFor= "let f of feed">
+                  {{f}}
+              </label><br/><br/>
+          </marquee>
+          
       </div>
   </div>
   </div>
