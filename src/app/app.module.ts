@@ -17,6 +17,7 @@ import { TimesheetComponent } from './timesheet/timesheet.component';
 import { ProjectComponent } from './project/project.component';
 import { SignupComponent } from './signup/signup.component';
 import { DisplayprojectComponent } from './displayproject/displayproject.component';
+import { DisplaytaskComponent } from "./displaytask/displaytask.component";
 
 @NgModule({
   providers: [],
@@ -68,6 +69,11 @@ import { DisplayprojectComponent } from './displayproject/displayproject.compone
           {
             path :"displayproject",
             component :DisplayprojectComponent
+          },
+         
+          {
+            path :"displayptask",
+            component :DisplaytaskComponent
           }
         ]
       }
@@ -86,7 +92,8 @@ import { DisplayprojectComponent } from './displayproject/displayproject.compone
     TimesheetComponent,
     ProjectComponent,
     SignupComponent,
-    DisplayprojectComponent
+    DisplayprojectComponent,
+    DisplaytaskComponent
   ]
 })
 export class AppModule {}

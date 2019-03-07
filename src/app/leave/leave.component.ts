@@ -145,9 +145,10 @@ export class LeaveComponent implements OnInit {
        {
          "key" : "31 Dec Tuesday",
          "value"   : "New Year's Eve",
-       },
+       }
      ]
- }
+    }
+
    //assign the value insise the leavsHistry array for the company leave calender
   
 

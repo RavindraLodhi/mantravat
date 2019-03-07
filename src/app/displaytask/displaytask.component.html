@@ -1,0 +1,32 @@
+<div class="container-fluid container-fluid1 ">
+    <div class="row">
+        <div class="col-sm-2 sidebarleft">
+            <ul style="list-style-type:none;">
+                <li id="sidebarleftOpt"><a routerLink="/task">
+                                <span class="glyphicon glyphicon-home"></span>
+                                Create Task</a></li>
+                <li id="sidebarleftOpt"><a routerLink="#">
+                                <span class="glyphicon glyphicon-magnet"></span>
+                                Change Task</a></li>
+                <li id="sidebarleftOpt"><a routerLink="#">
+                                <span class="glyphicon glyphicon-credit-card"></span>
+                                Display Task</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="row">
+              <div *ngFor="let item of tname">
+                <div class="col-sm-6 A">
+                    <label> NAME:{{item.StartDate}}</label><br/>
+                    <label> Task Priority:{{item.EndDate}}</label><br/>
+                    <label> Task Timeline:{{item.countDays}}</label><br/>
+                    <label> Task Status:{{item.leaveType}}</label><br/>
+                </div>
+                
+              </div>
+            </div>
+          
+          </div>
+  </div>
+
+</div>

@@ -33,6 +33,11 @@
     padding-top: 10px;
     height: 35px;
   }*/
+  body {
+    font-family: Arial;
+    font-size: 17px;
+    padding: 8px;
+  }
 
   .row{
     padding-top: 6px;
@@ -70,13 +75,14 @@
    padding-top: 10px;
    height: 35px;
  }
- input[type=text], input[type=password] {
+ input[type=text], input[type=password] ,input[type=Date]{
    width: 100%;
    padding: 5px 10px;
    margin: 8px 0;
    display: inline-block;
    border: 1px solid #ccc;
    box-sizing: border-box;
+   
  }
  button {
    
@@ -100,16 +106,21 @@
    box-sizing: border-box;
  }
  textarea{
+  width: 100%;
+   padding: 5px 10px;
    margin: 8px 0;
+   display: inline-block;
+   border: 1px solid #ccc;
+   box-sizing: border-box;
    height: 31px;
  }
  input[type=file] {
    width: 100%;
-   padding: 12px 20px;
+   padding: 5px 10px;
    margin: 8px 0;
    display: inline-block;
-  /* border: 1px solid #ccc;
-   box-sizing: border-box;*/
+   border: 1px solid #ccc;
+   box-sizing: border-box;
  }
  button:hover {
    opacity: 0.8;

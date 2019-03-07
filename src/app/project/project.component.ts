@@ -57,7 +57,8 @@ export class ProjectComponent implements OnInit {
     ];
   }
   submit(value :any){
-   let body = {
+   let body = 
+   {
      clientName : "ravi",
      startDate : "01-02-2019",
      endDate : "01-07-2019",
