@@ -1,48 +1,74 @@
-.A{
-    /* width: 200px; */
-    background: white;
-    /* margin-top: 20PX;
-    padding-left: 50px;
-    text-align: center;
-    margin-left: 10px; */
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
 }
-ul, #myUL {
-    list-style-type: none;
-  }
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+.h2, h2 {
+  font-size: 27px;
+  margin-bottom: 38px;
+  margin-top: 75px;
+}
+#proj{
+  display: block;
+  width: 780px;
+}
+.content[_ngcontent-c3] {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background: gray;
   
-  #myUL {
-    margin: 0;
-    padding: 0;
+}
+
+  label {
+      display: inline-block;
+      max-width: 100%;
+      margin-bottom: 5px;
+      /* font-weight: 700; */
   }
-  
-  .caret {
-    cursor: pointer;
-    -webkit-user-select: none; /* Safari 3.1+ */
-    -moz-user-select: none; /* Firefox 2+ */
-    -ms-user-select: none; /* IE 10+ */
-    user-select: none;
+  #p1{
+      width: 100%;
+      height: 139px;
+      margin-left: -19px;
+      background: white;
   }
-  
-  .caret::before {
-    content: "\25B6";
-    color: black;
-    display: inline-block;
-    margin-right: 6px;
+  #p2{
+      width: 237px;
+      height: 147px;
+      margin-left: 12px;
+      background: white;
+      padding-left: 45px;
   }
-  
-  .caret-down::before {
-    -ms-transform: rotate(90deg); /* IE 9 */
-    -webkit-transform: rotate(90deg); /* Safari */
-    transform: rotate(90deg);  
+  #p3{
+      width: 230px;
+  height: 148px;
+  margin-left: 12px;
+  background: white;
+  padding-left: 45px;
   }
-  
-  .nested {
-    display: none;
-  }
-  
-  .active {
-    display: block;
-  }
-  #d {
-    margin-top:100px;
-  }
+  #Feed{
+    position: absolute;
+    z-index: 2;
+    width: 200px;
+    margin-top: 28px;
+    margin-left: 72%;
+    font-size: 11px;
+    height:50%;
+    }

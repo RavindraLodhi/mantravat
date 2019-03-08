@@ -1,32 +1,139 @@
-
-<div class="container-fluid container-fluid1 ">
-    <div class="row">
-        <!-- <div class="col-sm-2 sidebarleft">
-            <ul style="list-style-type:none;">
-                <li id="sidebarleftOpt"><a routerLink="#">
-                                <span class="glyphicon glyphicon-home"></span>
-                                Create Project</a></li>
-                <li id="sidebarleftOpt"><a routerLink="#">
-                                <span class="glyphicon glyphicon-magnet"></span>
-                                Change project</a></li>
-                <li id="sidebarleftOpt"><a routerLink="#">
-                                <span class="glyphicon glyphicon-credit-card"></span>
-                                Display Project</a></li>
-            </ul>
-        </div> -->
-        <div class="container">
-            <div class="row">
-              <div *ngFor="let item of tname">
-                <div class="col-sm-4 A">
-                    <label> Project Id:{{item.StartDate}}</label><br/>
-                    <label> EMP Name:{{item.EndDate}}</label><br/>
-                    <label> Start time:{{item.countDays}}</label><br/>
-                    <label> End Time:{{item.leaveType}}</label><br/>
+<div class="col-sm-2 sidebarleft" id="myTopnav" style="margin-top: 50px;background-color:  white">
+  <ul style="list-style-type:none;">
+      <li id="sidebarleftOpt"><a routerLink="#">
+                    <span class="glyphicon glyphicon-home"></span>
+                    Dashbord</a></li>
+      <li id="sidebarleftOpt"><a routerLink="/project">
+                    <span class="glyphicon glyphicon-magnet"></span>
+                    project</a></li>
+      <li id="sidebarleftOpt"><a routerLink="/task">
+                    <span class="glyphicon glyphicon-credit-card"></span>
+                    Task</a></li>
+      <li id="sidebarleftOpt"><a routerLink="/leave">
+                    <span class="glyphicon glyphicon-list-alt"></span>
+                    Leave</a></li>
+      <li id="sidebarleftOpt"><a routerLink="/timesheet">
+                    <span class="glyphicon glyphicon-time"></span>
+                    Time Sheet</a></li>
+      <li id="sidebarleftOpt"><a (click)="onChang()">
+                      <span class="glyphicon glyphicon-time"></span>
+                      Singup</a></li>
+  </ul>
+</div>
+<div ng-app="" ng-init="names=['task-0','Hege','Kai']" >
+  <!-- <ul>
+    <li *ngFor="let item of names" ng-if="true" id="tree">
+      {{item}}<ul><li *ngFor="let item of names" >{{item}}</li></ul>
+    </li>
+  </ul> -->
+  <!-- <li *ngFor="let item1 of name" >{{item1.startDate}}</li> -->
+  <!-- <div class="col-sm-6 A" id="project"  >
+    <ul>
+      <li *ngFor="let item of names,let k=index" data-toggle="collapse" data-target="#task-0">
+        {{names[k]}}
+        <ul id="task-0"><li *ngFor="let item of tasks ,let l=index" ng-if="true">{{item[l]}}</li></ul>
+      </li>
+    </ul>
+</div> -->
+<div class="col-sm-3 A" id="project" style="background-color:  white;width: 50%;margin-left:60px;" >
+<h2 align=center>Project List</h2>
+<p>Task list:</p>
+<button class="collapsible" (click)="task()">Task1</button>
+<div class="content">
+    <div *ngFor="let item of names" id="proj" >
+        <div class="col-sm-6 A">
+          <button class="collapsible" (click)="task()">{{item}}</button>
+            <div *ngFor="let item of subtask" class="content">
+                <div class="col-sm-6 A" id="p1">
+                    <label>  Name:{{item.name}}</label>   <br/> 
+                    <label>  StartDate:{{item.StartDate}}</label>  <br/> 
+                    <label> EndDate:{{item.EndDate}}</label>  <br/> 
+                    <label> projname:{{item.projectname}}</label> <br/> 
+                    <label> status:{{item.status}}</label>   
                 </div>
-                
               </div>
-            </div>
-          
+        </div>
+      </div>
+      
+</div>
+<button class="collapsible"  (click)="task()">Task2</button>
+<div class="content">
+    <!-- <div *ngFor="let item of subtask">
+        <div class="col-sm-5 A">
+            <label> Project Id:{{item.StartDate}}</label>
+            <label> EndDate:{{item.EndDate}}</label>
+            <label> projname:{{item.projectname}}</label>
+            <label> status:{{item.status}}</label>
+        </div>
+      </div> -->
+      <div *ngFor="let item of names">
+          <div class="col-sm-5 A">
+            <button class="collapsible" (click)="task()">{{item}}</button>
+              <div *ngFor="let item of sub" class="content">
+                  <div class="col-sm-6 A" id="p2">
+                      <label>  StartDate :{{item.StartDate}}</label>   
+                    <label> EndDate:{{item.EndDate}}</label>  
+                    <label> projname:{{item.projectname}}</label> 
+                    <label> status:{{item.status}}</label>   
+                  </div>
+                </div>
           </div>
+        </div>
+  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> -->
+  <!-- <button class="collapsible">Subtask2</button> -->
+  <div class="content">
+      <!-- <div *ngFor="let item of sub">
+          <div class="col-sm-5 A">
+              <label> Project Id:{{item.StartDate}}</label>
+              <label> EndDate:{{item.EndDate}}</label>
+              <label> projname:{{item.projectname}}</label>
+              <label> status:{{item.status}}</label>
+          </div>
+        </div> -->
+    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> -->
   </div>
+</div>
+<button class="collapsible"  (click)="task()">Task3</button>
+<div class="content">
+    <!-- <div *ngFor="let item of name">
+        <div class="col-sm-5 A">
+            <label> Project Id:{{item.StartDate}}</label>
+            <label> EndDate:{{item.EndDate}}</label>
+            <label> projname:{{item.projectname}}</label>
+            <label> status:{{item.status}}</label>
+        </div>
+      </div> -->
+      <div *ngFor="let item of names">
+          <div class="col-sm-6 A" >
+            <button class="collapsible" (click)="task()">{{item}}</button>
+              <div *ngFor="let item of sub" class="content">
+                  <div class="col-sm-5 A" id="p3">
+                    <label>  StartDate :{{item.StartDate}}</label><br/> <br/><br/> <br/>  
+                    <label> EndDate:{{item.EndDate}}</label>  <br/>  <br/>
+                    <label> projname:{{item.projectname}}</label> <br/>  <br/>
+                    <label> status:{{item.status}}</label>   <br/>  <br/>
+                  </div>
+                </div>
+              
+          </div>
+        </div>
+  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> -->
+  <!-- <button class="collapsible">Subtask3</button> -->
+  <div class="content">
+<!--      
+      <div *ngFor="let item of name">
+          <div class="col-sm-5 A">
+              <label> Project Id:{{item.StartDate}}</label>
+              <label> EndDate:{{item.EndDate}}</label>
+              <label> projname:{{item.projectname}}</label>
+              <label> status:{{item.status}}</label>
+          </div>
+        </div> -->
+    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> -->
+  </div>
+</div>
+</div>
+</div>
+<div class="col-sm-3  right-sidebar" id="Feed" style="margin-top: 50px; background-color:white;">
+  Feed Updates
 </div>

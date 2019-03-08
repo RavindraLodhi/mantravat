@@ -6,60 +6,118 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./displayproject.component.css']
 })
 export class DisplayprojectComponent implements OnInit {
-  tname :any[] = [];
-  names: string[];
+  
+  form: any;
+  names :any[] = [];
+  name: { "StartDate": string; "EndDate": string; "projectname": string; "status": string; }[];
+  tasks: string[][];
+  a: string;
+  sub: { "StartDate": string; "EndDate": string; "projectname": string; "status": string; }[];
+  subtask: {"name":string, "StartDate": string; "EndDate": string; "projectname": string; "status": string; }[];
   constructor() { }
 
   ngOnInit() {
-    var toggler = document.getElementsByClassName("caret");
-var i;
+    this.names=["project1"
+   ,'project2'
+   ,'project3'
+   ,'project4']
+    var coll = document.getElementsByClassName("collapsible");
+   var i;
 
-for (i = 0; i < toggler.length; i++) {
-  toggler[i].addEventListener("click", function() {
-    this.parentElement.querySelector(".nested").classList.toggle("active");
-    this.classList.toggle("caret-down");
-  });
- this.names=['Jani','Hege','Kai'];
-}
-    this.tname=[
-      {
-        "StartDate" : "1",
-        "EndDate"   : "Aditya",
-        "countDays" : "12-01-2019 ",
-        "leaveType" : "05-02-2019"
-      },
-      {
-        "StartDate" : "2",
-        "EndDate"   : "Ravi",
-        "countDays" : "15-01-2019 ",
-        "leaveType" : "02-06-2019"
-      },
-      {
-        "StartDate" : "3",
-        "EndDate"   : "Raju",
-        "countDays" : "11-02-2019 ",
-        "leaveType" : "02-04-2019"
-      },
-      {
-        "StartDate" : "4",
-        "EndDate"   : "Vicky",
-        "countDays" : "11-01-2019 ",
-        "leaveType" : "02-02-2019"
-      },
-      {
-        "StartDate" : "5",
-        "EndDate"   : "Prakash",
-        "countDays" : "12-01-2019 ",
-        "leaveType" : " 05-02-2019"
-      },
-      {
-        "StartDate" : "6",
-        "EndDate"   : "Mohan",
-        "countDays" : "15-01-2019  ",
-        "leaveType" : "02-06-2019"
-      },
-    ];
+   for (i = 0; i < coll.length; i++) {
+     console.log(coll[i]);
+     
+     coll[i].addEventListener("click", function() {
+       this.classList.toggle("active");
+       var content = this.nextElementSibling;
+       if (content.style.display === "block") {
+         content.style.display = "none";
+       } else {
+         content.style.display = "block";
+       }
+     });
+   }
+   this.a="task-1"
+   
+
+   this.tasks=[
+     ['taskA','taskb','taskc'],
+     ['taskA','taskb','taskc'],
+     ['taskA','taskB','taskc']
+   ]
+
+
+
+   this.name=[
+     {
+       "StartDate" : "12-01-2019",
+       "EndDate"   : "14-01-2019",
+       "projectname" : "hrms",
+       "status" : "progress"
+     },
+
+     // {
+     //   "StartDate" : "15-01-2019",
+     //   "EndDate"   : "20-01-2019",
+     //   "projectname" : "cs",
+     //   "status" : " in progress"
+     // },
+   ]
+
+   this.sub=[
+     {
+       "StartDate" : "10-02-2019",
+       "EndDate"   : "27-04-2019",
+       "projectname" : "hrms",
+       "status" : "progress"
+     },
+
+     // {
+     //   "StartDate" : "05-01-2019",
+     //   "EndDate"   : "20-01-2019",
+     //   "projectname" : "cs",
+     //   "status" : " in progress"
+     // },
+   ]
+
+   this.subtask=[
+     {
+       "name" : "Subtask1",
+       "StartDate" : "20-02-2019",
+       "EndDate"   : "25-04-2019",
+       "projectname" : "Fms",
+       "status" : " in progress"
+     },
+
+     {
+       "name":"Subtask2",
+       "StartDate" : "05-01-2019",
+       "EndDate"   : "20-01-2019",
+       "projectname" : "ms",
+       "status" : "complete"
+     },
+   ]
+ 
+  
   }
+task()
+{
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
 
+  for (i = 0; i < coll.length; i++) {
+    console.log(coll[i]);
+    
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+}
   
 }
