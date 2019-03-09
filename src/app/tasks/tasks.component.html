@@ -20,8 +20,7 @@
             <li id="sidebarleftOpt"><a (click)="ctreate()" [ngClass]="'pointer'">
                 <span class="glyphicon glyphicon-home"></span>
                 Create Task</a></li>
-            <li id="sidebarleftOpt"><a (click)="getAllTasks()" data-toggle="collapse" data-target="#demo"
-                [ngClass]="'pointer'">
+            <li id="sidebarleftOpt"><a (click)="getAllTasks()" data-toggle="collapse" data-target="#demo" [ngClass]="'pointer'">
                 <span class="glyphicon glyphicon-magnet"></span>
                 Update Task</a>
               <div id="demo" class="collapse">
@@ -53,8 +52,7 @@
                   </div>
 
                   <div class="col-md-6 col-xs-6 col-sm-6 ">
-                    <input type="text" formControlName="t_Name" class="form-control"
-                      [ngClass]="{ 'is-invalid': submitted && f.t_Name.errors }" />
+                    <input type="text" formControlName="t_Name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.t_Name.errors }" />
                     <div *ngIf=" f.t_Name.touched && f.t_Name.errors" class="invalid-feedback">
                       <div *ngIf="f.t_Name.errors.required" class="error-msg">First Name is required</div>
                       <div *ngIf="f.t_Name.errors.pattern">Only alphabets allowed</div>
@@ -94,8 +92,7 @@
                     <label class="control-label  label-name" for="template">Task Category</label>
                   </div>
                   <div class="col-md-6 col-xs-6 col-sm-6 ">
-                    <input type="text" id="t_Category" formControlName="t_Category" class="form-control"
-                      name="t_Category">
+                    <input type="text" id="t_Category" formControlName="t_Category" class="form-control" name="t_Category">
                   </div>
                 </div>
                 <div class="form-group">
@@ -121,8 +118,7 @@
                     <label class="control-label  label-name" for="template">Estimeted Hr</label>
                   </div>
                   <div class="col-md-6 col-xs-6 col-sm-6 ">
-                    <input type="number" id="t_EstimetedHr" formControlName="t_EstimetedHr" class="form-control"
-                      name="t_EstimetedHr">
+                    <input type="number" id="t_EstimetedHr" formControlName="t_EstimetedHr" class="form-control" name="t_EstimetedHr">
                     <div *ngIf=" f.t_EstimetedHr.touched && f.t_EstimetedHr.errors" class="invalid-feedback">
                       <div *ngIf="f.t_EstimetedHr.errors.required" class="error-msg">Estimeted Hr is required</div>
                     </div>
@@ -133,8 +129,8 @@
                     <label class="control-label  label-name" for="template">Task Priority:</label>
                   </div>
                   <div class="col-md-6 col-xs-6 col-sm-6 ">
-                    <select type="t_Priority" class="form-control" id="t_Priority" formControlName="t_Priority"
-                      name="Priority" required>
+                    <select type="t_Priority" class="form-control" id="t_Priority" formControlName="t_Priority" name="Priority"
+                      required>
                       <option selected="true">Very High</option>
                       <option>High</option>
                       <option>Medium</option>
@@ -160,8 +156,8 @@
                     <label class="control-label  label-name" for="template">Parent Task Name:</label>
                   </div>
                   <div class="col-md-6 col-xs-6 col-sm-6 ">
-                    <select type="text" class="form-control" name="t_parentId" id="t_parentId"
-                      formControlName="t_parentId" required>>
+                    <select type="text" class="form-control" name="t_parentId" id="t_parentId" formControlName="t_parentId"
+                      required>>
                       <option value="project1">project1</option>
                       <option value="project2">project2</option>
                       <option value="project3">project3</option>
@@ -203,8 +199,8 @@
                   </div>
                   <div class="col-md-6 col-xs-6 col-sm-6 ">
                     <div>
-                      <input id="file" (change)="modo($event)" type="file" title="Browse Document"
-                        name="documentAttechments" required>
+                      <input id="file" (change)="modo($event)" type="file" title="Browse Document" name="documentAttechments"
+                        required>
                     </div>
                   </div>
                 </div>
@@ -232,7 +228,8 @@
               <div class="card-header " style="height: 27px;">
                 <div class="flude-container ">
                   <div class="row ">
-                    <div class="col-sm-4  col-xs-4" style="padding :0px; text-align: left">Priority :{{task.t_Priority}}
+                    <div class="col-sm-4  col-xs-4" style="padding :0px; text-align: left">Priority
+                      :{{task.t_Priority}}
                     </div>
                     <div class="col-sm-4 col-xs-4" style="padding :0px ; text-align: center">{{task.t_Name}}</div>
                     <div class="col-sm-4 col-xs-4" style="padding :0px ;  text-align: right">Status : {{task.t_Status}}

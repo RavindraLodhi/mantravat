@@ -12,6 +12,11 @@ input[type=text], input[type=password] {
   margin-left: 107px;
   border-radius: 17px;
 }
+img.avatar[_ngcontent-c6] {
+  width: 11%;
+  border-radius: 11%;
+  margin-right: 64px;
+}
 
 button {
  margin-left: 146px;

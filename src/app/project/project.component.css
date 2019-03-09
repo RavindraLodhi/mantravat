@@ -140,24 +140,26 @@
  .right-sidebar {
   
   background: white;
-  width: 284px;
-  margin-left: 1029px;
+  width: 325px;
+  margin-left: 1004px;
   position: fixed;
-  height: 550px;
+  height: 600px;
 } 
 ul[_ngcontent-c3] {
   background: white;
-  margin-right: -77px;
-  /* padding-left: 156px; */
-  width: -78px;
-  height: 113px;
-  margin-left: 121px;
+    margin-right: -127px;
+    width: -78px;
+    height: 131px;
+    margin-left: 123px;
+    margin-top: 12px;
+    position: fixed;
 }
 #status{
   /* background: red; */
     padding-top: 16px;
-    height: 161px;
+    height: 231px;
     font-size: 11px;
+    margin-top: 13px;
 }
 #hq1{
   margin-left: -141px;
@@ -169,11 +171,12 @@ ul[_ngcontent-c3] {
     margin-left: 75px;
 }
 #pn1{
-  height: 181px;
-    background: white;
-    margin-bottom: 7px;
-    width: 309px;
-    margin-left: 55px;
+  height: 191px;
+  background: white;
+  margin-bottom: -4px;
+  width: 305px;
+  margin-left: 44px;
+  margin-right: -59px;
 }
 
 li[_ngcontent-c3][_ngcontent-c3] {
@@ -186,6 +189,7 @@ li[_ngcontent-c3][_ngcontent-c3] {
 }
 a {
   text-decoration: none;
+  margin-left: -1px;
 }
 .row[_ngcontent-c3] {
   padding-top: 39px;
@@ -254,6 +258,22 @@ input#file {
   background-color: #ddd;
   margin-top: 2px;
 }
+#form1{
+  
+    margin-left: 287px;
+    width: 774px;
+    margin-top: 37px;
+}
+
+button[_ngcontent-c3] {
+  background: rgba(65, 19, 230, 0.96);
+  width: 84px;
+  border-radius: 16px;
+  margin-top: -129px;
+  /* margin-left: 80px; */
+  margin-right: -222px;
+}
+
 #cross_icon {
   color: black;
   margin-top: 4px;
@@ -411,6 +431,13 @@ input#file {
     background: white;
     margin-left: 16px;
     margin-top: -66px;
+    width: 773px;
+}
+#head2{
+  background: white;
+    margin-left: 16px;
+    margin-top: -46px;
+    width: 773px;
 }
 
 .inputFild {
@@ -425,6 +452,10 @@ input#file {
   background: white;
   height: 199px;
   width: 100%;
+}
+.cheackBox{
+  height: 78px;
+    background: white;
 }
 .pad {
   margin-top: 9px;

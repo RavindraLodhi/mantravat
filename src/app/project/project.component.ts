@@ -41,6 +41,7 @@ export class ProjectComponent implements OnInit {
    ProjectList: any;
    _ProjectService: any;
    isDisplayProject: boolean;
+   changeproject: boolean;
 
   
   constructor(
@@ -145,10 +146,18 @@ this.validation(value);
    if(value ==1){
     this.create = true;
     this.display = false;
+    this.changeproject =false;
    }
-   else{
+   else if(value==2){
     this.create = false;
     this.display = true;
+    this.changeproject= false;
+   }
+   else
+   {
+    this.create = false;
+    this.display = false;
+    this.changeproject= true;
    }
   }
 
@@ -362,6 +371,12 @@ Displayproject() {
 DisplaycreateChangTask() {
   this.isDisplayProject = false;
 }
-
-
 }
+var modal = document.getElementById('id01');
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
