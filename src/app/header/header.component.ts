@@ -11,5 +11,18 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
   }
+profile()
+{
+  console.log("running");
+  document.getElementById("d").style.display="block";
+  var modal = document.getElementById('d');
 
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+  
+}
 }

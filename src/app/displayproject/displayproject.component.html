@@ -5,7 +5,7 @@
                     Dashbord</a></li>
       <li id="sidebarleftOpt"><a routerLink="/project">
                     <span class="glyphicon glyphicon-magnet"></span>
-                    project</a></li>
+                    Project</a></li>
       <li id="sidebarleftOpt"><a routerLink="/task">
                     <span class="glyphicon glyphicon-credit-card"></span>
                     Task</a></li>
@@ -44,12 +44,12 @@
         <div class="col-sm-6 A">
           <button class="collapsible" (click)="task()">{{item}}</button>
             <div *ngFor="let item of subtask" class="content">
-                <div class="col-sm-6 A" id="p1">
+                <div class="col-sm-6 A" id="p1" *ngFor="let item of subtask">
                     <label>  Name:{{item.name}}</label>   <br/> 
                     <label>  StartDate:{{item.StartDate}}</label>  <br/> 
                     <label> EndDate:{{item.EndDate}}</label>  <br/> 
-                    <label> projname:{{item.projectname}}</label> <br/> 
-                    <label> status:{{item.status}}</label>   
+                    <label> ProjectName:{{item.projectname}}</label> <br/> 
+                    <label> Status:{{item.status}}</label>   
                 </div>
               </div>
         </div>
