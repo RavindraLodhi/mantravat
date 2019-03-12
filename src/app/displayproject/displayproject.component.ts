@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplayprojectComponent implements OnInit {
   tname :any[] = [];
+  names: string[];
   constructor() { }
 
   ngOnInit() {
+    var toggler = document.getElementsByClassName("caret");
+var i;
+
+for (i = 0; i < toggler.length; i++) {
+  toggler[i].addEventListener("click", function() {
+    this.parentElement.querySelector(".nested").classList.toggle("active");
+    this.classList.toggle("caret-down");
+  });
+ this.names=['Jani','Hege','Kai'];
+}
     this.tname=[
       {
         "StartDate" : "1",
@@ -50,4 +61,5 @@ export class DisplayprojectComponent implements OnInit {
     ];
   }
 
+  
 }

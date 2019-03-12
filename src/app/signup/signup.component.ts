@@ -61,6 +61,8 @@ export class SignupComponent implements OnInit {
   from10;
   to10;
   certificate10;
+
+  
  
 
  constructor(
@@ -78,6 +80,15 @@ export class SignupComponent implements OnInit {
 
  }
  submit(value :any){
+
+//  if(value.suffix == ''){
+//      console.log("suffix is null");
+//      document.getElementById("suffix").style.border = "1px solid #FC0606";
+     
+
+//  }
+
+
    // this.router1.navigate(['/dashboard']);
    this.suffix=value.suffix;
    this.firstname=value.firstname;
@@ -167,9 +178,12 @@ export class SignupComponent implements OnInit {
 
     password:value.password,
     confirmpassword:value.confirmpassword,
+
+    
     
   
    }
+   
 
    this._SignupService.signup(body).subscribe(data=>{
 
@@ -236,75 +250,217 @@ export class SignupComponent implements OnInit {
 //    this.to10=value.to10;
 //    this.certificate10=value.Certificate10;
 
-console.log(value);
+//  console.log(value);
+ console.log(value.DOJ);
+ console.log(value.DOJ.substr(0,4));//year
+ console.log(value.DOJ.substr(5,2));//month
+ console.log(value.DOJ.substr(8,2));//date
+ console.log(new Date().getFullYear());
+ console.log(new Date().getMonth()+1);
+ console.log(new Date().getDate());
+// console.log(new Date());
+// this.val(value);
+ this.validation(value);
 
-   if(this.password==this.confirmpassword)
-   {
-    document.getElementById("demo3").innerHTML = "password  matched";
-    document.getElementById("demo4").innerHTML = "";
-   // document.getElementById('submit').disable = false;
-   }
-   else{
-    document.getElementById("demo4").innerHTML = "password is not matching";
-    document.getElementById("demo3").innerHTML = "";
-   }
-   if(this.password.length>=8  )
-   {
-    document.getElementById("demo5").innerHTML = "password is correct";
-    document.getElementById("demo6").innerHTML = "";
-   }
-   else{
-    document.getElementById("demo6").innerHTML = "password should atleast 8 chrachters ";
-    document.getElementById("demo5").innerHTML = "";
-   }
-   console.log(value.Email)
+ }
+//  val(value)
+//  {
+//   if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value.Email)&& value.Email!="")
+//   {
+//    document.getElementById("em1").innerHTML = "email is valid";
+//    document.getElementById("em2").innerHTML = "";
+//    document.getElementById("em").style.border = "1px solid green";
+//     return true;
+//   }
+//   else
+//   {
+//    document.getElementById("em2").innerHTML = "email is not valid";
+//    document.getElementById("em1").innerHTML = "";
+//    document.getElementById("em").style.border = "1px solid #FC0606";
+//    document.getElementById("em").focus();
+//    return false;
+//   }
+ 
+  
+ 
+//  }
+
+validation(value){
+  var letters = /^[A-Za-z]+$/;
+ // for suffix
+  if(value.suffix.match(letters))
+ {
+ //alert('Your name have accepted : you can try another');
+ document.getElementById("suffix").style.border = "1px solid green";
+
+ }
+ else
+ {
+ alert('Please input alphabet characters only for suffix');
+ document.getElementById("suffix").style.border = "1px solid #FC0606";
+ document.getElementById("suffix").focus();
+ return false;
+ 
+
+ }
+
+ //for fristname
+ var letters1 = /^[A-Za-z]+$/;
+ if(value.FirstName.match(letters1))
+ {
+ //alert('Your name have accepted : you can try another');
+ document.getElementById("fn").style.border = "1px solid green";
+ }
+ else
+ {
+ alert('Please input alphabet characters only for fristname');
+ document.getElementById("fn").style.border = "1px solid #FC0606";
+ document.getElementById("fn").focus();
+ return false;
+ }
+
+ var letters1 = /^[A-Za-z]+$/;
+ if(value.middleName.match(letters1))
+ {
+ //alert('Your name have accepted : you can try another');
+ document.getElementById("mn").style.border = "1px solid green";
+ }
+ else
+ {
+ alert('Please input alphabet characters only middlename');
+ document.getElementById("mn").style.border = "1px solid #FC0606";
+ document.getElementById("mn").focus();
+ return false;
+ }
+
+ var letters1 = /^[A-Za-z]+$/;
+ if(value.lastName.match(letters1))
+ {
+ //alert('Your name have accepted : you can try another');
+ document.getElementById("ln").style.border = "1px solid green";
+ }
+ else
+ {
+ alert('Please input alphabet characters only for lastname');
+ document.getElementById("ln").style.border = "1px solid #FC0606";
+ document.getElementById("ln").focus();
+ return false;
+ }
+ if(new Date().getFullYear()-value.DOB.substr(0,4)>=18 && value.DOB!="")
+ {
+   document.getElementById("demo7").innerHTML = "Age is 18+";
+   document.getElementById("demo8").innerHTML = "";
+   document.getElementById("dob").style.border = "1px solid green";
    
-   if(value.Email.match("/(\W|^)[\w.+\-]*@gmail\.com(\W|$)"))
-   {
-    document.getElementById("em1").innerHTML = "email is valid";
-    document.getElementById("em2").innerHTML = "";
-   }
-   else
-   {
-    document.getElementById("em2").innerHTML = "email is not valid";
-    document.getElementById("em1").innerHTML = "";
-   }
-  // if(dtCurrent.getFullYear()-this.dob.getFullYear() == 18)
-  console.log(value.DOB.substr(0,4));
-  console.log(new Date().getFullYear());
-  console.log("hello");
-  if(new Date().getFullYear()-value.DOB.substr(0,4)>=18)
+ }
+ else{
+   document.getElementById("demo8").innerHTML = "Age should be 18+";
+   document.getElementById("demo7").innerHTML = "";
+   document.getElementById("dob").style.border = "1px solid #FC0606";
+   document.getElementById("dob").focus();
+   return false;
+ }
+ if(new Date().getFullYear()<=value.DOJ.substr(0,4) && new Date().getDate()<=value.DOJ.substr(8,2) &&  new Date().getMonth()+1<=value.DOJ.substr(5,2)&& value.DOJ!="")
+ {
+   document.getElementById("doj1").innerHTML = "DOJ is correct";
+   document.getElementById("doj2").innerHTML = "";
+   document.getElementById("doj").style.border = "1px solid green";
+   
+ }
+ else{
+   document.getElementById("doj2").innerHTML = "DOJ shoud be greater then current date";
+   document.getElementById("doj1").innerHTML = "";
+   document.getElementById("doj").style.border = "1px solid #FC0606";
+   document.getElementById("doj").focus();
+   return false;
+ }
+ if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value.Email)&& value.Email!="")
   {
-    document.getElementById("demo6").innerHTML = "Age is 18+";
-    document.getElementById("demo7").innerHTML = "";
+   document.getElementById("em1").innerHTML = "email is valid";
+   document.getElementById("em2").innerHTML = "";
+   document.getElementById("em").style.border = "1px solid green";
+
+  }
+  else
+  {
+   document.getElementById("em2").innerHTML = "email is not valid";
+   document.getElementById("em1").innerHTML = "";
+   document.getElementById("em").style.border = "1px solid #FC0606";
+   document.getElementById("em").focus();
+   return false;
+  
+  }
+  if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value.Emailc)&& value.Emailc!="")
+  {
+   document.getElementById("emc1").innerHTML = "email is valid";
+   document.getElementById("emc2").innerHTML = "";
+   document.getElementById("emc").style.border = "1px solid green";
+
+  }
+  else
+  {
+   document.getElementById("emc2").innerHTML = "email is not valid";
+   document.getElementById("emc1").innerHTML = "";
+   document.getElementById("emc").style.border = "1px solid #FC0606";
+   document.getElementById("emc").focus();
+   return false;
+  }
+  if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value.Emailp)&& value.Emailp!="")
+  {
+   document.getElementById("emp1").innerHTML = "email is valid";
+   document.getElementById("emp2").innerHTML = "";
+   document.getElementById("emp").style.border = "1px solid green";
+
+  }
+  else
+  {
+   document.getElementById("emp2").innerHTML = "email is not valid";
+   document.getElementById("emp1").innerHTML = "";
+   document.getElementById("emp").style.border = "1px solid #FC0606";
+   document.getElementById("emp").focus();
+   return false;
+  }
+  if(this.password.length>=8 && /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(this.password) )
+  {
+   document.getElementById("demo5").innerHTML = "password is correct";
+   document.getElementById("demo6").innerHTML = "";
+   document.getElementById("p").style.border = "1px solid green";
+
   }
   else{
-    document.getElementById("demo7").innerHTML = "Age should be 18+";
-    document.getElementById("demo6").innerHTML = "";
+   document.getElementById("demo6").innerHTML = "password should haveMinimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character ";
+   document.getElementById("demo5").innerHTML = "";
+   document.getElementById("p").style.border = "1px solid #FC0606";
+   document.getElementById("p").focus();
+   return false;
   }
   
+
+   if(this.password==this.confirmpassword && this.confirmpassword!="" )
+  {
+   document.getElementById("demo3").innerHTML = "password  matched";
+   document.getElementById("demo4").innerHTML = "";
+  // document.getElementById('submit').disable = false;
+  document.getElementById("cp").style.border = "1px solid green";
+  }
+  else{
+   document.getElementById("demo4").innerHTML = "password is not matching";
+   document.getElementById("demo3").innerHTML = "";
+   document.getElementById("cp").style.border = "1px solid #FC0606";
+   document.getElementById("cp").focus();
+   return false;
+  }
+  
+  
+ 
+  
+ 
+  
+ 
+ 
+}
+
 }
 
 
-// console.log("data co"+value.suffix);
-// console.log("data co"+value.FirstName);
-// console.log("data co"+value.MiddleName);
-// console.log("data co"+value.LastName);
-// console.log("data co"+value.gender);
-// console.log("data co"+value.DOB);
-// console.log("data co"+value.DOJ);
-// console.log("data co"+value.Email);
-// console.log("data co"+value.cn);
-// console.log("data co"+value.Title);
-// console.log("data co"+value.location);
-// console.log("data co"+value.From);
-// console.log("data co"+value.To);
-// console.log("data co"+value.Description);
-// console.log("data co"+value.Skill);
-// console.log("data co"+value.country);
-// console.log("data co"+value.State);
-// console.log("data co"+value.city);
-// console.log("data co"+value.Street1);
-// console.log("data co"+value.Street2);
-// console.log("data co"+value.pin);
-}
+ 

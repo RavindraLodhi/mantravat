@@ -1,0 +1,472 @@
+/* button {
+  background: rgba(65, 19, 230, 0.96);
+  width: 69px;
+  border-radius: 16px;
+}
+.divHight {
+  height: auto;
+  background: white;
+  margin-top: 26px;
+}
+.right-sidebar {
+  background: white;
+  width: 284px;
+}
+ul {
+  background: white;
+}
+
+li {
+  padding-top: 10px;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}
+.row {
+  padding-top: 6px;
+}
+label {
+  font-weight: 100;
+}
+input {
+  font-weight: 400;
+  transition-duration: 334ms;
+  transition-property: border-color, box-shadow;
+  box-shadow: none;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  padding: 0 10px;
+  width: 100%;
+  outline: 0;
+  height: 32px;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.9);
+}
+textarea {
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  background-color: transparent;
+}
+select {
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  background-color: transparent;
+}
+.container1 {
+  height: 118px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  background-color: transparent;
+}
+.topnav .icon {
+  display: none;
+}
+.topnav .icon1 {
+  display: none;
+}
+.docomentAttech {
+  background: red;
+  height: 62px;
+  border-radius: 24px;
+}
+#form {
+  background-color: red !important;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav {
+    background: black;
+    margin-top: -5px;
+  }
+  .sidebarleft {
+    display: none !important;
+    padding: 0px;
+  }
+  .sidebarleftA {
+    display: none !important;
+  }
+  .sidebarleftB {
+    display: block !important;
+  }
+  .topnav a.icon {
+    float: left;
+    display: block;
+  }
+  .topnav a.icon1 {
+    float: right;
+    display: block;
+  }
+
+  .right-sidebar {
+    width: 81px;
+    height: 224px;
+    display: none;
+  }
+  .col-xs-2 {
+    width: 16.666667%;
+    margin: 0px;
+    padding: 0px;
+  }
+  ul {
+    padding-left: 1px;
+    font-size: 12px;
+  }
+
+  .glyphicon-menu-hamburger {
+    font-size: 25px;
+  }
+  #myTopnav {
+    position: absolute;
+    z-index: 2;
+    width: 100px;
+    margin-top: 28px;
+  }
+  #Feed {
+    position: absolute;
+    z-index: 2;
+    width: 100px;
+    margin-top: 28px;
+    margin-left: 311px;
+    font-size: 11px;
+    margin-top: -533px;
+  }
+  .col-sm-3 right-sidebar {
+    display: none;
+  }
+  .right-sidebarB {
+    background: white;
+    height: 200px;
+    width: 284px;
+  }
+} */
+.container-fluid1{
+    padding-top: 37px;
+  }
+  #mobileHeader{
+   position: fixed;
+   z-index: 2;
+   padding-right: 0px;
+   padding-left: 0px;
+  }
+  button {
+    background: rgba(65, 19, 230, 0.96);
+    width: 69px;
+    border-radius: 16px;
+    margin-top: 10px;
+  }
+  .divHight {
+    height: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    /* background: white; */
+    /* margin-top: 26px; */
+  }
+  
+  .right-sidebar {
+    background: white;
+    width: 284px;
+  }
+  ul {
+    background: white;
+  }
+  
+  li {
+    padding-top: 10px;
+    height: auto;
+  }
+  a {
+    text-decoration: none;
+  }
+  .row {
+    padding-top: 6px;
+  }
+  label {
+    font-weight: 100;
+    font-family: "Times New Roman", Times, serif;
+  }
+  input {
+    height: 26px;
+  
+    /* border-radius: 15px; */
+  }
+  
+  select {
+    height: 26px;
+  }
+  .container1 {
+    height: 118px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    background-color: transparent;
+  }
+  .topnav .icon {
+    display: none;
+  }
+  .topnav .icon1 {
+    display: none;
+  }
+  .docomentAttech {
+    background: red;
+    height: 62px;
+    border-radius: 24px;
+  }
+  #form {
+    /* background-color: red !important; */
+  }
+  input#file {
+    display: inline-block;
+    margin-left: 204px;
+    width: 59px;
+    padding: 26px 0 0 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698394-icon-130-cloud-upload-512.png)
+      center center no-repeat #e4e4e4;
+    border-radius: 20px;
+    background-size: 44px 28px;
+  }
+  .attechmentShow {
+    width: 608px;
+    margin-left: 15px;
+    height: 102px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    background: white;
+  }
+  .attechment {
+    color: #4400ff;
+    height: 25px;
+    padding-top: 1px;
+    padding-left: 7px;
+    background-color: #ddd;
+    margin-top: 2px;
+  }
+  #cross_icon {
+    color: black;
+    margin-top: 4px;
+  }
+  #Feed{
+    margin-left: 673px;
+    position: fixed;
+    z-index: 2;
+    top:45px;
+  }
+  
+  @media screen and (max-width: 600px) {
+  
+    
+    input#file[_ngcontent-c3] {
+      margin-left: 80px;
+      margin-bottom: 5px;
+    }
+    .attechmentShow[_ngcontent-c3] {
+      width: 315px;
+    }
+    #textarea[_ngcontent-c3] {
+      height: 75px;
+    }
+    textarea[_ngcontent-c3] {
+      height: 79px;
+      width: 154px;
+    }
+  
+    .inputFild[_ngcontent-c3] {
+      background: white;
+      padding-left: 0px;
+      padding-right: 35px;
+      height: 402px;
+    }
+    .headertext[_ngcontent-c3] {
+      margin-top: 26px;
+      height: 50px;
+      padding-top: 2px;
+    }
+    .form-control[_ngcontent-c3] {
+      padding: 3px 12px;
+      width: 100%;
+    }
+    .commentBox[_ngcontent-c3] {
+      margin-top: 9px;
+    }
+    .headertext[_ngcontent-c1] {
+      margin-top: 30px;
+      /* text-align: center; */
+      background-color: white;
+      height: 40px;
+      padding-top: 0.5px;
+    }
+    .topnav {
+      background: black;
+      margin-top: -5px;
+    }
+    .sidebarleft {
+      display: none !important;
+      padding: 0px;
+      padding-left: 1px !important;
+      padding-right: 1px !important;
+    }
+    .sidebarleftA {
+      display: none !important;
+    }
+    .sidebarleftB {
+      display: block !important;
+    }
+    .topnav a.icon {
+      float: left;
+      display: block;
+    }
+    .topnav a.icon1 {
+      float: right;
+      display: block;
+    }
+  
+    .right-sidebar {
+      width: 81px;
+      height: 224px;
+      display: none;
+    }
+    .col-xs-2 {
+      width: 16.666667%;
+      margin: 0px;
+      padding: 0px;
+    }
+    ul {
+      padding-left: 1px;
+      font-size: 12px;
+    }
+  
+    .glyphicon-menu-hamburger {
+      font-size: 25px;
+    }
+    #myTopnav {
+      position: absolute;
+      z-index: 2;
+      width: 100px;
+      margin-top: 28px;
+    }
+    #Feed {
+      position: absolute;
+      z-index: 2;
+      width: 100px;
+      margin-top: 28px;
+      margin-left: 311px;
+      font-size: 11px;
+      margin-top: -533px;
+    }
+    .col-sm-3 right-sidebar {
+      display: none;
+    }
+    .right-sidebarB {
+      background: white;
+      height: 200px;
+      width: 284px;
+    }
+    /* .inputFild[_ngcontent-c1] {
+      height: 497px;
+      background: white;
+      padding-left: 12px;
+      padding-right: 45px;
+     
+  } */
+  .col-sm-7{
+    margin-left: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 43px !important;
+  } 
+  }
+  #overlay {
+    position: fixed;
+   }
+  
+   #sidebar {
+    width: 191px;
+    background: #ddd;
+    float: right;
+    /* max-height: 100%; */
+   }
+  
+  /* new css  */
+  .form-group {
+    margin-top: 18px;
+    padding-top: 21px;
+    height: 24px;
+  
+  }
+  .inputFild {
+    height: 402px;
+    background: white;
+    padding-left: 56px;
+    padding-right: 178px;
+  }
+  .commentBox {
+    margin-top:4px;
+    background: white;
+    height: 199px;
+    width: 100%;
+  }
+  .pad {
+    margin-top: 9px;
+    text-align: right;
+  }
+  .headertext {
+    text-align: center;
+    background-color: white;
+    height: 21px;
+  }
+  .form-groupfirstRow {
+    margin-top: 1px;
+  }
+  .midDiv {
+    height: 450px;
+    /* overflow: auto; */
+  }
+  .form-control {
+    padding: 3px 12px;
+    width: auto;
+  }
+  textarea {
+    background-color: transparent;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    height: 104px;
+    width: 295px;
+  }
+  #textarea {
+    height: 100px;
+  }
+  .pointer{
+    cursor: pointer;
+  }
+  .invalid-feedback{
+    color: red;
+    border-color: blue;
+  }
+  
+  /* this css for display task */
+  .High{
+    border-top: 2px solid rgb(194, 11, 11);
+  }
+  #l{
+    padding-right: 31px;
+    margin-left: 15px;
+    
+    background: white !important;
+  }
+  .col-sm-7{
+    padding-right: 31px;
+    margin-left: 15px;
+    height: auto !important;
+    background: white !important;
+  }
+  #card{
+    margin-left: 46px;
+    margin-top: 20px;
+    height: 136px;
+    font-size: 10px;
+  }
+  .Low{
+    border-top: 2px solid rgb(186, 243, 111);
+  }
+  .Medium{
+    border-top: 2px solid rgb(10, 9, 9);
+  }
+  .Very{
+    border-top: 2px solid #ff0000;
+  }

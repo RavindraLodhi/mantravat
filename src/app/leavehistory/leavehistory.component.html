@@ -184,12 +184,20 @@ Enter text here...</textarea
     <div class=" col-xs-12" id="mobileHeader">
       <div class=" col-xs-6  topnav">
         <a href="javascript:void(0);" class="icon">
-          <i class="glyphicon glyphicon-menu-hamburger" (click)="myFunction()" id="icon"></i>
+          <i
+            class="glyphicon glyphicon-menu-hamburger"
+            (click)="myFunction()"
+            id="icon"
+          ></i>
         </a>
       </div>
       <div class=" col-xs-6 topnav">
         <a href="javascript:void(0);" class="icon1">
-          <i class="glyphicon glyphicon-menu-hamburger" (click)="myFunctionFeedBack()" id="icon"></i>
+          <i
+            class="glyphicon glyphicon-menu-hamburger"
+            (click)="myFunctionFeedBack()"
+            id="icon"
+          ></i>
         </a>
       </div>
     </div>
@@ -201,17 +209,25 @@ Enter text here...</textarea
             <li id="sidebarleftOpt">
               <a (click)="callComponentMethodHere(1)" [ngClass]="'pointer'">
                 <span class="glyphicon glyphicon-home"></span>
-                Apply Leave</a>
+                Apply Leave</a
+              >
             </li>
             <li id="sidebarleftOpt">
-              <a (click)="callComponentMethodHere(2)" data-toggle="collapse" data-target="#demo" [ngClass]="'pointer'">
+              <a
+              routerLink="/leave"
+                data-toggle="collapse"
+                data-target="#demo"
+                [ngClass]="'pointer'"
+              >
                 <span class="glyphicon glyphicon-magnet"></span>
-                Leave Histry</a>
+                Leave Histry</a
+              >
             </li>
             <li id="sidebarleftOpt">
-              <a routerLink="/leavehistory">
+              <a (click)="callComponentMethodHere(3)">
                 <span class="glyphicon glyphicon-credit-card"></span>
-                Leave Status</a>
+                Leave Status</a
+              >
             </li>
           </ul>
         </div>
@@ -228,11 +244,19 @@ Enter text here...</textarea
               <div class="inputFild">
                 <div class="form-group">
                   <div class="col-md-6 col-md-6  col-xs-6 col-sm-6 pad">
-                    <label class="control-label  label-name" for="template">Leave Type:</label>
+                    <label class="control-label  label-name" for="template"
+                      >Leave Type:</label
+                    >
                   </div>
                   <div class="col-md-6 col-xs-6 col-sm-6 ">
-                    <select type="l_type" class="form-control" id="l_type" formControlName="l_type" name="Priority"
-                      required>
+                    <select
+                      type="l_type"
+                      class="form-control"
+                      id="l_type"
+                      formControlName="l_type"
+                      name="Priority"
+                      required
+                    >
                       <option>Type 1</option>
                       <option>Type 2</option>
                       <option>Type 3</option>
@@ -241,11 +265,19 @@ Enter text here...</textarea
                 </div>
                 <div class="form-group">
                   <div class="col-md-6 col-md-6  col-xs-6 col-sm-6 pad">
-                    <label class="control-label  label-name" for="template">Day:</label>
+                    <label class="control-label  label-name" for="template"
+                      >Day:</label
+                    >
                   </div>
                   <div class="col-md-6 col-xs-6 col-sm-6 ">
-                    <select type="l_Day" class="form-control" id="l_Day" formControlName="l_Day" name="Priority"
-                      required>
+                    <select
+                      type="l_Day"
+                      class="form-control"
+                      id="l_Day"
+                      formControlName="l_Day"
+                      name="Priority"
+                      required
+                    >
                       <option>Type 1</option>
                       <option>Type 2</option>
                       <option>Type 3</option>
@@ -254,33 +286,62 @@ Enter text here...</textarea
                 </div>
                 <div class="form-group">
                   <div class="col-md-6 col-xs-6 col-sm-6 pad ">
-                    <label class="control-label  label-name" for="template">Start Date:</label>
+                    <label class="control-label  label-name" for="template"
+                      >Start Date:</label
+                    >
                   </div>
                   <div class="col-md-6 col-xs-6 col-sm-6 ">
-                    <input type="Date" id="l_SDate" formControlName="l_SDate" class="form-control" name="l_SDate" />
+                    <input
+                      type="Date"
+                      id="l_SDate"
+                      formControlName="l_SDate"
+                      class="form-control"
+                      name="l_SDate"
+                    />
                     <font id="sd" color="red"></font>
                     <font id="sd1"></font>
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="col-md-6 col-xs-6 col-sm-6 pad">
-                    <label class="control-label  label-name" for="template">End Date</label>
+                    <label class="control-label  label-name" for="template"
+                      >End Date</label
+                    >
                   </div>
                   <div class="col-md-6 col-xs-6 col-sm-6 ">
-                    <input type="Date" id="l_EDate" formControlName="l_EDate" class="form-control" name="l_EDate" />
+                    <input
+                      type="Date"
+                      id="l_EDate"
+                      formControlName="l_EDate"
+                      class="form-control"
+                      name="l_EDate"
+                    />
                     <font id="ed" color="red"></font>
                     <font id="ed1"></font>
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="col-md-6 col-xs-6 col-sm-6 pad">
-                    <label class="control-label  label-name" for="template">Count days</label>
+                    <label class="control-label  label-name" for="template"
+                      >Count days</label
+                    >
                   </div>
                   <div class="col-md-6 col-xs-6 col-sm-6 ">
-                    <input type="number" id="l_count_days" formControlName="l_count_days" class="form-control"
-                      name="l_count_days" />
-                    <div *ngIf="f.l_count_days.touched && f.l_count_days.errors" class="invalid-feedback">
-                      <div *ngIf="f.l_count_days.errors.required" class="error-msg">
+                    <input
+                      type="number"
+                      id="l_count_days"
+                      formControlName="l_count_days"
+                      class="form-control"
+                      name="l_count_days"
+                    />
+                    <div
+                      *ngIf="f.l_count_days.touched && f.l_count_days.errors"
+                      class="invalid-feedback"
+                    >
+                      <div
+                        *ngIf="f.l_count_days.errors.required"
+                        class="error-msg"
+                      >
                         Number of day is required
                       </div>
                     </div>
@@ -288,16 +349,31 @@ Enter text here...</textarea
                 </div>
                 <div class="form-group " id="textarea">
                   <div class="col-md-6 col-md-6  col-xs-6 col-sm-6 pad">
-                    <label class="control-label  label-name" for="template">Comment Description:</label>
+                    <label class="control-label  label-name" for="template"
+                      >Comment Description:</label
+                    >
                   </div>
                   <div class="col-md-6 col-xs-6 col-sm-6 ">
-                    <textarea placeholder="please enter the task comment......" formControlName="l_LongDescription"
-                      cols="10" type="text" id="l_LongDescription" name="l_LongDescription" required></textarea>
-                    <div *ngIf="
+                    <textarea
+                      placeholder="please enter the task comment......"
+                      formControlName="l_LongDescription"
+                      cols="10"
+                      type="text"
+                      id="l_LongDescription"
+                      name="l_LongDescription"
+                      required
+                    ></textarea>
+                    <div
+                      *ngIf="
                         f.l_LongDescription.touched &&
                         f.l_LongDescription.errors
-                      " class="invalid-feedback">
-                      <div *ngIf="f.l_LongDescription.errors.required" class="error-msg">
+                      "
+                      class="invalid-feedback"
+                    >
+                      <div
+                        *ngIf="f.l_LongDescription.errors.required"
+                        class="error-msg"
+                      >
                         First Name is required
                       </div>
                     </div>
@@ -305,108 +381,49 @@ Enter text here...</textarea
                 </div>
               </div>
               <div class="col-md-11 col-xs-12 col-sm-12">
-                <button (click)="addLeave()" type="button" class="btn btn-default pull-right btn-btn">
+                <button
+                  (click)="addLeave()"
+                  type="button"
+                  class="btn btn-default pull-right btn-btn"
+                >
                   Submit
                 </button>
               </div>
             </form>
           </div>
         </div>
+        <div *ngIf="leaveHistry" style="margin-left: 207px; margin-top: -16px;">
+          <h2>Leave History</h2>
+        </div>
         <div *ngIf="leaveHistry">
-          <div class="container-fluid " style="    margin-top: 32px;">
+          <div class="container-fluid ">
             <div class="row">
               <div class="col-sm-5">
-                Start Date:<input style="margin-top :5px" type="date" name="" id="" />
+                  Start Date:<input style="margin-top :5px" type="date" name="" id="" />
               </div>
               <div class="col-sm-5">
-                End Date: <input style="margin-top :5px" type="date" name="" id="" />
+               End Date: <input style="margin-top :5px" type="date" name="" id="" />
               </div>
               <div class="col-sm-2">
                 <button style="margin-top :5px" type="button">serch</button>
-              </div><br /><br />
-              <!-- <div class="search-table-outter" style="overflow-x: scroll;">
-                <table border="3" class="search-table" style="width: 100%;">
-                  <header ngFor="let headeropt of headerOpts">
-                    <div class="col-sm-3 leavHistry ">
-                      <tr>
-                        <th style="border:none;">Requested Date</th>
-                        <th style="border:none;">LeaveType</th>
-                        <th style="border:none;">Days</th>
-                        <th style="border:none;">RequestStatus</th>
-                        <th style="border:none;">Start Date</th>
-                        <th style="border:none;">End Date</th>
-                        <th style="border:none;">LeaveReasons</th>
-
-                      </tr>
-                    </div>
-                  </header>
-                  <tr>
-                    <header *ngFor="let leavHistry of leaveStatus1">
-                      <div class="col-sm-2 leavHistry">
-                        <td style="border:none;"> {{ leavHistry.Rdate }}</td>
-                      </div>
-                      <div class="col-sm-2 leavHistry">
-                        <td style="border:none;"> {{ leavHistry.leaveType }}</td>
-                      </div>
-                      <div class="col-sm-2 leavHistry">
-                        <td style="border:none;"> {{ leavHistry.Days }}</td>
-                      </div>
-                      <div class="col-sm-2 leavHistry">
-                        <td style="border:none;"> {{ leavHistry.Rstatus }}</td>
-                      </div>
-                      <div class="col-sm-2 leavHistry">
-                        <td style="border:none;">{{ leavHistry.StartDate}}</td>
-                      </div>
-                      <div class="col-sm-2 leavHistry">
-                        <td style="border:none;">{{ leavHistry.EndDate }}</td>
-                      </div>
-                      <div class="col-sm-2 leavHistry">
-                        <td style="border:none;">{{ leavHistry.lreasons }}</td>
-                      </div>
-                    </header>
-                  </tr>
-                </table>
-              </div> -->
-              <div class="search-table-outter wrapper">
-                <table class="search-table inner">
-                  <tr>
-                    <th >Requested Date</th>
-                    <th >LeaveType</th>
-                    <th >Days</th>
-                    <th >RequestStatus</th>
-                    <th >Start Date</th>
-                    <th >End Date</th>
-                    <th>LeaveReasons</th>
-
-                  </tr>
-                  
-                    <tr *ngFor="let leavHistry of leaveStatus1">
-                      
-                        <td> {{ leavHistry.Rdate }}</td>
-                      
-                    
-                        <td> {{ leavHistry.leaveType }}</td>
-                      
-                      
-                        <td > {{ leavHistry.Days }}</td>
-                      
-                    
-                        <td > {{ leavHistry.Rstatus }}</td>
-                      
-                      
-                        <td >{{ leavHistry.StartDate}}</td>
-                      
-                      
-                        <td>{{ leavHistry.EndDate }}</td>
-                      
-                  
-                        <td >{{ leavHistry.lreasons }}</td>
-                      
-                    
-                  </tr>
-                           
-                </table>
-              </div>
+              </div><br/><br/>
+              <table border="3"  style="width: 100%;">
+              <header *ngFor="let headeropt of headerOpts">
+                <div class="col-sm-3 leavHistry "><tr><th style="border:none;">{{ headeropt }}</th></tr></div>
+              </header>
+             <tr><header *ngFor="let leavHistry of leaveStatus1">
+                <div class="col-sm-3 leavHistry">
+                 <td style="border:none;"> {{ leavHistry.StartDate }}</td>
+                </div>
+                <div class="col-sm-3 leavHistry"><td style="border:none;">{{ leavHistry.EndDate }}</td></div>
+                <div class="col-sm-3 leavHistry">
+                 <td style="border:none;">{{ leavHistry.countDays }}</td>
+                </div>
+                <div class="col-sm-3 leavHistry">
+                  <td style="border:none;">{{ leavHistry.leaveType }}</td>
+                </div>
+              </header></tr>
+          </table>
             </div>
           </div>
 
@@ -435,13 +452,36 @@ Enter text here...</textarea
               </div>
             </div> -->
         </div>
-        <div *ngIf="leaveStatus">
+        <div *ngIf="leaveStatus" id="l" style=" height: 44px; margin-top: -16px;">
           <h2 style="margin-left: 207px;">leaveStatus</h2>
 
-        </div>
+          <div class="col-sm-12 A">
+              <div class="row">
+                  <div class="col-sm-6 " *ngFor="let item1 of headerOpts1" >
+                      <div class="col-sm-2">
+                          <span class="glyphicon glyphicon-credit-card"></span></div>
+                      <div class="col-sm-8 " style="text-align :center">{{item1}}</div>
+                      <div *ngFor="let item of tname" ng-show="$first">
+                        <div class="col-sm-6 A">
+                           <div class="col-sm-12 A" style=" width: 147%;"><label> Start Date:{{item.StartDate}}</label></div> 
+                           <div class="col-sm-12 A"style=" width: 147%;">  <label> End Date:{{item.EndDate}}</label><br/></div>
+                            <div class="col-sm-12 A" style=" width: 151%;"> <label> Reason:{{item.Reason}}</label></div>
+                            <div class="col-sm-12 A" style=" width: 127%;"> <label> total Days :{{item.total}}</label></div>
+                            
+                        </div>
+                      </div>
+                      
+
+                  </div>
+              </div>
+          </div>
+        
+        
+        
+        
       </div>
     </div>
-    <div class="col-sm-3 right-sidebar" id="Feed">
+    <div class="col-sm-3 right-sidebar" id="Feed" >
       <div id="overlay1">
         <div id="sidebar1">
           <div class="container-fluid">

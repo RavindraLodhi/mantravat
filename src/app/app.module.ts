@@ -18,6 +18,8 @@ import { ProjectComponent } from './project/project.component';
 import { SignupComponent } from './signup/signup.component';
 import { DisplayprojectComponent } from './displayproject/displayproject.component';
 import { DisplaytaskComponent } from "./displaytask/displaytask.component";
+import { CreatetimesheetComponent } from './createtimesheet/createtimesheet.component';
+import { LeavehistoryComponent } from './leavehistory/leavehistory.component';
 
 @NgModule({
   providers: [],
@@ -75,6 +77,14 @@ import { DisplaytaskComponent } from "./displaytask/displaytask.component";
             path :"displayptask",
             component :DisplaytaskComponent
           }
+          , {
+            path :"createtimesheet",
+            component :CreatetimesheetComponent
+          },
+          {
+            path :"leavehistory",
+            component :LeavehistoryComponent
+          }
         ]
       }
     ])
@@ -93,7 +103,9 @@ import { DisplaytaskComponent } from "./displaytask/displaytask.component";
     ProjectComponent,
     SignupComponent,
     DisplayprojectComponent,
-    DisplaytaskComponent
+    DisplaytaskComponent,
+    CreatetimesheetComponent,
+    LeavehistoryComponent
   ]
 })
 export class AppModule {}
