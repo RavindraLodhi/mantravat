@@ -19,6 +19,8 @@ import { SignupComponent } from './signup/signup.component';
 import { DisplayprojectComponent } from './displayproject/displayproject.component';
 import { CreatetimesheetComponent } from './createtimesheet/createtimesheet.component';
 import { LeavehistoryComponent } from './leavehistory/leavehistory.component';
+import { ChangeprojectComponent } from './changeproject/changeproject.component';
+import { ProjectListComponent } from "./project-list/project-list.component";
 
 @NgModule({
   providers: [],
@@ -78,7 +80,15 @@ import { LeavehistoryComponent } from './leavehistory/leavehistory.component';
           {
             path :"leavehistory",
             component :LeavehistoryComponent
-          }
+          },
+
+          
+          {
+            path :"Projectlist",
+            component : ProjectListComponent     },
+            {
+              path :"changeproject",
+              component : ChangeprojectComponent     },
         ]
       }
     ])
@@ -98,7 +108,9 @@ import { LeavehistoryComponent } from './leavehistory/leavehistory.component';
     SignupComponent,
     DisplayprojectComponent,
     CreatetimesheetComponent,
-    LeavehistoryComponent
+    LeavehistoryComponent,
+    ChangeprojectComponent,
+    ProjectListComponent
   ]
 })
 export class AppModule {}
