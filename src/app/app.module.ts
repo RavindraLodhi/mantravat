@@ -17,6 +17,7 @@ import { TimesheetComponent } from './timesheet/timesheet.component';
 import { ProjectComponent } from './project/project.component';
 import { SignupComponent } from './signup/signup.component';
 import { DisplayprojectComponent } from './displayproject/displayproject.component';
+import { DisplaytaskComponent } from "./displaytask/displaytask.component";
 import { CreatetimesheetComponent } from './createtimesheet/createtimesheet.component';
 import { LeavehistoryComponent } from './leavehistory/leavehistory.component';
 
@@ -70,6 +71,11 @@ import { LeavehistoryComponent } from './leavehistory/leavehistory.component';
           {
             path :"displayproject",
             component :DisplayprojectComponent
+          },
+         
+          {
+            path :"displayptask",
+            component :DisplaytaskComponent
           }
           , {
             path :"createtimesheet",
@@ -97,6 +103,7 @@ import { LeavehistoryComponent } from './leavehistory/leavehistory.component';
     ProjectComponent,
     SignupComponent,
     DisplayprojectComponent,
+    DisplaytaskComponent,
     CreatetimesheetComponent,
     LeavehistoryComponent
   ]
