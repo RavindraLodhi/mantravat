@@ -80,7 +80,7 @@ export class HeaderComponent implements OnInit {
   search() {
     var b = ["Aditya", "Ravi", "Anshul", "Joy", "Garima", "Smita", "Jintendra"]
     var flag = 0;
-    var a = document.getElementById("s").value
+    var a = (document.getElementById("s")as HTMLInputElement).value
     for (var i = 0; i <= b.length; i++) {
       if (b[i] == a) {
         flag = 1;

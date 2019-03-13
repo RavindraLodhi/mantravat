@@ -77,7 +77,7 @@ export class SignupComponent implements OnInit {
 
 
  ngOnInit() {
-
+   
  }
  submit(value :any){
 
@@ -458,6 +458,44 @@ validation(value){
   
  
  
+}
+myFunction() {
+  var checkBox = (document.getElementById("myCheck") as HTMLInputElement);
+  
+  var aid=(document.getElementById("aidc")as HTMLInputElement).value;
+  var mb1=(document.getElementById("mbn1c")as HTMLInputElement).value;
+  var mb2=(document.getElementById("mbn2c")as HTMLInputElement).value;
+  var email=(document.getElementById("emc")as HTMLInputElement).value;
+  var country=(document.getElementById("coc")as HTMLInputElement).value;
+  var State=(document.getElementById("sc")as HTMLInputElement).value;
+  var city=(document.getElementById("ctc")as HTMLInputElement).value;
+  var street1=(document.getElementById("st1c")as HTMLInputElement).value;
+  var street2=(document.getElementById("st2c")as HTMLInputElement).value;
+  var pin=(document.getElementById("pinc")as HTMLInputElement).value;
+  if (checkBox.checked == true){
+    (document.getElementById("aidp") as HTMLInputElement).value=aid;
+    (document.getElementById("mbn1p")as HTMLInputElement).value=mb1;
+    (document.getElementById("mbn2p")as HTMLInputElement).value=mb2;
+    (document.getElementById("emp")as HTMLInputElement).value=email;
+    (document.getElementById("cop")as HTMLInputElement).value=country;
+    (document.getElementById("sp")as HTMLInputElement).value=State;
+    (document.getElementById("ctp")as HTMLInputElement).value=city;
+    (document.getElementById("st1p")as HTMLInputElement).value=street1;
+    (document.getElementById("st2p")as HTMLInputElement).value=street2;
+    (document.getElementById("pinp")as HTMLInputElement).value=pin;
+    
+  } else {
+    (document.getElementById("aidp")as HTMLInputElement).value="";
+    (document.getElementById("mbn1p")as HTMLInputElement).value="";
+    (document.getElementById("mbn2p")as HTMLInputElement).value="";
+    (document.getElementById("emp")as HTMLInputElement).value="";
+    (document.getElementById("cop")as HTMLInputElement).value="";
+    (document.getElementById("sp")as HTMLInputElement).value="";
+    (document.getElementById("ctp")as HTMLInputElement).value="";
+    (document.getElementById("st1p")as HTMLInputElement).value="";
+    (document.getElementById("st2p")as HTMLInputElement).value="";
+    (document.getElementById("pinp")as HTMLInputElement).value="";
+  }
 }
 
 }
