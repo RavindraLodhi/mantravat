@@ -395,10 +395,15 @@ input#file {
   padding-right: 178px;
 }
 .commentBox {
-  margin-top:4px;
+  margin-top: 126px;
   background: white;
   height: 199px;
-  width: 100%;
+  width: 101%;
+}
+#btn{
+  background-color: #f1f1f1;
+    width: 94px;
+    margin-top: -39px;
 }
 .pad {
   margin-top: 9px;
@@ -462,4 +467,31 @@ textarea {
 }
 .Very{
   border-top: 2px solid #ff0000;
+}
+#change{
+  padding-right: 130px;
+  margin-left: -4px;
+  height: auto !important;
+  /* background: white !important; */
+  width: 615px;
+}
+#input{
+  height: 495px;
+  padding-left: 42px;
+  padding-right: 178px;
+  background: red;
+  width: 680px;
+  margin-left: -81px;
+}
+#Addtask{
+  text-align: center;
+    margin-left: 42px;
+    margin-top: 64px;
+}
+b, strong {
+  font-weight: 700;
+  margin-left: 85px;
+}
+h4 {
+  font-size: 22px;
 }

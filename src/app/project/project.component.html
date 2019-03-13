@@ -17,14 +17,14 @@
 
     <div class="col-sm-2 sidebarleft divHight2" id="myTopnav">
       <div id="overlay">
-        <div id="sidebar">
+        <div id="sidebar" id="sidebar">
           <ul style="list-style-type:none;">
 
             <li id="sidebarleftOpt"><a (click)="changScreen(1)"> <span class="glyphicon glyphicon-credit-card"></span>Create
                 project</a></li>
             <li id="sidebarleftOpt"><a (click)="changScreen(2)"><span class="glyphicon glyphicon-home"></span>Display
                 Project</a></li>
-            <li id="sidebarleftOpt"><a (click)="changScreen(3)"><span class="glyphicon glyphicon-home"></span> change
+            <li id="sidebarleftOpt"><a (click)="changScreen(3)"><span class="glyphicon glyphicon-home"></span> Change
                 project</a></li>
           </ul>
         </div>
@@ -42,7 +42,7 @@
       </div>
 
 
-      <div class="inputFild">
+      <div class="inputFild" id="f1">
         <div class="form-group form-groupfirstRow">
           <div class="col-md-6 col-md-6  col-xs-6 col-sm-6 pad">
             <label class="control-label  label-name" for="template">project Name:</label>
@@ -163,6 +163,10 @@
               name="cretedby">
           </div>
         </div>
+        <div class="col-md-11 col-xs-12 col-sm-12">
+          <button (click)="addSprinkling()" type="button" class="btn btn-default pull-right btn-btn" id="Button">Submit</button>
+        </div>
+
       </div>
     </form>
 
@@ -330,11 +334,12 @@
                     name="cretedby">
                 </div>
               </div>
+
             </div>
             <div class="form-group checkBox">
                 <div class="uploadBox">
                   <div class="col-md-6 col-xs-6 col-sm-6 " id="task">
-                    <label class="control-label  label-name" for="template"><b>And new task</b></label>
+                    <label class="control-label  label-name" for="template"><b>And new project</b></label>
                   </div>
                   <div class="col-md-6 col-xs-6 col-sm-6 ">
                     <div>
@@ -342,7 +347,7 @@
                         <div class="container" style="background-color:#f1f1f1" id="btn">
                             <button type="button" onclick="document.getElementById('id01')
                             .style.display='block'" class="OKbtn">OK</button>
-       </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -513,7 +518,7 @@
           </form>
         </div>
         <div class="col-md-11 col-xs-12 col-sm-12">
-          <button (click)="addSprinkling()" type="button" class="btn btn-default pull-right btn-btn">Submit</button>
+          <button (click)="addSprinkling()" type="button" class="btn btn-default pull-right btn-btn" id="Button">Submit</button>
         </div>
       </div>
     </div>
