@@ -1,31 +1,45 @@
 <header class="container-fluid">
-        <div class="row" >
-            <div class="col-sm-3 col-xs-2">
-                <!-- <div class="col-sm-12 "> -->
-                    <img src="/assets/images/MantraLogo.jpg" alt="Italian Trulli" onclick="alert('This is our Company Logo')">
-                    <!-- <label>Mantravat Infotech LLp</label> -->
-                <!-- </div> -->
+    <div class="row">
+        <div class="col-sm-3 col-xs-2">
+            <!-- <div class="col-sm-12 "> -->
+            <img src="/assets/images/MantraLogo.jpg" alt="Italian Trulli"
+                onclick="document.getElementById('d2').style.display='block'">
+            <div id="d2" style="display:none">Welcome to Mantravat <img src="/assets/images/MantraLogo.jpg"
+                    alt="Italian Trulli"><span onclick="document.getElementById('d2').style.display='none'"
+                    class="close" title="Close Modal">X</span> <br /> <a href="https://mantravat.com/">Click here to
+                    know More</a><br />
+
             </div>
-            <div class="col-sm-6 col-xs-7 col-sm-offset-1">
-                <input type="search" placeholder="Search.." ng-required name="search" id="s">
-                <button type="submit" (click)="search()">
-                    <span  class="glyphicon glyphicon-search"></span>
-              </button>
-            </div>
-            <!-- <div class="col-sm-1  col-xs-1"></div> -->
-            <div class="col-sm-2  col-xs-3">
-                
-                <!-- <label>ravindra lodhi</label> -->
-                <span id="bellIcon" class="glyphicon glyphicon-bell" onclick="document.getElementById('d1').style.display='block', document.getElementById('d').style.display='none'" (click)="noti()"> </span>
-                <span><img  src="/assets/images/ravi.jpg" alt="Italian Trulli" onclick="document.getElementById('d').style.display='block',document.getElementById('d1').style.display='none'" (click)="profile()" >
-                <div id="d" style="display:none">Hello Aditya<span onclick="document.getElementById('d').style.display='none'" class="close" title="Close Modal">X</span><br/>
-                    <img  src="/assets/images/ravi.jpg" alt="Italian Trulli" >
-                </div>
-                <div id="d1" style="display:none">Notifications<span onclick="document.getElementById('d1').style.display='none'" class="close" title="Close Modal">X</span><br/>
-                    <img  src="/assets/images/ravi.jpg" alt="Italian Trulli" >
-                </div>
-                </span>
-            </div>
+            <!-- <label>Mantravat Infotech LLp</label> -->
+            <!-- </div> -->
         </div>
-    </header>
-    
+        <div class="col-sm-6 col-xs-7 col-sm-offset-1">
+            <input type="search" placeholder="Search.." ng-required name="search" id="s">
+            <button type="submit" (click)="search()">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+        </div>
+        <!-- <div class="col-sm-1  col-xs-1"></div> -->
+        <div class="col-sm-2  col-xs-3">
+
+            <!-- <label>ravindra lodhi</label> -->
+            <span id="bellIcon" class="glyphicon glyphicon-bell"
+                onclick="document.getElementById('d1').style.display='block', document.getElementById('d').style.display='none'"
+                (click)="noti()"> </span>
+            <span><img src="/assets/images/ravi.jpg" alt="Italian Trulli"
+                    onclick="document.getElementById('d').style.display='block',document.getElementById('d1').style.display='none'"
+                    (click)="profile()">
+                <div id="d" style="display:none">Hello Aditya<span
+                        onclick="document.getElementById('d').style.display='none'" class="close"
+                        title="Close Modal">X</span><br />
+                    <img src="/assets/images/ravi.jpg" alt="Italian Trulli">
+                </div>
+                <div id="d1" style="display:none">Notifications<span
+                        onclick="document.getElementById('d1').style.display='none'" class="close"
+                        title="Close Modal">X</span><br />
+                    <img src="/assets/images/ravi.jpg" alt="Italian Trulli">
+                </div>
+            </span>
+        </div>
+    </div>
+</header>
