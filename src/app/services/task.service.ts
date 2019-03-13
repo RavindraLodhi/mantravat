@@ -15,16 +15,20 @@ export class TaskService {
   ) {}
 
   getAllTasks(): Observable<Task[]>{
+    console.log("getTask is running")
+    // return this.http.get('http://localhost:3005/api/getTasks',{headers}).pipe(map(getData => {
     // const headers = new HttpHeaders().set("X-CustomHttpHeader", "CUSTOM_VALUE");
   // return this.http.get<Task[]>('http://192.168.0.16:3005/api/getTasks',{headers});  
-      return this.http.get<Task[]>("./assets/data/tasks.json");
+      return this.http.get<Task[]>("http://localhost:3005/api/getTasks");
   }
 
-   changTask(id){
-    const headers = new HttpHeaders().set("X-CustomHttpHeader", "CUSTOM_VALUE");
-    return this.http.get('http://192.168.0.16:3005/api/getTasks',{headers}).pipe(map(getData => {
-    return getData;  
-   }))
+   changTask(changTaskData){
+    //  console.log(changTaskData);
+    // const headers = new HttpHeaders().set("X-CustomHttpHeader", "CUSTOM_VALUE");
+    // return this.http.get('http://192.168.0.16:3005/api/getTasks',{headers}).pipe(map(getData => {
+    // return getData;  
+   //}))
+   return this.http.put<Task[]>("http://localhost:3005/api/update_task",changTaskData);
    }
 
 
@@ -32,7 +36,7 @@ export class TaskService {
     console.log("New task fields :: "+JSON.stringify(task));
     // const header = this._HeaderService.config_Header(task);
      const headers = new HttpHeaders().set("X-CustomHttpHeader", "CUSTOM_VALUE");
-      return this.http.post("http://192.168.0.11:3005/api/task/add", task, { headers })
+      return this.http.post("http://localhost:3005/api/create_task", task, { headers })
       .pipe(
         map(getData => {
           console.log(getData);
@@ -53,4 +57,18 @@ export class TaskService {
         })
       );
      }
+<<<<<<< HEAD
+=======
+
+     
+    
+   }
+   displayTask(){
+    const headers = new HttpHeaders().set("X-CustomHttpHeader", "CUSTOM_VALUE");
+    return this.http.get('http://192.168.0.16:3005/api/getTasks',{headers}).pipe(map(getData => {
+    return getData;  
+   }))
+  }
+ 
+>>>>>>> origin/Aditya1
 }

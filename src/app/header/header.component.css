@@ -117,6 +117,26 @@ input {
 button {
   height: 30px;
 }
+#d
+{
+  background-color: white;
+    width: auto;
+    height: auto;
+}
+#d2
+{
+  background-color: white;
+    width: auto;
+    height: auto;
+}
+#d1
+{
+  background-color: white;
+    width: auto;
+    height: auto;
+    margin-right: 140px;
+    margin-left: -135px;
+}
 @media screen and (max-width: 600px) {
   input {
     width: 158px;

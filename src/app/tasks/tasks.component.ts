@@ -26,6 +26,7 @@ export class TasksComponent implements OnInit {
   dummyTask1: Task = new Task();
   taskList: Task[] = [];
   isDisplayTask: boolean = false;
+  createTsk :boolean =true;
   /****************** contructor for create object *********************/
   constructor(
     private _TaskService: TaskService,
@@ -58,7 +59,7 @@ export class TasksComponent implements OnInit {
       t_Status: [this.dummyTask1.t_Status, [Validators.required]],
       t_parentId: [this.dummyTask1.t_parentId, [Validators.required]],
       projectId: [this.dummyTask1.projectId, [Validators.required]],
-      t_CreateBy: [this.dummyTask1.t_CreateBy, [Validators.required]],
+      // t_CreateBy: [this.dummyTask1.t_CreateBy, [Validators.required]],
       t_Assign: [this.dummyTask1.t_Assign, [Validators.required]],
       t_LongDescription: [
         this.dummyTask1.t_LongDescription,
@@ -73,15 +74,31 @@ export class TasksComponent implements OnInit {
     // this.validation();
     let newTask = this.form.value;
     newTask.attachements = this.attechmentArray;
-    console.log(JSON.stringify(newTask));
-    this._TaskService.addTask(newTask).subscribe(
-      data => {
-        console.log(" response is :: " + data);
-      },
-      error => {
-        console.log(error);
-      }
-    );
+    // console.log(JSON.stringify(newTask));
+    console.log(this.dummyTask1._id );
+    
+    if(this.dummyTask1._id==undefined){
+        this._TaskService.addTask(newTask).subscribe(
+         data => {
+            console.log(" response is :: " + data);
+          },
+          error => {
+            console.log(error);
+          }
+        );
+    }
+    else{
+        newTask._id = this.dummyTask1._id; 
+        this._TaskService.changTask(newTask).subscribe(
+          data => {
+            console.log(" response is :: " + data);
+          },
+          error => {
+            console.log(error);
+          }
+        );
+    }
+   
   }
 
   /****************** it is for mobile
@@ -114,11 +131,14 @@ export class TasksComponent implements OnInit {
     }
   }
 
+  //calls service methode to get all task
   getAllTasks() {
     this.DisplaycreateChangTask();
     if(this.taskList.length==0){
       this._TaskService.getAllTasks().subscribe(
         response => {
+          console.log(response);
+          
           this.taskList = response;
         },
         error => {
@@ -129,12 +149,11 @@ export class TasksComponent implements OnInit {
    
   }
 
-  updateTask(taskName) {
-    console.log("running update");
-    
+//calls service method for chang task acording to task id  
+  updateTask(taskName) { 
+    // this.createTsk =false;
     for (let task of this.taskList) {
       if (taskName == task.t_Name) {
-        console.log("if");
         this.dummyTask1 = task;
         this.initialiseTaskForm();
         break;
@@ -142,7 +161,9 @@ export class TasksComponent implements OnInit {
     }
   }
 
+  //use to create task if user click on other option
   ctreate() {
+    // this.createTsk =true;
     this.DisplaycreateChangTask();
     this.dummyTask1 = new Task();
     this.initialiseTaskForm();
@@ -188,10 +209,10 @@ export class TasksComponent implements OnInit {
     this.attechmentArray.splice(index, 1);
     this.atttechments.splice(index, 1);
   }
+
+  //calls service method when user click on display option
   DisplayTask() {
     this.isDisplayTask = true;
-    console.log(this.taskList);
-    
     if (this.taskList.length == 0) {
       this._TaskService.getAllTasks().subscribe(
         response => {

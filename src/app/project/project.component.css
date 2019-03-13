@@ -44,6 +44,7 @@
    display: inline-block;
    border: 2px solid #ccc;
    box-sizing: border-box;
+   
  }
  button {
    
@@ -74,7 +75,7 @@
 }
  input[type=file] {
    width: 100%;
-   padding: 12px 20px;
+   padding: 5px 10px;
    margin: 8px 0;
    display: inline-block;
   /* border: 1px solid #ccc;
@@ -135,7 +136,7 @@
   
   background: white;
   width: 284px;
-  margin-left: 1029px;
+  margin-left: 1166px;
   position: fixed;
   height: 550px;
 } 
@@ -386,9 +387,9 @@ input#file {
 }
 #head1{
   background: white;
-    margin-left: 16px;
-    margin-top: -75px;
-    width: 694px;
+  margin-left: 16px;
+  margin-top: -75px;
+  width: 781px;
 }
 input[type=checkbox], input[type=radio] {
   margin: -93px 0 0;
