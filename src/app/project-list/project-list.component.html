@@ -1,40 +1,8 @@
 
 <div class="container-fluid container-fluid1 ">
         <div class="row">
-                <!-- <div class="col-sm-2 sidebarleft divHight2" id="myTopnav">
-                        <div id="overlay">
-                          <div id="sidebar">
-                            <ul style="list-style-type:none;">
-                  
-                              <li id="sidebarleftOpt"><a (click)="changScreen(1)"> <span class="glyphicon glyphicon-credit-card"></span>Create
-                                  project</a></li>
-                              <li id="sidebarleftOpt"><a (click)="changScreen(2)"><span class="glyphicon glyphicon-home"></span>Display
-                                  Project</a></li>
-                                  <li id="sidebarleftOpt"><a (click)="changScreen(3)"> <span class="glyphicon glyphicon-credit-card"></span>Project List
-                                    </a></li>
-                  
-                            </ul>
-                          </div>
-                        </div>
-                      </div> -->
-
-
     <div ng-app="" ng-init="names=['task-0','Hege','Kai']">
-        <!-- <ul>
-    <li *ngFor="let item of names" ng-if="true" id="tree">
-      {{item}}<ul><li *ngFor="let item of names" >{{item}}</li></ul>
-    </li>
-  </ul> -->
-
-        <!-- <li *ngFor="let item1 of name" >{{item1.startDate}}</li> -->
-        <!-- <div class="col-sm-6 A" id="project"  >
-    <ul>
-      <li *ngFor="let item of names,let k=index" data-toggle="collapse" data-target="#task-0">
-        {{names[k]}}
-        <ul id="task-0"><li *ngFor="let item of tasks ,let l=index" ng-if="true">{{item[l]}}</li></ul>
-      </li>
-    </ul>
-</div> -->
+        
         <div class="col-sm-6" id="project">
             <h2>project list</h2>
             <p>Task list:</p>
@@ -43,7 +11,7 @@
                 <div *ngFor="let item of names" id="proj">
                     <div class="col-sm-5 A">
                             <button class="collapsible"(click)="task()">{{item}}</button>
-                        <!-- <label>{{item}}</label> -->
+                         <label>{{item}}</label> -->
                         <div *ngFor="let item of subtask" class="content">
                              <div class="col-sm-5 A" *ngFor="let item of subtask" id="p1">
                             <label> name :{{item.name}}</label>
@@ -66,7 +34,7 @@
                 <div *ngFor="let item of names">
                     <div class="col-sm-5 A">
                             <button class="collapsible"(click)="task()">{{item}}</button>
-                        <!-- <label>{{item}}</label> -->
+                        <label>{{item}}</label>
                         <div *ngFor="let item of sub" class="content">
                             <div class="col-sm-5 A" id="p2">
                                 <label> StartDate :{{item.StartDate}}</label>
@@ -87,8 +55,8 @@
                 <div *ngFor="let item of names">
                     <div class="col-sm-5 A">
                             <button class="collapsible"(click)="task()">{{item}}</button>
-                        <!-- <label>{{item}}</label> -->
-                        <div *ngFor="let item of name" class="content">
+                         <label>{{item}}</label> -->
+                         <div *ngFor="let item of name" class="content">
                             <div class="col-sm-5 A" id="p3">
                                 <label> StartDate :{{item.StartDate}}</label>
                                 <label> EndDate:{{item.EndDate}}</label>

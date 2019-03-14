@@ -435,24 +435,25 @@ margin-top: 19px;
     }
   #Addtask{
     background: white;
-    margin-left: -9px;
-    margin-top: -788px;
-    width: 740px;
+    margin-left: 15px;
+    margin-top: -85px;
+    width: 784px;
 }
 #input
 {
-  margin-top: -1px;
+  margin-top: 533px;
     height: 576px;
     background: white;
     padding-left: 56px;
     padding-right: 178px;
+    background: pink;
 }
   
  #change{
-  background: white;
-    margin-left: -25px;
-    width: 740px;
-    margin-top: -750px;
+  /* background: white; */
+  margin-left: -15px;
+  width: 813px;
+  margin-top: -583px;
  }
   
 #form1[_ngcontent-c3][_ngcontent-c3] {
@@ -518,5 +519,9 @@ textarea {
     /* margin-left: 95px; */
     margin-right: -223px;
 }
-
+#btn1{
+  width: 110px;
+  margin-left: 499px;
+  margin-top: 40px;
+  }
 

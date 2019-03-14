@@ -344,10 +344,10 @@
                 <div class="col-md-6 col-xs-6 col-sm-6 ">
                   <div>
                     <input type="checkbox" checked="checked" name="remember">
-                    <div class="container" style="background-color:#f1f1f1" id="btn">
-                      <button type="button" onclick="document.getElementById('id01')
-                            .style.display='block'"
-                        class="OKbtn">OK</button>
+                        <div class="container" style="background-color:#f1f1f1" id="btn">
+                          <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">ok</button>
+ 
+                        
                     </div>
                   </div>
                 </div>
@@ -356,6 +356,9 @@
 
 
             <div id="id01" style="display:none">
+               <!-- <span
+            onclick="document.getElementById('id02').style.display='none'" class="close"
+            title="Close Modal">X</span><br />>>
               <div class="row">
                 <div class="col-sm-12 leave" style="text-align :center" id="Addtask">
                   <h4>Add tast</h4>
@@ -363,7 +366,7 @@
               </div>
               <!-- <input type="text"/> -->
               <!-- <input type="submit"/> -->
-              <div class="col-sm-7" id="change">
+              <!-- <div class="col-sm-7" id="change">
                 <div class="inputFild" id="input">
                   <div class="form-group form-groupfirstRow">
                     <div class="col-md-6 col-md-6  col-xs-6 col-sm-6 pad">
@@ -485,13 +488,35 @@
                   </div>
 
                   <div class="col-md-11 col-xs-12 col-sm-12">
-                    <button (click)="addSprinkling()" type="button" class="btn btn-default pull-right btn-btn">Submit</button>
+                    <button (click)="addSprinkling()" type="button" class="btn btn-default pull-right btn-btn" id="btn1">Submit</button>
                   </div>
 
 
 
                 </div>
-              </div>
+              </div> -->
+
+
+              <form class="modal-content animate">
+                <div class="imgcontainer">
+                  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                  <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
+                </div>
+            
+                <div class="container">
+                  <label for="uname"><b>Username</b></label>
+                  <input type="text" placeholder="Enter Username" name="uname" required>
+            
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="psw" required>   
+                </div>
+            
+                <div class="container" style="background-color:#f1f1f1">
+                  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                  <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+              </form>
+
 
 
 

@@ -201,16 +201,19 @@
                         <input type="checkbox" checked="checked" name="remember">
                         <div class="container" style="background-color:#f1f1f1" id="btn">
                           <button type="button" onclick="document.getElementById('id01')
-                              .style.display='block'"
-                            class="OKbtn">OK</button>
+                              .style.display='block'" (click)="Task()"                
+                            class="okbtn" title="Close Modal">OK</button>                    
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                
 
 
-                <div id="id01" style="display:none">
+                <div id="id01" style="display:none"> <span
+                onclick="document.getElementById('id01').style.display='none'" class="close"
+                title="Close Modal">X</span><br />>
                   <div class="row">
                     <div class="col-sm-12 leave" style="text-align :center" id="Addtask">
                       <h4>Add new task</h4>
