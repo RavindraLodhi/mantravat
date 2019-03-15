@@ -172,4 +172,18 @@ export class DashboardComponent implements OnInit {
          x.className = "col-sm-3  right-sidebar";
       }
     }
+    pro()
+    {
+      var x=(document.getElementById('project') as HTMLElement).getAttribute("aria-expanded");
+      var y=document.getElementById('pro')
+       if(x==null)
+        console.log("null")
+        else if(x=='true')
+          console.log("true");
+        else
+          console.log("false");
+          
+          
+       
+    }
 }

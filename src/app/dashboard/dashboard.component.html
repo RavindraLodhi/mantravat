@@ -22,35 +22,137 @@
 <div class="container-fluid container-fluid1 ">
     <div class="row">
         <div class=" col-xs-6  topnav">
-                <a href="javascript:void(0);" class="icon" >
-                 <i class="glyphicon glyphicon-menu-hamburger"(click)="myFunction()" id="icon"></i>
-                </a>
+            <a href="javascript:void(0);" class="icon">
+                <i class="glyphicon glyphicon-menu-hamburger" (click)="myFunction()" id="icon"></i>
+            </a>
         </div>
         <div class=" col-xs-6 topnav">
-                <a href="javascript:void(0);" class="icon1">
-                 <i class="glyphicon glyphicon-menu-hamburger"(click)=" myFunctionFeedBack()" id="icon"></i>
-                </a>
+            <a href="javascript:void(0);" class="icon1">
+                <i class="glyphicon glyphicon-menu-hamburger" (click)=" myFunctionFeedBack()" id="icon"></i>
+            </a>
         </div>
         <div class="col-sm-2 sidebarleft" id="myTopnav" style="margin-top: 50px;">
             <ul style="list-style-type:none;">
-                <li id="sidebarleftOpt"><a routerLink="#">
-                              <span class="glyphicon glyphicon-home"></span>
-                              Dashbord</a></li>
-                <li id="sidebarleftOpt"><a routerLink="/project">
-                              <span class="glyphicon glyphicon-magnet"></span>
-                              project</a></li>
-                <li id="sidebarleftOpt"><a routerLink="/task">
-                              <span class="glyphicon glyphicon-credit-card"></span>
-                              Task</a></li>
-                <li id="sidebarleftOpt"><a routerLink="/leave">
-                              <span class="glyphicon glyphicon-list-alt"></span>
-                              Leave</a></li>
-                <li id="sidebarleftOpt"><a routerLink="/timesheet">
-                              <span class="glyphicon glyphicon-time"></span>
-                              Time Sheet</a></li>
-                <li id="sidebarleftOpt"><a (click)="onChang()">
-                                <span class="glyphicon glyphicon-time"></span>
-                                Singup</a></li>
+                <div class="row">
+                    <li id="sidebarleftOpt"><a routerLink="/dashboard">
+                            <span class="glyphicon glyphicon-home"></span>
+                            Dashbord</a></li>
+                </div>
+                <div class="row" id="pro">
+                    <li id="sidebarleftOpt"><a id="project" data-toggle="collapse" data-target="#Project" onclick="document.getElementById('task').style='margin-top:0px;'" (click)="pro()">
+                            <span class="glyphicon glyphicon-magnet"></span>
+                            Project</a>
+
+                        <ul id="Project" class="collapse" style="list-style-type:none;">
+                            <li><a routerLink="/project">
+                                    <span class="glyphicon glyphicon-magnet"></span>
+                                    Create Project</a></li>
+
+                            <li><a routerLink="/project">
+                                    <span class="glyphicon glyphicon-magnet"></span>
+                                    Change Project</a>
+                            </li>
+                            <li><a routerLink="/project">
+                                    <span class="glyphicon glyphicon-magnet"></span>
+                                    Dispaly Project</a></li>
+                        </ul>
+
+                    </li>
+                </div>
+                <div class="row" id="task">
+                    <li id="sidebarleftOpt"><a data-toggle="collapse" data-target="#Task"  onclick="document.getElementById('Leave').style='margin-top:82px;',document.getElementById('Task').style='margin-top:0px;'">
+                            <span class="glyphicon glyphicon-magnet"></span>
+                            Task</a>
+                        <div id="Task" class="collapse">
+                            <ul><a routerLink="/project">
+                                    <span class="glyphicon glyphicon-magnet"></span>
+                                    Create task</a>
+                            </ul>
+                            <ul><a routerLink="/project">
+                                    <span class="glyphicon glyphicon-magnet"></span>
+                                    Change Task</a>
+                            </ul>
+                            <ul><a routerLink="/project">
+                                    <span class="glyphicon glyphicon-magnet"></span>
+                                    Dispaly Task</a>
+                            </ul>
+                        </div>
+                    </li>
+                </div>
+                <div class="row">
+                <li id="sidebarleftOpt"><a data-toggle="collapse" data-target="#Leave"  onclick="document.getElementById('Time').style='margin-top:82px;'">
+                        <span class="glyphicon glyphicon-magnet"></span>
+                        Leave</a>
+                    <div id="Leave" class="collapse">
+                        <ul><a routerLink="/project">
+                                <span class="glyphicon glyphicon-magnet"></span>
+                                Apply Leave</a>
+                        </ul>
+                        <ul><a routerLink="/project">
+                                <span class="glyphicon glyphicon-magnet"></span>
+                                Leave History</a>
+                        </ul>
+                        <ul><a routerLink="/project">
+                                <span class="glyphicon glyphicon-magnet"></span>
+                                Leave Status</a>
+                        </ul>
+                    </div>
+                </li>
+                </div>
+                <div class="row">
+                <li id="sidebarleftOpt"><a data-toggle="collapse" data-target="#Time"  onclick="document.getElementById('login').style='margin-top:82px;'">
+                        <span class="glyphicon glyphicon-magnet"></span>
+                        Timesheet</a>
+                    <div id="Time" class="collapse">
+                        <ul><a routerLink="/createtimesheet">
+                                <span class="glyphicon glyphicon-magnet"></span>
+                                Create Timesheet</a>
+                        </ul>
+                        <ul><a routerLink="/timesheet">
+                                <span class="glyphicon glyphicon-magnet"></span>
+                                Display Timesheet</a>
+                        </ul>
+
+                    </div>
+                </li>
+                </div>
+                <div class="row">
+                <li id="sidebarleftOpt"><a data-toggle="collapse" data-target="#login"  onclick="document.getElementById('Profile').style='margin-top:82px;'">
+                        <span class="glyphicon glyphicon-magnet"></span>
+                        Login</a>
+                    <div id="login" class="collapse">
+                        <ul><a routerLink="/project">
+                                <span class="glyphicon glyphicon-magnet"></span>
+                                Signup</a>
+                        </ul>
+                        <ul><a routerLink="/project">
+                                <span class="glyphicon glyphicon-magnet"></span>
+                                Login</a>
+                        </ul>
+                        <ul><a routerLink="/project">
+                                <span class="glyphicon glyphicon-magnet"></span>
+                                Forgot Password</a>
+                        </ul>
+                    </div>
+                </li>
+                </div>
+                <div class="row">
+                <li id="sidebarleftOpt"><a data-toggle="collapse" data-target="#Profile">
+                        <span class="glyphicon glyphicon-magnet"></span>
+                        Profile</a>
+                    <div id="Profile" class="collapse">
+                        <ul><a routerLink="/project">
+                                <span class="glyphicon glyphicon-magnet"></span>
+                                Display Profile</a>
+                        </ul>
+                        <ul><a routerLink="/project">
+                                <span class="glyphicon glyphicon-magnet"></span>
+                                Change Profile</a>
+                        </ul>
+
+                    </div>
+                </li>
+            </div>
             </ul>
         </div>
         <div class="col-sm-7 col-xs-12 mainContainer">
@@ -66,15 +168,15 @@
                                     <div class="task1">
                                        
                                     </div>  -->
+                            </div>
+                            <div ngFor="let item of tname" ng-show="$first" style="width: 538px; margin-left: -5px;">
+                                <div class="col-sm-12 A" style="    width: 101%">
+                                    <label> UserName:Aditya</label><br />
+                                    <label> EMPid:199</label><br />
+                                    <label> DOB:02-02-1996</label><br />
+                                    <label> DOJ:03-02-2019</label><br />
                                 </div>
-                                <div ngFor="let item of tname" ng-show="$first" style="width: 538px; margin-left: -5px;">
-                                    <div class="col-sm-12 A" style="    width: 101%">
-                                        <label> UserName:Aditya</label><br/>
-                                        <label> EMPid:199</label><br/>
-                                        <label> DOB:02-02-1996</label><br/>
-                                        <label> DOJ:03-02-2019</label><br/>
-                                    </div>
-                                    
+
                             </div>
                         </div>
                     </div>
@@ -86,15 +188,15 @@
                                 <div class="col-sm-8 " style="text-align :center">Tasks</div>
                                 <!-- <div class="col-sm-2">
                                     <div class="task2"></div> -->
-                                </div> 
-                                <div ngFor="let item of tname" ng-show="$first" style="width: 538px; margin-left: -5px;">
-                                    <div class="col-sm-12 A" style="    width: 101%">
-                                        <label> Number of Tasks:3</label><br/>
-                                        <label> Number of Inprocess Tasks:1</label><br/>
-                                        <label> Number of Open Tasks:1</label><br/>
-                                        <label> Number of Compeleted Tasks:1</label><br/>
-                                    </div>
-                                    
+                            </div>
+                            <div ngFor="let item of tname" ng-show="$first" style="width: 538px; margin-left: -5px;">
+                                <div class="col-sm-12 A" style="    width: 101%">
+                                    <label> Number of Tasks:3</label><br />
+                                    <label> Number of Inprocess Tasks:1</label><br />
+                                    <label> Number of Open Tasks:1</label><br />
+                                    <label> Number of Compeleted Tasks:1</label><br />
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -106,15 +208,15 @@
                                 <div class="col-sm-8 " style="text-align :center"> Project</div>
                                 <!-- <div class="col-sm-2">
                                     <div class="task3"></div> -->
+                            </div>
+                            <div ngFor="let item of tname" ng-show="$first" style="width: 538px; margin-left: -5px;">
+                                <div class="col-sm-12 A" style="    width: 101%">
+                                    <label> Project Status:Open</label><br />
+                                    <label> Number of Tasks:5</label><br />
+                                    <label> Start Date:02-02-2019</label><br />
+                                    <label> Estimated hours:10</label><br />
+                                    <label> Log hours:10</label><br />
                                 </div>
-                                <div ngFor="let item of tname" ng-show="$first" style="width: 538px; margin-left: -5px;">
-                                    <div class="col-sm-12 A" style="    width: 101%">
-                                        <label> Project Status:Open</label><br/>
-                                        <label> Number of  Tasks:5</label><br/>
-                                        <label> Start Date:02-02-2019</label><br/>
-                                        <label> Estimated hours:10</label><br/>
-                                        <label> Log hours:10</label><br/>
-                                    </div>
 
                             </div>
                         </div>
@@ -127,16 +229,16 @@
                                 <div class="col-sm-8 " style="text-align :center">Leave</div>
                                 <!-- <div class="col-sm-2">
                                     <div class="task4"></div> -->
+                            </div>
+                            <div ngFor="let item of tname" ng-show="$first" style="width: 538px; margin-left: -5px;">
+                                <div class="col-sm-12 A" style="    width: 101%">
+                                    <label> Upcoming Holiday:04-03-2019</label><br />
+                                    <label> Upcoming BirthDay:02-06-2019</label><br />
+                                    <label> Number of Open Tasks:1</label><br />
+                                    <label> Reamaining Leave :15</label><br />
+                                    <label style="    margin-bottom: 0px"> Approved Leave :5</label> <br />
+                                    <label> Pending Leave :1</label><br />
                                 </div>
-                                <div ngFor="let item of tname" ng-show="$first" style="width: 538px; margin-left: -5px;">
-                                    <div class="col-sm-12 A" style="    width: 101%">
-                                        <label> Upcoming Holiday:04-03-2019</label><br/>
-                                        <label> Upcoming BirthDay:02-06-2019</label><br/>
-                                        <label> Number of Open Tasks:1</label><br/>
-                                        <label> Reamaining Leave :15</label><br/>
-                                        <label style="    margin-bottom: 0px"> Approved Leave :5</label> <br/>
-                                        <label>  Pending Leave :1</label><br/>
-                                    </div>
 
                             </div>
                         </div>
@@ -149,21 +251,21 @@
                                 <div class="col-sm-8 " style="text-align :center">Timesheet</div>
                                 <!-- <div class="col-sm-2">
                                     <span class="glyphicon glyphicon-list-alt"></span>-->
-                                </div> 
-                                <!-- <div class="col-sm-6">
+                            </div>
+                            <!-- <div class="col-sm-6">
                                     
                                 </div>
                                 <div class="col-sm-6">
                                     
                                 </div> -->
+                        </div>
+                        <div ngFor="let item of tname" ng-show="$first" style="width: 538px; margin-left: -20px;">
+                            <div class="col-sm-12 A" style="    width: 101%">
+                                <label> Pending Month:Feb</label><br />
+                                <label> Number of Days Pending:1</label><br />
+                                <label> Current Month:feb</label><br />
+                                <label> Number of Days pending:1</label><br />
                             </div>
-                            <div ngFor="let item of tname" ng-show="$first" style="width: 538px; margin-left: -20px;">
-                                <div class="col-sm-12 A" style="    width: 101%">
-                                    <label> Pending Month:Feb</label><br/>
-                                    <label> Number of Days Pending:1</label><br/>
-                                    <label> Current Month:feb</label><br/>
-                                    <label> Number of Days pending:1</label><br/>
-                                </div>
                         </div>
                     </div>
                     <div class="col-sm-6 A" style="    height: 200px;">
