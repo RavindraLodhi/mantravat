@@ -15,21 +15,31 @@
     </div>
 
 
-    <div class="col-sm-2 sidebarleft divHight2" id="myTopnav">
-      <div id="overlay">
-        <div id="sidebar" id="sidebar">
-          <ul style="list-style-type:none;">
-
-            <li id="sidebarleftOpt"><a (click)="changScreen(1)"> <span class="glyphicon glyphicon-credit-card"></span>Create
-                project</a></li>
-            <li id="sidebarleftOpt"><a (click)="changScreen(2)"><span class="glyphicon glyphicon-home"></span>Display
-                Project</a></li>
-            <li id="sidebarleftOpt"><a (click)="changScreen(3)"><span class="glyphicon glyphicon-home"></span> Change
-                project</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <div class="col-sm-2 sidebarleft" id="myTopnav" style="margin-top:44px;">
+      <ul style="list-style-type:none;">
+          <li id="sidebarleftOpt"><a routerLink="#">
+                        <span class="glyphicon glyphicon-home"></span>
+                        Dashbord</a></li>
+                        <li id="sidebarleftOpt"><a routerLink="/changeproject">
+                          <span class="glyphicon glyphicon-magnet"></span>
+                          change project</a></li>
+                          <li id="sidebarleftOpt"><a routerLink="/project">
+                            <span class="glyphicon glyphicon-magnet"></span>
+                            create project</a></li>
+            <li id="sidebarleftOpt"><a routerLink="/Projectlist">
+                          <span class="glyphicon glyphicon-credit-card"></span>
+                          Display project</a></li>
+          <li id="sidebarleftOpt"><a routerLink="/leave">
+                        <span class="glyphicon glyphicon-list-alt"></span>
+                        Leave</a></li>
+          <li id="sidebarleftOpt"><a routerLink="/timesheet">
+                        <span class="glyphicon glyphicon-time"></span>
+                        Time Sheet</a></li>
+          <li id="sidebarleftOpt"><a (click)="onChang()">
+                          <span class="glyphicon glyphicon-time"></span>
+                          Singup</a></li>
+      </ul>
+  </div>
 
 
 
@@ -345,7 +355,7 @@
                   <div>
                     <input type="checkbox" checked="checked" name="remember">
                         <div class="container" style="background-color:#f1f1f1" id="btn">
-                          <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">ok</button>
+                          <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"></button>
  
                         
                     </div>

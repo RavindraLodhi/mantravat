@@ -22,6 +22,8 @@ import { CreatetimesheetComponent } from './createtimesheet/createtimesheet.comp
 import { LeavehistoryComponent } from './leavehistory/leavehistory.component';
 import { ChangeprojectComponent } from './changeproject/changeproject.component';
 import { ProjectListComponent } from "./project-list/project-list.component";
+import { CreateTaskComponent } from './create-task/create-task.component';
+// import { DisplayTaskComponent } from './display-task/display-task.component';
 
 @NgModule({
   providers: [],
@@ -76,7 +78,7 @@ import { ProjectListComponent } from "./project-list/project-list.component";
           },
          
           {
-            path :"displayptask",
+            path :"displaytask",
             component :DisplaytaskComponent
           }
           , {
@@ -95,6 +97,9 @@ import { ProjectListComponent } from "./project-list/project-list.component";
             {
               path :"changeproject",
               component : ChangeprojectComponent     },
+              {
+                path :"create-task",
+                component : CreateTaskComponent     },
         ]
       }
     ])
@@ -117,7 +122,9 @@ import { ProjectListComponent } from "./project-list/project-list.component";
     CreatetimesheetComponent,
     LeavehistoryComponent,
     ChangeprojectComponent,
-    ProjectListComponent
+    ProjectListComponent,
+    CreateTaskComponent,
+    // DisplayTaskComponent
   ]
 })
 export class AppModule {}

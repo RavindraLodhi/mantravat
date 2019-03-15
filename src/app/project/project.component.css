@@ -140,11 +140,12 @@
   position: fixed;
   height: 550px;
 } 
-ul {
+ul[_ngcontent-c3][_ngcontent-c3] {
   background: white;
-    margin-left: 90px;
-    width: 190px;
-    padding-left: 40px;
+  margin-left: 90px;
+  width: 204px;
+  padding-left: 40px;
+  margin-top: -42px;
 }
 
 li[_ngcontent-c3][_ngcontent-c3] {
@@ -524,4 +525,7 @@ textarea {
   margin-left: 499px;
   margin-top: 40px;
   }
+  /* #myTopnav{
+    margin-top: 2px;
+  } */
 

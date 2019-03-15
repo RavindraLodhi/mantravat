@@ -13,30 +13,34 @@
       </div>
     </div>
 
-    <div class="col-sm-2 sidebarleft divHight2" id="myTopnav">
-      <div id="overlay">
-        <div id="sidebar">
-          <ul style="list-style-type:none;">
-            <li id="sidebarleftOpt"><a (click)="ctreate()" [ngClass]="'pointer'">
-                <span class="glyphicon glyphicon-home"></span>
-                Create Task</a></li>
-            <li id="sidebarleftOpt"><a (click)="getAllTasks()" data-toggle="collapse" data-target="#demo" [ngClass]="'pointer'">
-                <span class="glyphicon glyphicon-magnet"></span>
-                Update Task</a>
-              <div id="demo" class="collapse">
-                <ul style="list-style-type:none;" *ngFor="let task of taskList">
-                  <li (click)="updateTask(task.t_Name)" [ngClass]="'pointer'">{{task.t_Name}}</li>
-                </ul>
-              </div>
-            </li>
-            <li id="sidebarleftOpt"><a (click)="DisplayTask()">
-                <span class="glyphicon glyphicon-credit-card"></span>
-                Display Task</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <div class="col-sm-2 sidebarleft" id="myTopnav" style="margin-top:44px;">
+        <ul style="list-style-type:none;">
+            <li id="sidebarleftOpt"><a routerLink="/dashboard">
+                          <span class="glyphicon glyphicon-home"></span>
+                          Dashbord</a></li>
+                          <li id="sidebarleftOpt"><a routerLink="/create-task">
+                            <span class="glyphicon glyphicon-magnet"></span>
+                            change task</a></li>
+                            <li id="sidebarleftOpt"><a routerLink="/task">
+                              <span class="glyphicon glyphicon-magnet"></span>
+                              create task</a></li>
+              <li id="sidebarleftOpt"><a routerLink="/displaytask">
+                            <span class="glyphicon glyphicon-credit-card"></span>
+                            Display task</a></li>
+            <li id="sidebarleftOpt"><a routerLink="/leave">
+                          <span class="glyphicon glyphicon-list-alt"></span>
+                          Leave</a></li>
+            <li id="sidebarleftOpt"><a routerLink="/timesheet">
+                          <span class="glyphicon glyphicon-time"></span>
+                          Time Sheet</a></li>
+            <li id="sidebarleftOpt"><a (click)="onChang()">
+                            <span class="glyphicon glyphicon-time"></span>
+                            Singup</a></li>
+        </ul>
     </div>
+
+
+
     <div class="col-sm-7">
       <div id="content2 ">
         <div *ngIf="!isDisplayTask" class="container-fluid   divHight">
@@ -201,19 +205,18 @@
                         <input type="checkbox" checked="checked" name="remember">
                         <div class="container" style="background-color:#f1f1f1" id="btn">
                           <button type="button" onclick="document.getElementById('id01')
-                              .style.display='block'" (click)="Task()"                
-                            class="okbtn" title="Close Modal">OK</button>                    
+                              .style.display='block'"
+                            (click)="Task()" class="okbtn" title="Close Modal">OK</button>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                
 
 
-                <div id="id01" style="display:none"> <span
-                onclick="document.getElementById('id01').style.display='none'" class="close"
-                title="Close Modal">X</span><br />>
+
+                <div id="id01" style="display:none"> <span onclick="document.getElementById('id01').style.display='none'"
+                    class="close" title="Close Modal">X</span><br />>
                   <div class="row">
                     <div class="col-sm-12 leave" style="text-align :center" id="Addtask">
                       <h4>Add new task</h4>
@@ -249,7 +252,7 @@
                         </div>
                         <div class="col-md-6 col-xs-6 col-sm-6 ">
                           <select type="t_type" class="form-control" [(ngModel)]="form.t_type" id="t_type"
-                            formControlName="t_type"  value="Norway" readonly>
+                            formControlName="t_type" value="Norway" readonly>
                             <option>Very High</option>
                             <option>High</option>
                             <option>Medium</option>
@@ -348,7 +351,6 @@
                   </div>
 
                 </div>
-
               </div>
 
 
@@ -375,43 +377,9 @@
               </div>
             </form>
           </div>
-          <!-- <div class="col-md-11 col-xs-12 col-sm-12">
-                  <button (click)="addTask()" type="button" class="btn btn-default pull-right btn-btn">Submit</button>
-                </div> -->
+          
         </div>
-        <div *ngIf="isDisplayTask" class="DishplayTask">
-          <div class="headertext">
-            <h4>Display Task</h4>
-          </div>
-          <div *ngFor="let task of taskList ">
-            <div id="card" class="col-sm-5" [ngClass]="task.t_Priority">
-              <div class="card-header " style="height: 27px;">
-                <div class="flude-container ">
-                  <div class="row ">
-                    <div class="col-sm-4  col-xs-4" style="padding :0px; text-align: left">Priority
-                      :{{task.t_Priority}}
-                    </div>
-                    <div class="col-sm-4 col-xs-4" style="padding :0px ; text-align: center">{{task.t_Name}}</div>
-                    <div class="col-sm-4 col-xs-4" style="padding :0px ;  text-align: right">Status : {{task.t_Status}}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-body" style="height: 82px;">
-                <div class="row">
-                  <div class="col-sm-4 col-xs-4" style="padding :0px"></div>
-                  <div class="col-sm-4 col-xs-4" style="padding :0px; text-align: center"></div>
-                  <div class="col-sm-4 col-xs-4" style="padding :0px ; text-align:right">From -
-                    {{task.t_SDate | date: 'dd/MM/yyyy'}} To -{{task.t_EDate | date: 'dd/MM/yyyy'}}</div>
 
-                </div>
-              </div>
-              <div class="card-footer" style="height: 27px;">
-
-              </div>
-            </div>
-          </div>
-        </div>
 
       </div>
 

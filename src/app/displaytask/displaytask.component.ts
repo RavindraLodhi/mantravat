@@ -18,7 +18,7 @@ export class DisplaytaskComponent implements OnInit {
  }
 
   ngOnInit() {
-    this._TaskService.displayTask().subscribe(data =>{
+    this._TaskService.displaytask().subscribe(data =>{
 
     },
     error => {
