@@ -21,6 +21,8 @@ import { CreatetimesheetComponent } from './createtimesheet/createtimesheet.comp
 import { LeavehistoryComponent } from './leavehistory/leavehistory.component';
 import { CreateteamComponent } from './createteam/createteam.component';
 import { ChangeteamComponent } from './changeteam/changeteam.component';
+import { MenuComponent } from './menu/menu.component';
+import { FeedComponent } from './feed/feed.component';
 
 @NgModule({
   providers: [],
@@ -62,6 +64,10 @@ import { ChangeteamComponent } from './changeteam/changeteam.component';
             component: TasksComponent
           },
           {
+            path: "changeteam",
+            component: ChangeteamComponent
+          },
+          {
             path :"timesheet",
             component :TimesheetComponent
           },
@@ -84,7 +90,20 @@ import { ChangeteamComponent } from './changeteam/changeteam.component';
           {
             path :"createteam",
             component :CreateteamComponent
+          },
+          {
+            path :"signup",
+            component :SignupComponent
+          },
+          {
+            path :"header",
+            component :HeaderComponent
+          },
+          {
+            path :"menu",
+            component :MenuComponent
           }
+      
       
         ]
       }
@@ -107,7 +126,9 @@ import { ChangeteamComponent } from './changeteam/changeteam.component';
     CreatetimesheetComponent,
     LeavehistoryComponent,
     CreateteamComponent,
-    ChangeteamComponent
+    ChangeteamComponent,
+    MenuComponent,
+    FeedComponent
   ]
 })
 export class AppModule {}

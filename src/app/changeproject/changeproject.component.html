@@ -1,0 +1,171 @@
+
+  <div class="container-fluid container-fluid1 ">
+  <div class="row">
+    <div class="col-sm-2 sidebarleft" id="myTopnav" style="margin-top:44px;">
+      <ul style="list-style-type:none;">
+          <li id="sidebarleftOpt"><a routerLink="/dashboard">
+                        <span class="glyphicon glyphicon-home"></span>
+                        Dashbord</a></li>
+                        <li id="sidebarleftOpt"><a routerLink="/changeproject">
+                          <span class="glyphicon glyphicon-magnet"></span>
+                          change project</a></li>
+                          <li id="sidebarleftOpt"><a routerLink="/project">
+                            <span class="glyphicon glyphicon-magnet"></span>
+                            create project</a></li>
+            <li id="sidebarleftOpt"><a routerLink="/Projectlist">
+                          <span class="glyphicon glyphicon-credit-card"></span>
+                          Display project</a></li>
+          <li id="sidebarleftOpt"><a routerLink="/leave">
+                        <span class="glyphicon glyphicon-list-alt"></span>
+                        Leave</a></li>
+          <li id="sidebarleftOpt"><a routerLink="/timesheet">
+                        <span class="glyphicon glyphicon-time"></span>
+                        Time Sheet</a></li>
+          <li id="sidebarleftOpt"><a (click)="onChang()">
+                          <span class="glyphicon glyphicon-time"></span>
+                          Singup</a></li>
+      </ul>
+  </div>
+
+
+    <div class="row">
+      <div class="col-sm-12 leave" style="text-align :center" id="head2">
+        <h4>change project</h4>
+      </div>
+    </div>
+
+    <div class="col-sm-7" id="h1">
+      <div class="inputFild">
+
+        <div class="inputFild" id="f1">
+          <div class="form-group form-groupfirstRow">
+            <div class="col-md-6 col-md-6  col-xs-6 col-sm-6 pad">
+              <label class="control-label  label-name" for="template">project Name:</label>
+            </div>
+            <div class="col-md-6 col-xs-6 col-sm-6 ">
+              <input type="text" id="p_NameFont" placeholder="hrms" formControlName="project_Name" [readonly] class="form-control"
+                [(ngModel)]="form.project_Name" value="Norway" readonly>
+              <font color="red" id="na1"></font>
+              <font color="red" id="na2"></font>
+            </div>
+          </div>
+  
+  
+  
+          <div class="form-group">
+            <div class="col-md-6 col-xs-6 col-sm-6 pad">
+              <label class="control-label  label-name" for="template"> ClientName</label>
+            </div>
+            <div class="col-md-6 col-xs-6 col-sm-6 ">
+              <input type="text" id="ClientName" formControlName="ClientName" class="form-control" [(ngModel)]="form.ClientName"
+                value="Norway" readonly>
+              <font color="red" id="cn1"></font>
+              <font color="red" id="cn2"></font>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-6 col-xs-6 col-sm-6 pad">
+              <label class="control-label  label-name" for="template"> Type:</label>
+            </div>
+            <div class="col-md-6 col-xs-6 col-sm-6 ">
+              <select type="p_Priority" class="form-control" [(ngModel)]="form.p_Priority" id="p_type" formControlName="type"
+                name="type" required>
+                <option>Very High</option>
+                <option>High</option>
+                <option>Medium</option>
+                <option>Low</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-6 col-xs-6 col-sm-6 pad">
+              <label class="control-label  label-name" for="template">category:</label>
+            </div>
+            <div class="col-md-6 col-xs-6 col-sm-6 ">
+              <select type="p_category" class="form-control" [(ngModel)]="form.category" id="p_category" formControlName="category"
+                name="category" required>
+                <option>project1</option>
+                <option>project2</option>
+                <option>project3</option>
+                <option>project4</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-6 col-xs-6 col-sm-6 pad ">
+              <label class="control-label  label-name" for="template">Start Date:</label>
+            </div>
+            <div class="col-md-6 col-xs-6 col-sm-6 ">
+              <input type="Date" id="sd" formControlName="startDate" class="form-control" [(ngModel)]="form.p_SDate" name="startDate">
+            </div>
+  
+          </div>
+          <div class="form-group">
+            <div class="col-md-6 col-xs-6 col-sm-6 pad">
+              <label class="control-label  label-name" for="template">End Date</label>
+  
+            </div>
+            <div class="col-md-6 col-xs-6 col-sm-6 ">
+              <input type="Date" id="ed" formControlName="endDate" class="form-control" [(ngModel)]="form.p_EDate" name="endDate">
+              <font color="red" id="sd2"></font>
+              <font color="green" id="sdj1"></font>
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <div class="col-md-6 col-xs-6 col-sm-6 pad">
+              <label class="control-label  label-name" for="template">Estimeted Hr</label>
+            </div>
+            <div class="col-md-6 col-xs-6 col-sm-6 ">
+              <input type="number" id="P_EstimetedHr" formControlName="EstimetedHr" class="form-control" [(ngModel)]="form.t_EstimetedHr"
+                name="EstimetedHr">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-6 col-xs-6 col-sm-6 pad">
+              <label class="control-label  label-name" for="template"> Priority:</label>
+            </div>
+            <div class="col-md-6 col-xs-6 col-sm-6 ">
+              <select type="t_Priority" class="form-control" [(ngModel)]="form.t_Priority" id="p_Priority"
+                formControlName="Priority" name="Priority" required>
+                <!-- <option >Very High</option> -->
+                <option>High</option>
+                <option>Medium</option>
+                <option>Low</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-6 col-xs-6 col-sm-2 pad">
+              <label class="control-label  label-name" for="template">project Status</label>
+            </div>
+            <div class="col-md-6 col-xs-6 col-sm-4 ">
+              <select type="text" class="form-control" [(ngModel)]="form.t_Status" id="t_Status" formControlName="status"
+                name="status" required>>
+                <option value="volvo">Open</option>
+                <option value="saab">InProgress</option>
+                <option value="opel">Completed</option>
+              </select>
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <div class="col-md-6 col-xs-6 col-sm-6 pad">
+              <label class="control-label  label-name" for="template">Created By</label>
+            </div>
+            <div class="col-md-6 col-xs-6 col-sm-6 ">
+              <input type="text" id="t_CreateBy" formControlName="cretedby" class="form-control" [(ngModel)]="form.t_CreateBy"
+                name="cretedby">
+            </div>
+          </div>
+          <div class="col-md-11 col-xs-12 col-sm-12">
+            <button (click)="addSprinkling()" type="button" class="btn btn-default pull-right btn-btn" id="Button">Submit</button>
+          </div>
+  
+        </div>
+    </div>
+    <div class="col-sm-3 right-sidebar" id="Feed">
+      Feed Updates
+    </div>
+    </div>
+</div>
