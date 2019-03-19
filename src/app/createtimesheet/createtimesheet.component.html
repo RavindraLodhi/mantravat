@@ -1,3 +1,11 @@
+<head>
+    <title>Aditya</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
 <div class="container-fluid container-fluid1 ">
     <div class="row">
         <div class=" col-xs-6  topnav">
@@ -10,33 +18,15 @@
                  <i class="glyphicon glyphicon-menu-hamburger"(click)=" myFunctionFeedBack()" id="icon"></i>
                 </a>
         </div>
-        <div class="col-sm-2 sidebarleft" id="myTopnav" style="margin-top:44px;">
-            <ul style="list-style-type:none;">
-                <li id="sidebarleftOpt"><a routerLink="#">
-                              <span class="glyphicon glyphicon-home"></span>
-                              Dashbord</a></li>
-                              <li id="sidebarleftOpt"><a routerLink="/createtimesheet">
-                                <span class="glyphicon glyphicon-magnet"></span>
-                                create timesheet</a></li>
-                  <li id="sidebarleftOpt"><a routerLink="/timesheet">
-                                <span class="glyphicon glyphicon-credit-card"></span>
-                                Display timesheet</a></li>
-                <li id="sidebarleftOpt"><a routerLink="/leave">
-                              <span class="glyphicon glyphicon-list-alt"></span>
-                              Leave</a></li>
-                <li id="sidebarleftOpt"><a routerLink="/timesheet">
-                              <span class="glyphicon glyphicon-time"></span>
-                              Time Sheet</a></li>
-                <li id="sidebarleftOpt"><a (click)="onChang()">
-                                <span class="glyphicon glyphicon-time"></span>
-                                Singup</a></li>
-            </ul>
-        </div>
+        
         <div _ngcontent-c4="" class="col-sm-7 mainContainer">
           <!-- <div _ngcontent-c4="" class="container-fluid container-fluid"> -->
             <div _ngcontent-c4="" class="row">
             
-           <div  class="col-sm-12" style="background-color: white; margin-top: 40px;" >
+           <div  class="col-sm-12" style="background-color: white;
+           margin-top: 40px;
+           width: 291%;
+           margin-left: 13px;" >
             <form >
                            <h2 align="center">  Create Timesheet</h2>
              Month<input #firstNameInput type="month" name="d" value="{{today1}}"  id="m" (click)="Date()"/>
@@ -83,15 +73,7 @@
         
   
   
-        <div class="col-sm-3  right-sidebar" id="Feed" style="margin-left: 10px; margin-top: 44px;" >
-         <header>Feed Updates</header> 
-          <marquee width="75%" direction="up" height="93%" onmousedown="this.stop();" onmouseup="this.start();">
-              <br/><br/><label width="75%" direction="up" height="30%" *ngFor= "let f of feed,let k=index">
-                {{k+1}}  {{f}}
-              </label><br/><br/>
-          </marquee>
-          
-      </div>
+       
   </div>
   </div>
   <!-- <header class="container-fluid">

@@ -1,0 +1,144 @@
+<head>
+  <title>Aditya</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+
+
+
+<div class="container">
+
+  
+
+  <div class="col-sm-12 " style="margin-top: 50px;width: 170%;">
+    <div class="row">
+      <form>
+        <h3 align="center">Create Team</h3>
+        <div class="col-sm-6">
+          <label class="active" id="l1" for="address">Team Name</label>
+
+        </div>
+        <div class="col-sm-6">
+
+          <input id="tname" type="text">
+        </div>
+
+        <div class="col-sm-6">
+          <label class="active" id="l1" for="locality">Team Description</label>
+
+
+        </div>
+        <div class="col-sm-6">
+
+          <input id="tdes" type="text">
+        </div>
+
+
+        <div class="col-sm-6">
+          <label class="active" id="l1" for="city">Start Date</label>
+
+        </div>
+        <div class="col-sm-6">
+
+          <input id="tsd" type="date">
+
+        </div>
+        <div class="col-sm-6">
+          <label class="active" id="l1" for="pin_code">End Date</label>
+
+
+        </div>
+        <div class="col-sm-6">
+
+          <input id="ted" type="date">
+
+        </div>
+
+        <div class="col-sm-12">
+
+          <button type='submit' id="b1" (click)="Team()">Submit</button>
+
+        </div>
+      </form>
+    </div>
+    <div class="row">
+      <form>
+        <h3 align="center">Resources of Team</h3>
+        <div class="col-sm-6">
+          <label class="active" id="l1" for="address">Resource Name</label>
+
+        </div>
+        <div class="col-sm-6">
+
+          <input id="rname" type="text">
+        </div>
+
+        <div class="col-sm-6">
+          <label class="active" id="l1" for="locality">Resource Description</label>
+
+
+        </div>
+        <div class="col-sm-6">
+
+          <input id="rdes" type="text">
+        </div>
+
+
+        <div class="col-sm-6">
+          <label class="active" id="l1" for="city">Start Date</label>
+
+        </div>
+        <div class="col-sm-6">
+
+          <input id="rsd" type="date">
+
+        </div>
+        <div class="col-sm-6">
+          <label class="active" id="l1" for="pin_code">End Date</label>
+
+
+        </div>
+        <div class="col-sm-6">
+
+          <input id="red" type="date">
+
+        </div>
+
+        <div class="col-sm-12">
+
+          <button type='submit' (click)="res()" id="b1">Add</button>
+
+        </div>
+      </form>
+    </div>
+    <div class="row">
+      <h3 align="center">Display Details</h3>
+      <button id="b1">Save</button>
+     
+      <table class="w3-table w3-bordered w3-striped" border="2">
+        <tr>
+          <th>Edit</th>
+          <th>Resource Name</th>
+          <th>Resources id</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+        </tr>
+        <tr *ngFor="let u of resoures;">
+          <td>
+            <button> Edit</button>
+          </td>
+          <td>{{u.name}}</td>
+          <td>{{u.rd}}</td>
+          <td>{{u.sd}} </td>
+          <td>{{u.ed}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  
+
+</div>

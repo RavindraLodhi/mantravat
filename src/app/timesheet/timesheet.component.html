@@ -10,7 +10,7 @@
                <i class="glyphicon glyphicon-menu-hamburger"(click)=" myFunctionFeedBack()" id="icon"></i>
               </a>
       </div>
-      <div class="col-sm-2 sidebarleft" id="myTopnav" style="margin-top: 44px;">
+      <!-- <div class="col-sm-2 sidebarleft" id="myTopnav" style="margin-top: 44px;">
           <ul style="list-style-type:none;">
               <li id="sidebarleftOpt"><a routerLink="#">
                             <span class="glyphicon glyphicon-home"></span>
@@ -31,12 +31,15 @@
                               <span class="glyphicon glyphicon-time"></span>
                               Singup</a></li>
           </ul>
-      </div>
-      <div _ngcontent-c4="" class="col-sm-7 mainContainer">
+      </div> -->
+      <div _ngcontent-c4="" class="col-sm-12 mainContainer">
         <!-- <div _ngcontent-c4="" class="container-fluid container-fluid"> -->
           <div _ngcontent-c4="" class="row">
            
-         <div  class="col-sm-12" style="background-color: white; margin-top: 40px;">
+         <div  class="col-sm-12" style="background-color: white;
+         margin-top: 40px;
+         width: 167%;
+         margin-left: 13px;">
                          <h2 align="center">Display Timesheet</h2>
            Month<input #firstNameInput type="month"  value="{{today1}}" name="d" style="width:160px"/>
         
@@ -74,7 +77,7 @@
       
 
 
-      <div class="col-sm-3  right-sidebar" id="Feed" style="margin-left: 10px; margin-top: 44px;">
+      <!-- <div class="col-sm-3  right-sidebar" id="Feed" style="margin-left: 10px; margin-top: 44px;">
           <header>Feed Updates</header> 
           <marquee width="75%" direction="up" height="93%" >
               <br/><br/><label width="75%" direction="up" height="30%" *ngFor= "let f of feed">
@@ -82,7 +85,7 @@
               </label><br/><br/>
           </marquee>
           
-      </div>
+      </div> -->
 </div>
 </div>
 <!-- <header class="container-fluid">

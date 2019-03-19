@@ -1,0 +1,104 @@
+/* #tree{
+    margin-top: 40px;
+    margin-left: 143px;
+}
+
+label {
+    display: inline-block;
+    max-width: 160%;
+    margin-bottom: 27px;
+    font-weight: 700;
+} */
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #555;
+  }
+  
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
+  h2[_ngcontent-c3] {
+    font-size: 27px;
+    margin-bottom: 38px;
+    margin-top: 75px;
+    text-align: center;
+}
+#proj{
+    display: block;
+    width: 780px;
+}
+#Feed{
+    height: 500px;
+    margin-top: 53px;
+    background: white;
+    width: 244px;
+    margin-left: 63px;
+}
+.content[_ngcontent-c3] {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background: gray;
+    width: 675px;
+}
+
+    label {
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 5px;
+        /* font-weight: 700; */
+    }
+    #p1{
+        width: 190px;
+        height: 139px;
+        margin-left: -19px;
+        background: white;
+    }
+    #p2{
+        width: 237px;
+        height: 147px;
+        margin-left: 12px;
+        background: white;
+        padding-left: 45px;
+    }
+    #p3{
+        width: 230px;
+    height: 148px;
+    margin-left: 12px;
+    background: white;
+    padding-left: 45px;
+    }
+    #project{
+        margin-left: 96px;
+    background: white;
+    margin-top: 49px;
+    width: 819px;
+     }
+     #sidebar{
+        background: white;
+        margin-top: 76px;
+        margin-left: 29px;
+    }
+    ul {
+        margin-top: 5px;
+        margin-bottom: 10px;
+        background: white;
+        margin-left: 73px;
+        height: 183px;
+        width: 206px;
+    }
+     

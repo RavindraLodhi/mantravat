@@ -9,7 +9,8 @@ import { d } from '@angular/core/src/render3';
 export class CreatetimesheetComponent implements OnInit {
 
   days: any[] = [];
-  weeks: any[] = [];today1: string;
+  weeks: any[] = [];
+  today1: string;
   names: string[];
   feed: string[];
 ;
@@ -242,9 +243,7 @@ export class CreatetimesheetComponent implements OnInit {
  
      }
     
-        document.getElementById("object-monday").style.color="red";
-       document.getElementById("object-sunday").style.color="red";
-     
+      
      // console.log(this.days);
      // console.log(this.weeks);
      
