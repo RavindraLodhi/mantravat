@@ -22,8 +22,17 @@ form{
    margin-left: 31px;
    height: 32px;
 } */
-#table{
+.table>{
    overflow-y: scroll;
+   overflow-x: scroll;
+
+}
+.table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+  padding: 5px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+  
 }
 label {
    display: inline-block;
@@ -79,6 +88,7 @@ margin-top: -241px;
    height: 43px;
    width: 75px;
 }
+
 
 /* #edu{
    margin-left: 550px;

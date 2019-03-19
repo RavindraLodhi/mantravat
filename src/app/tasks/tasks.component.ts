@@ -35,27 +35,11 @@ export class TasksComponent implements OnInit {
 
   /****************** methode will run after constructor *********************/
   ngOnInit() {
-    var modal = document.getElementById('id01');
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-
-
-
-
     this.initialiseTaskForm();
   }
   get f() {
     return this.form.controls;
   }
-
-
-
-  
 
   
 
@@ -83,12 +67,6 @@ export class TasksComponent implements OnInit {
       ]
     });
   }
-
-
-
-
-
-  
 
   /****************** runs click on submit button *********************/
 
@@ -270,29 +248,4 @@ export class TasksComponent implements OnInit {
   //     documentAttechments: new FormControl("", Validators.required)
   //   });
   // }
-
-  Task() {
-    var modal = document.getElementById('id01');
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-    document.getElementById('id01').style.display = "block"
-    console.log("running");
-    console.log(document.getElementById('id01').style.display == "block");
-
-    if (document.getElementById('id01').style.display =="block") {
-     
-
-
-    }
-
-  }
 }
-
-
-  
-

@@ -1,4 +1,143 @@
+/* button {
+  background: rgba(65, 19, 230, 0.96);
+  width: 69px;
+  border-radius: 16px;
+}
+.divHight {
+  height: auto;
+  background: white;
+  margin-top: 26px;
+}
+.right-sidebar {
+  background: white;
+  width: 284px;
+}
+ul {
+  background: white;
+}
 
+li {
+  padding-top: 10px;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}
+.row {
+  padding-top: 6px;
+}
+label {
+  font-weight: 100;
+}
+input {
+  font-weight: 400;
+  transition-duration: 334ms;
+  transition-property: border-color, box-shadow;
+  box-shadow: none;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  padding: 0 10px;
+  width: 100%;
+  outline: 0;
+  height: 32px;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.9);
+}
+textarea {
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  background-color: transparent;
+}
+select {
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  background-color: transparent;
+}
+.container1 {
+  height: 118px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  background-color: transparent;
+}
+.topnav .icon {
+  display: none;
+}
+.topnav .icon1 {
+  display: none;
+}
+.docomentAttech {
+  background: red;
+  height: 62px;
+  border-radius: 24px;
+}
+#form {
+  background-color: red !important;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav {
+    background: black;
+    margin-top: -5px;
+  }
+  .sidebarleft {
+    display: none !important;
+    padding: 0px;
+  }
+  .sidebarleftA {
+    display: none !important;
+  }
+  .sidebarleftB {
+    display: block !important;
+  }
+  .topnav a.icon {
+    float: left;
+    display: block;
+  }
+  .topnav a.icon1 {
+    float: right;
+    display: block;
+  }
+
+  .right-sidebar {
+    width: 81px;
+    height: 224px;
+    display: none;
+  }
+  .col-xs-2 {
+    width: 16.666667%;
+    margin: 0px;
+    padding: 0px;
+  }
+  ul {
+    padding-left: 1px;
+    font-size: 12px;
+  }
+
+  .glyphicon-menu-hamburger {
+    font-size: 25px;
+  }
+  #myTopnav {
+    position: absolute;
+    z-index: 2;
+    width: 100px;
+    margin-top: 28px;
+  }
+  #Feed {
+    position: absolute;
+    z-index: 2;
+    width: 100px;
+    margin-top: 28px;
+    margin-left: 311px;
+    font-size: 11px;
+    margin-top: -533px;
+  }
+  .col-sm-3 right-sidebar {
+    display: none;
+  }
+  .right-sidebarB {
+    background: white;
+    height: 200px;
+    width: 284px;
+  }
+} */
 .container-fluid1{
   padding-top: 37px;
 }
@@ -18,16 +157,16 @@ button {
   height: auto;
   padding-left: 0px;
   padding-right: 0px;
-  
+  /* background: white; */
+  /* margin-top: 26px; */
 }
 
 .right-sidebar {
   background: white;
   width: 284px;
 }
-ul[_ngcontent-c3] {
+ul {
   background: white;
-  margin-top: -40px;
 }
 
 li {
@@ -218,7 +357,13 @@ input#file {
     height: 200px;
     width: 284px;
   }
- 
+  /* .inputFild[_ngcontent-c1] {
+    height: 497px;
+    background: white;
+    padding-left: 12px;
+    padding-right: 45px;
+   
+} */
 .col-sm-7{
   margin-left: 0px !important;
   padding-left: 0px !important;
@@ -250,15 +395,10 @@ input#file {
   padding-right: 178px;
 }
 .commentBox {
-  margin-top: 126px;
+  margin-top:4px;
   background: white;
   height: 199px;
-  width: 101%;
-}
-#btn{
-  background-color: #f1f1f1;
-    width: 94px;
-    margin-top: -39px;
+  width: 100%;
 }
 .pad {
   margin-top: 9px;
@@ -322,31 +462,4 @@ textarea {
 }
 .Very{
   border-top: 2px solid #ff0000;
-}
-#change{
-  padding-right: 130px;
-  margin-left: -4px;
-  height: auto !important;
-  /* background: white !important; */
-  width: 615px;
-}
-#input{
-  height: 495px;
-  padding-left: 42px;
-  padding-right: 178px;
-  background: pink;
-  width: 680px;
-  margin-left: -81px;
-}
-#Addtask{
-  text-align: center;
-    margin-left: 42px;
-    margin-top: 64px;
-}
-b, strong {
-  font-weight: 700;
-  margin-left: 85px;
-}
-h4 {
-  font-size: 22px;
 }

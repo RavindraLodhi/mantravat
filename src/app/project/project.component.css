@@ -1,9 +1,45 @@
-/* 
-   .row{
+/*   .row{
+     padding-top: 6px;
+  }
+  label{
+    margin-bottom: 0px;
+    margin-left: 100px;
+   }
+   .A{
+    margin-top: 5px;
+    height: 29px;
+    
+   }
+   button{
+    margin-left: 366px;
+    margin-top: 20px;
+    background: rgba(65, 19, 230, 0.96);
+    border-radius: 17px;
+   }
+   form{
+    background: white;
+    width: 499px;
+    margin-left: 124px;
+   }
+   .right-sidebar{
+    background: white;
+    height: 517px;
+    width: 284px
+  }
+  ul{
+    background: white;
+  }
+  li{
+    padding-top: 10px;
+    height: 35px;
+  }*/
+
+  .row{
     padding-top: 6px;
  }
  label{
-
+  /* margin-bottom: 0px;
+   margin-left: 100px;*/
    display: block;
    font-weight: 50;
   
@@ -12,19 +48,16 @@
    background-color: white;
    margin-left: 20px;
    margin-top: 10px;
-   height: 143px;
   }
- 
-  #form1{
-   background: white;
-   height: 450; 
-   height: 629px;
-  }
+ /* button{
+   margin-left: 366px;
+   margin-top: 20px;
+   background: rgba(65, 19, 230, 0.96);
+   border-radius: 17px;
+  }*/
   form{
-    background: white;
-    height: 450; 
-    
-   }
+   background: white;
+  }
   .right-sidebar{
    background: white;
    height: 517px;
@@ -38,22 +71,20 @@
    height: 35px;
  }
  input[type=text], input[type=password] {
-   width: 81%;
+   width: 100%;
    padding: 5px 10px;
    margin: 8px 0;
    display: inline-block;
-   border: 2px solid #ccc;
+   border: 1px solid #ccc;
    box-sizing: border-box;
-   
  }
  button {
    
    background-color: rgba(65, 19, 230, 0.96);
    height: 31px;;
    width: 69px;
-   /* margin-left: 532px; */
-   /* border-radius: 12px;
-   margin-top :20px
+   margin-left: 532px;
+   border-radius: 12px;
  }
  
  button:hover {
@@ -61,471 +92,26 @@
  }
  select
  {
-   width: 35%;
+   width: 100%;
    padding: 5px 10px;
    margin: 8px 0;
    display: inline-block;
    border: 1px solid #ccc;
    box-sizing: border-box;
  }
- textarea[_ngcontent-c3] {
-  margin: 8px 0;
-  height: 31px;
-  width: 286px;
-}
+ textarea{
+   margin: 8px 0;
+   height: 31px;
+ }
  input[type=file] {
    width: 100%;
-   padding: 5px 10px;
+   padding: 12px 20px;
    margin: 8px 0;
    display: inline-block;
   /* border: 1px solid #ccc;
    box-sizing: border-box;*/
- /* }
+ }
  button:hover {
    opacity: 0.8;
  }
-#btn{
-   height:32px;
-   margin-top: -57px;
- }
-
-.form-control {
-  display: block;
-  width: 81%;
-  height: 34px;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #555;
-  background-color: #fff;
-  background-image: none;
-  border: 1px solid #ccc;
- } 
- */ 
-
-
- button {
-  background: rgba(65, 19, 230, 0.96);
-  width: 69px;
-  border-radius: 16px;
-  margin-top: 10px;
-}
-#p1{
-  padding-top: 42px;
-    background: white;
-    height: 144px;
-    margin-left: 58px;
-    margin-top: 13px;
-    padding-left: 35px;
-}
-#head2{
-  text-align: center;
-  margin-top: -59px;
-  background: white;
-}
-.divHight {
-  height: auto;
-  padding-left: 0px;
-  padding-right: 0px;
-
-  /* background: white; */
-  /* margin-top: 26px; */
-}
-
- .right-sidebar {
-  
-  background: white;
-  width: 284px;
-  margin-left: 1166px;
-  position: fixed;
-  height: 550px;
-} 
-ul[_ngcontent-c3][_ngcontent-c3] {
-  background: white;
-  margin-left: 90px;
-  width: 204px;
-  padding-left: 40px;
-  margin-top: -42px;
-}
-
-li[_ngcontent-c3][_ngcontent-c3] {
-  padding-top: 36px;
-  height: auto;
-  margin-top: 5px;
-  margin-bottom: -35px;
-  /* padding-left: 2px; */
-  margin-left: -5px;
-}
-a {
-  text-decoration: none;
-}
-.row[_ngcontent-c3] {
-  padding-top: 39px;
-}
-label {
-  font-weight: 100;
-  font-family: "Times New Roman", Times, serif;
-}
-input {
-  height: 26px;
-
-  /* border-radius: 15px; */
-}
-
-select {
-  height: 26px;
-}
-/* .container-fluid {
-  padding-right: -72px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-left: -39px;
-} */
-.topnav .icon {
-  display: none;
-}
-#form[_ngcontent-c3] {
-  margin-left: 61px;
-}
-.topnav .icon1 {
-  display: none;
-}
-.docomentAttech {
-  background: red;
-  height: 62px;
-  border-radius: 24px;
-}
-#form {
-  /* background-color: red !important; */
-}
-input#file {
-  display: inline-block;
-  margin-left: 204px;
-  width: 59px;
-  padding: 26px 0 0 0;
-  overflow: hidden;
-  box-sizing: border-box;
-  background: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698394-icon-130-cloud-upload-512.png)
-    center center no-repeat #e4e4e4;
-  border-radius: 20px;
-  background-size: 44px 28px;
-}
-.attechmentShow {
-  width: 608px;
-  margin-left: 71px;
-  height: 102px;
-  border: 1px solid rgba(0, 0, 0, 0.6);
-  background: white;
-}
-.attechment {
-  color: #645b7e;
-  height: 25px;
-  padding-top: 1px;
-  padding-left: 7px;
-  background-color: #ddd;
-  margin-top: 2px;
-}
-#cross_icon {
-  color: black;
-  margin-top: 4px;
-}
-
-@media screen and (max-width: 600px) {
-  #head1[_ngcontent-c3] {
-    margin-top: -49px;
-}
-#overlay{
-  margin-right: -51px;
-    /* width :44px; */
-    padding-left: 75px;
-}
-#form[_ngcontent-c3][_ngcontent-c3] {
-  margin-left: -5px;
-}
-  #mobileHeader{
-    margin-top: 9px;
-  }
-  input#file[_ngcontent-c3] {
-    margin-left: 80px;
-    margin-bottom: 5px;
-  }
-  .attechmentShow[_ngcontent-c3] {
-    width: 315px;
-  }
-  #textarea[_ngcontent-c3] {
-    height: 75px;
-  }
-  textarea[_ngcontent-c3] {
-    height: 79px;
-    width: 154px;
-  }
-
-  .inputFild[_ngcontent-c3] {
-    margin-top: -47px;
-    height: 576px;
-    background: white;
-    padding-left: 56px;
-    padding-right: 178px;
-    
-  }
-  .headertext[_ngcontent-c3] {
-    margin-top: 26px;
-    height: 50px;
-    padding-top: 2px;
-  }
-  .form-control[_ngcontent-c3] {
-    padding: 3px 12px;
-    width: 100%;
-  }
-  .commentBox[_ngcontent-c3] {
-    margin-top: 9px;
-  }
-  .headertext[_ngcontent-c1] {
-    margin-top: 30px;
-    /* text-align: center; */
-    background-color: white;
-    height: 40px;
-    padding-top: 0.5px;
-  }
-  #myTopnav {
-    position: absolute;
-    z-index: 2;
-    width: 100px;
-    margin-top: 28px;
-  }
-  .sidebarleft {
-    display: none !important;
-    padding: 0px;
-    padding-left: 1px !important;
-    padding-right: 1px !important;
-  }
-  #sidebar{
-    padding-left: 61px;
-    /* margin-left: 39px; */
-    width: 235px;
-    margin-left: 45px;
-
-  }
-  .sidebarleftA {
-    display: none !important;
-  }
-  .sidebarleftB {
-    display: block !important;
-  }
-  .topnav a.icon {
-    float: left;
-    display: block;
-  }
-  .topnav a.icon1 {
-    float: right;
-    display: block;
-  }
-
-  .right-sidebar {
-    width: 81px;
-    height: 224px;
-    display: none;
-  }
-  .col-xs-2 {
-    width: 16.666667%;
-    margin: 0px;
-    padding: 0px;
-  }
-  ul {
-    padding-left: 1px;
-    font-size: 12px;
-  }
-
-  .glyphicon-menu-hamburger {
-    font-size: 25px;
-  }
-  #myTopnav {
-    position: absolute;
-    z-index: 2;
-    width: 100px;
-    margin-top: 28px;
-  }
-  #Feed {
-    position: absolute;
-    z-index: 2;
-    width: 100px;
-    margin-top: 28px;
-    margin-left: 311px;
-    font-size: 11px;
-    margin-top: -533px;
-  }
-  
-  .col-sm-3 right-sidebar {
-    display: none;
-  }
-  /* .right-sidebar[_ngcontent-c3] {
-    margin-left: 1011px;
-    background: white;
-    width: 284px;
-    position: fixed;
-} */
-  /* .right-sidebar[_ngcontent-c3] {
-    background: white;
-    width: 284px;
-    position: fixed;
-    margin-left: 1004px;
-    height: 400px;
-} */
-  /* .inputFild[_ngcontent-c1] {
-    height: 497px;
-    background: white;
-    padding-left: 12px;
-    padding-right: 45px;
-   
-} */
-}
-
-/* new css  */
-.form-group {
-  margin-top: 18px;
-  padding-top: 21px;
-}
-#head1{
-  background: white;
-  margin-left: 16px;
-  margin-top: -75px;
-  width: 781px;
-}
-input[type=checkbox], input[type=radio] {
-  margin: -93px 0 0;
-  margin-top: 1px\9;
-  line-height: normal;
-  margin-left: 304px;
-  /* margin-top: -40px; */
-}
-
-
-
-.inputFild {
-  margin-top: -35px;
-  height: 576px;
-  background: white;
-  padding-left: 56px;
-  padding-right: 178px;
-}
-.commentBox {
-  margin-top: 19px;
-  background: white;
-  height: 199px;
-  width: 100%;
-}
-.checkBox{
-margin-top: 19px;
-    background: white;
-    height: 83px;
-    width: 100%;
-  }
-  #task{
-    display: inline-block;
-    max-width: 122%;
-    margin-bottom: -13px;
-    /* font-weight: 700; */
-    margin-left: 202px;
-  }
-  
-    #btn[_ngcontent-c3] {
-      width: 83px;
-    margin-top: -45px;
-    margin-left: 379px;
-    }
-  #Addtask{
-    background: white;
-    margin-left: 15px;
-    margin-top: -85px;
-    width: 784px;
-}
-#input
-{
-  margin-top: 533px;
-    height: 576px;
-    background: white;
-    padding-left: 56px;
-    padding-right: 178px;
-    background: pink;
-}
-  
- #change{
-  /* background: white; */
-  margin-left: -15px;
-  width: 813px;
-  margin-top: -583px;
- }
-  
-#form1[_ngcontent-c3][_ngcontent-c3] {
-  margin-left: 61px;
-  width: 762px;
-  margin-left: 319px;
-}
-#head2[_ngcontent-c3] {
-  background: white;
-    margin-left: -7px;
-    margin-top: -35px;
-    width: 781px;
-}
-.pad {
-  margin-top: 9px;
-  text-align: right;
-}
-.headertext {
-  text-align: center;
-  background-color: white;
-  height: 21px;
-}
-.form-groupfirstRow {
-  margin-top: 1px;
-}
-.midDiv {
-  height: 450px;
-  overflow: auto;
-}
-.form-control {
-  padding: 3px 12px;
-  width: auto;
-}
  
-textarea {
-  background-color: transparent;
-  font-size: 12px;
-  border: 1px solid #ccc;
-  height: 104px;
-  width: 295px;
-}
-#textarea {
-  height: 100px;
-}
-.container-fluid[_ngcontent-c2] {
-  background-color: rgba(65, 19, 230, 0.96);
-  height: 41px;
-  /* position: relative; */
-  width: 100%;
-  width: 100%;
-  position: fixed;
-}
-#f1{
-  margin-top: -45px;
-    height: 576px;
-    background: white;
-    padding-left: 56px;
-    padding-right: 178px;
-    margin-left: -21px;
-}
-#button{
-  margin-top: -125px;
-    /* margin-left: 95px; */
-    margin-right: -223px;
-}
-#btn1{
-  width: 110px;
-  margin-left: 499px;
-  margin-top: 40px;
-  }
-  /* #myTopnav{
-    margin-top: 2px;
-  } */
-

@@ -13,35 +13,32 @@
       </div>
     </div>
 
-    <div class="col-sm-2 sidebarleft" id="myTopnav" style="margin-top:44px;">
-        <ul style="list-style-type:none;">
-            <li id="sidebarleftOpt"><a routerLink="/dashboard">
-                          <span class="glyphicon glyphicon-home"></span>
-                          Dashbord</a></li>
-                          <li id="sidebarleftOpt"><a routerLink="/create-task">
-                            <span class="glyphicon glyphicon-magnet"></span>
-                            change task</a></li>
-                            <li id="sidebarleftOpt"><a routerLink="/task">
-                              <span class="glyphicon glyphicon-magnet"></span>
-                              create task</a></li>
-              <li id="sidebarleftOpt"><a routerLink="/displaytask">
-                            <span class="glyphicon glyphicon-credit-card"></span>
-                            Display task</a></li>
-            <li id="sidebarleftOpt"><a routerLink="/leave">
-                          <span class="glyphicon glyphicon-list-alt"></span>
-                          Leave</a></li>
-            <li id="sidebarleftOpt"><a routerLink="/timesheet">
-                          <span class="glyphicon glyphicon-time"></span>
-                          Time Sheet</a></li>
-            <li id="sidebarleftOpt"><a (click)="onChang()">
-                            <span class="glyphicon glyphicon-time"></span>
-                            Singup</a></li>
-        </ul>
-    </div>
-
-
-
-    <div class="col-sm-7">
+    <!-- <div class="col-sm-2 sidebarleft divHight2" id="myTopnav">
+      <div id="overlay">
+        <div id="sidebar">
+          <ul style="list-style-type:none;">
+            <li id="sidebarleftOpt"><a (click)="ctreate()" [ngClass]="'pointer'">
+                <span class="glyphicon glyphicon-home"></span>
+                Create Task</a></li>
+            <li id="sidebarleftOpt"><a (click)="getAllTasks()" data-toggle="collapse" data-target="#demo"
+                [ngClass]="'pointer'">
+                <span class="glyphicon glyphicon-magnet"></span>
+                Update Task</a>
+              <div id="demo" class="collapse">
+                <ul style="list-style-type:none;" *ngFor="let task of taskList">
+                  <li (click)="updateTask(task.t_Name)" [ngClass]="'pointer'">{{task.t_Name}}</li>
+                </ul>
+              </div>
+            </li>
+            <li id="sidebarleftOpt"><a (click)="DisplayTask()">
+                <span class="glyphicon glyphicon-credit-card"></span>
+                Display Task</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div> -->
+    <div class="col-sm-12">
       <div id="content2 ">
         <div *ngIf="!isDisplayTask" class="container-fluid   divHight">
           <div class="headertext">
@@ -56,7 +53,8 @@
                   </div>
 
                   <div class="col-md-6 col-xs-6 col-sm-6 ">
-                    <input type="text" formControlName="t_Name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.t_Name.errors }" />
+                    <input type="text" formControlName="t_Name" class="form-control"
+                      [ngClass]="{ 'is-invalid': submitted && f.t_Name.errors }" />
                     <div *ngIf=" f.t_Name.touched && f.t_Name.errors" class="invalid-feedback">
                       <div *ngIf="f.t_Name.errors.required" class="error-msg">First Name is required</div>
                       <div *ngIf="f.t_Name.errors.pattern">Only alphabets allowed</div>
@@ -96,7 +94,8 @@
                     <label class="control-label  label-name" for="template">Task Category</label>
                   </div>
                   <div class="col-md-6 col-xs-6 col-sm-6 ">
-                    <input type="text" id="t_Category" formControlName="t_Category" class="form-control" name="t_Category">
+                    <input type="text" id="t_Category" formControlName="t_Category" class="form-control"
+                      name="t_Category">
                   </div>
                 </div>
                 <div class="form-group">
@@ -122,7 +121,8 @@
                     <label class="control-label  label-name" for="template">Estimeted Hr</label>
                   </div>
                   <div class="col-md-6 col-xs-6 col-sm-6 ">
-                    <input type="number" id="t_EstimetedHr" formControlName="t_EstimetedHr" class="form-control" name="t_EstimetedHr">
+                    <input type="number" id="t_EstimetedHr" formControlName="t_EstimetedHr" class="form-control"
+                      name="t_EstimetedHr">
                     <div *ngIf=" f.t_EstimetedHr.touched && f.t_EstimetedHr.errors" class="invalid-feedback">
                       <div *ngIf="f.t_EstimetedHr.errors.required" class="error-msg">Estimeted Hr is required</div>
                     </div>
@@ -133,8 +133,8 @@
                     <label class="control-label  label-name" for="template">Task Priority:</label>
                   </div>
                   <div class="col-md-6 col-xs-6 col-sm-6 ">
-                    <select type="t_Priority" class="form-control" id="t_Priority" formControlName="t_Priority" name="Priority"
-                      required>
+                    <select type="t_Priority" class="form-control" id="t_Priority" formControlName="t_Priority"
+                      name="Priority" required>
                       <option selected="true">Very High</option>
                       <option>High</option>
                       <option>Medium</option>
@@ -160,8 +160,8 @@
                     <label class="control-label  label-name" for="template">Parent Task Name:</label>
                   </div>
                   <div class="col-md-6 col-xs-6 col-sm-6 ">
-                    <select type="text" class="form-control" name="t_parentId" id="t_parentId" formControlName="t_parentId"
-                      required>>
+                    <select type="text" class="form-control" name="t_parentId" id="t_parentId"
+                      formControlName="t_parentId" required>>
                       <option value="project1">project1</option>
                       <option value="project2">project2</option>
                       <option value="project3">project3</option>
@@ -194,165 +194,7 @@
                     </div>
                   </div>
                 </div>
-
-                <div class="form-group checkBox">
-                  <div class="uploadBox">
-                    <div class="col-md-6 col-xs-6 col-sm-6 " id="task">
-                      <label class="control-label  label-name" for="template"><b>And new Task</b></label>
-                    </div>
-                    <div class="col-md-6 col-xs-6 col-sm-6 ">
-                      <div>
-                        <input type="checkbox" checked="checked" name="remember">
-                        <div class="container" style="background-color:#f1f1f1" id="btn">
-                          <button type="button" onclick="document.getElementById('id01')
-                              .style.display='block'"
-                            (click)="Task()" class="okbtn" title="Close Modal">OK</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-
-
-                <div id="id01" style="display:none"> <span onclick="document.getElementById('id01').style.display='none'"
-                    class="close" title="Close Modal">X</span><br />>
-                  <div class="row">
-                    <div class="col-sm-12 leave" style="text-align :center" id="Addtask">
-                      <h4>Add new task</h4>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-7" id="change">
-                    <div class="inputFild" id="input">
-                      <div class="form-group form-groupfirstRow">
-                        <div class="col-md-6 col-md-6  col-xs-6 col-sm-6 pad">
-                          <label class="control-label  label-name" for="template">Task Name:</label>
-                        </div>
-                        <div class="col-md-6 col-xs-6 col-sm-6 ">
-                          <input type="text" id="p_NameFont" placeholder="case study" formControlName="t_Name"
-                            [readonly] class="form-control" [(ngModel)]="form.t_Name" value="Norway" readonly>
-                        </div>
-                      </div>
-
-                      <!-- <div class="form-group">
-                        <div class="col-md-6 col-xs-6 col-sm-6 pad">
-                          <label class="control-label  label-name" for="template"> Task Type:</label>
-                        </div>
-                        <div class="col-md-6 col-xs-6 col-sm-6 ">
-                          <input type="text" id="t_type" placeholder="type" formControlName="t_type" class="form-control"
-                            [(ngModel)]="form.t_type" value="Norway" readonly>
-                          <font color="red" id="cn1"></font>
-                          <font color="red" id="cn2"></font>
-                        </div>
-                      </div> -->
-                      <div class="form-group">
-                        <div class="col-md-6 col-xs-6 col-sm-6 pad">
-                          <label class="control-label  label-name" for="template"> Task Type:</label>
-                        </div>
-                        <div class="col-md-6 col-xs-6 col-sm-6 ">
-                          <select type="t_type" class="form-control" [(ngModel)]="form.t_type" id="t_type"
-                            formControlName="t_type" value="Norway" readonly>
-                            <option>Very High</option>
-                            <option>High</option>
-                            <option>Medium</option>
-                            <option>Low</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <div class="col-md-6 col-xs-6 col-sm-6 pad">
-                          <label class="control-label  label-name" for="template">category:</label>
-                        </div>
-                        <div class="col-md-6 col-xs-6 col-sm-6 ">
-                          <select type="p_category" class="form-control" [(ngModel)]="form.category" id="p_category"
-                            formControlName="category" name="category" required>
-                            <option>task1</option>
-                            <option>task2</option>
-                            <option>task3</option>
-                            <option>task4</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <div class="col-md-6 col-xs-6 col-sm-6 pad ">
-                          <label class="control-label  label-name" for="template">Start Date:</label>
-                        </div>
-                        <div class="col-md-6 col-xs-6 col-sm-6 ">
-                          <input type="Date" id="sd" formControlName="startDate" class="form-control" [(ngModel)]="form.p_SDate"
-                            name="startDate">
-                        </div>
-
-                      </div>
-                      <div class="form-group">
-                        <div class="col-md-6 col-xs-6 col-sm-6 pad">
-                          <label class="control-label  label-name" for="template">End Date</label>
-
-                        </div>
-                        <div class="col-md-6 col-xs-6 col-sm-6 ">
-                          <input type="Date" id="ed" formControlName="endDate" class="form-control" [(ngModel)]="form.p_EDate"
-                            name="endDate">
-                          <font color="red" id="sd2"></font>
-                          <font color="green" id="sdj1"></font>
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <div class="col-md-6 col-xs-6 col-sm-6 pad">
-                          <label class="control-label  label-name" for="template">Estimeted Hr</label>
-                        </div>
-                        <div class="col-md-6 col-xs-6 col-sm-6 ">
-                          <input type="number" id="P_EstimetedHr" formControlName="EstimetedHr" class="form-control"
-                            [(ngModel)]="form.t_EstimetedHr" name="EstimetedHr">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <div class="col-md-6 col-xs-6 col-sm-6 pad">
-                          <label class="control-label  label-name" for="template"> Priority:</label>
-                        </div>
-                        <div class="col-md-6 col-xs-6 col-sm-6 ">
-                          <select type="t_Priority" class="form-control" [(ngModel)]="form.t_Priority" id="p_Priority"
-                            formControlName="Priority" name="Priority" required>
-
-                            <option>High</option>
-                            <option>Medium</option>
-                            <option>Low</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <div class="col-md-6 col-xs-6 col-sm-2 pad">
-                          <label class="control-label  label-name" for="template">Task Status</label>
-                        </div>
-                        <div class="col-md-6 col-xs-6 col-sm-4 ">
-                          <select type="text" class="form-control" [(ngModel)]="form.t_Status" id="t_Status"
-                            formControlName="status" name="status" required>>
-                            <option value="volvo">Open</option>
-                            <option value="saab">InProgress</option>
-                            <option value="opel">Completed</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <div class="col-md-6 col-xs-6 col-sm-6 pad">
-                          <label class="control-label  label-name" for="template">Created By</label>
-                        </div>
-                        <div class="col-md-6 col-xs-6 col-sm-6 ">
-                          <input type="text" id="t_CreateBy" placeholder="Anshul" formControlName="cretedby" class="form-control"
-                            [(ngModel)]="form.t_CreateBy" value="Anshul" readonly>
-                        </div>
-                      </div>
-
-                      <div class="col-md-11 col-xs-12 col-sm-12">
-                        <button (click)="addSprinkling()" type="button" class="btn btn-default pull-right btn-btn">Submit</button>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
               </div>
-
 
               <div class="form-group commentBox">
                 <div class="uploadBox">
@@ -361,8 +203,8 @@
                   </div>
                   <div class="col-md-6 col-xs-6 col-sm-6 ">
                     <div>
-                      <input id="file" (change)="modo($event)" type="file" title="Browse Document" name="documentAttechments"
-                        required>
+                      <input id="file" (change)="modo($event)" type="file" title="Browse Document"
+                        name="documentAttechments" required>
                     </div>
                   </div>
                 </div>
@@ -377,22 +219,55 @@
               </div>
             </form>
           </div>
-          
+          <!-- <div class="col-md-11 col-xs-12 col-sm-12">
+                  <button (click)="addTask()" type="button" class="btn btn-default pull-right btn-btn">Submit</button>
+                </div> -->
         </div>
+        <div *ngIf="isDisplayTask" class="DishplayTask">
+          <div class="headertext">
+            <h4>Display Task</h4>
+          </div>
+          <div *ngFor="let task of taskList ">
+            <div id="card" class="col-sm-5" [ngClass]="task.t_Priority">
+              <div class="card-header " style="height: 27px;">
+                <div class="flude-container ">
+                  <div class="row ">
+                    <div class="col-sm-4  col-xs-4" style="padding :0px; text-align: left">Priority :{{task.t_Priority}}
+                    </div>
+                    <div class="col-sm-4 col-xs-4" style="padding :0px ; text-align: center">{{task.t_Name}}</div>
+                    <div class="col-sm-4 col-xs-4" style="padding :0px ;  text-align: right">Status : {{task.t_Status}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body" style="height: 82px;">
+                <div class="row">
+                  <div class="col-sm-4 col-xs-4" style="padding :0px"></div>
+                  <div class="col-sm-4 col-xs-4" style="padding :0px; text-align: center"></div>
+                  <div class="col-sm-4 col-xs-4" style="padding :0px ; text-align:right">From -
+                    {{task.t_SDate | date: 'dd/MM/yyyy'}} To -{{task.t_EDate | date: 'dd/MM/yyyy'}}</div>
 
+                </div>
+              </div>
+              <div class="card-footer" style="height: 27px;">
+
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
 
 
     </div>
-    <div class="col-sm-3 right-sidebar" id="Feed">
+    <!-- <div class="col-sm-3 right-sidebar" id="Feed">
       <div id="overlay1">
         <div id="sidebar1">
           Feed Updates
         </div>
-      </div>
+      </div> 
 
 
-    </div>
+    </div>-->
   </div>
 </div>

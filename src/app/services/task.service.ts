@@ -9,9 +9,6 @@ import { Observable } from "rxjs";
   providedIn: "root"
 })
 export class TaskService {
-  displaytask(): any {
-    throw new Error("Method not implemented.");
-  }
   constructor(
     private http: HttpClient,
     private _HeaderService: HeaderService

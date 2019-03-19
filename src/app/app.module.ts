@@ -17,13 +17,12 @@ import { TimesheetComponent } from './timesheet/timesheet.component';
 import { ProjectComponent } from './project/project.component';
 import { SignupComponent } from './signup/signup.component';
 import { DisplayprojectComponent } from './displayproject/displayproject.component';
-import { DisplaytaskComponent } from "./displaytask/displaytask.component";
 import { CreatetimesheetComponent } from './createtimesheet/createtimesheet.component';
 import { LeavehistoryComponent } from './leavehistory/leavehistory.component';
-import { ChangeprojectComponent } from './changeproject/changeproject.component';
-import { ProjectListComponent } from "./project-list/project-list.component";
-import { CreateTaskComponent } from './create-task/create-task.component';
-// import { DisplayTaskComponent } from './display-task/display-task.component';
+import { CreateteamComponent } from './createteam/createteam.component';
+import { ChangeteamComponent } from './changeteam/changeteam.component';
+import { MenuComponent } from './menu/menu.component';
+import { FeedComponent } from './feed/feed.component';
 
 @NgModule({
   providers: [],
@@ -65,6 +64,10 @@ import { CreateTaskComponent } from './create-task/create-task.component';
             component: TasksComponent
           },
           {
+            path: "changeteam",
+            component: ChangeteamComponent
+          },
+          {
             path :"timesheet",
             component :TimesheetComponent
           },
@@ -75,11 +78,6 @@ import { CreateTaskComponent } from './create-task/create-task.component';
           {
             path :"displayproject",
             component :DisplayprojectComponent
-          },
-         
-          {
-            path :"displaytask",
-            component :DisplaytaskComponent
           }
           , {
             path :"createtimesheet",
@@ -89,17 +87,24 @@ import { CreateTaskComponent } from './create-task/create-task.component';
             path :"leavehistory",
             component :LeavehistoryComponent
           },
-
-          
           {
-            path :"Projectlist",
-            component : ProjectListComponent     },
-            {
-              path :"changeproject",
-              component : ChangeprojectComponent     },
-              {
-                path :"create-task",
-                component : CreateTaskComponent     },
+            path :"createteam",
+            component :CreateteamComponent
+          },
+          {
+            path :"signup",
+            component :SignupComponent
+          },
+          {
+            path :"header",
+            component :HeaderComponent
+          },
+          {
+            path :"menu",
+            component :MenuComponent
+          }
+      
+      
         ]
       }
     ])
@@ -118,13 +123,12 @@ import { CreateTaskComponent } from './create-task/create-task.component';
     ProjectComponent,
     SignupComponent,
     DisplayprojectComponent,
-    DisplaytaskComponent,
     CreatetimesheetComponent,
     LeavehistoryComponent,
-    ChangeprojectComponent,
-    ProjectListComponent,
-    CreateTaskComponent,
-    // DisplayTaskComponent
+    CreateteamComponent,
+    ChangeteamComponent,
+    MenuComponent,
+    FeedComponent
   ]
 })
 export class AppModule {}

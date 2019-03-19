@@ -1,8 +1,26 @@
 .wrapper{
-    background-color: #ddd;
+    
     height: 569px;
     /* overflow: auto;
     overflow-x: hidden; */
+}
+.container-fluid {
+    /* padding-right: 15px; */
+    padding-left: 0px; 
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+.container
+{
+    margin-left: 0px;
+}
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #ddd;
 }
 @media screen and (max-width: 600px) {
     .wrapper{

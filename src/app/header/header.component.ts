@@ -12,22 +12,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
 
-    var modal = document.getElementById('d');
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-    var modal1 = document.getElementById('d1');
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-      if (event.target == modal1) {
-        modal1.style.display = "none";
-      }
-    }
+    
 
 
 
@@ -80,7 +65,7 @@ export class HeaderComponent implements OnInit {
   search() {
     var b = ["Aditya", "Ravi", "Anshul", "Joy", "Garima", "Smita", "Jintendra"]
     var flag = 0;
-    var a = document.getElementById("s").value
+    var a = (document.getElementById("s")as HTMLInputElement).value
     for (var i = 0; i <= b.length; i++) {
       if (b[i] == a) {
         flag = 1;
