@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-profile',
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
+  selector: 'app-changeprofile',
+  templateUrl: './changeprofile.component.html',
+  styleUrls: ['./changeprofile.component.css']
 })
-export class ProfileComponent implements OnInit {
+export class ChangeprofileComponent implements OnInit {
 
   constructor() { }
 
@@ -24,4 +24,5 @@ img()
   document.getElementById("profile-image1").src = '/assets/images/'+a.substr(12,25);
   
 }
+
 }

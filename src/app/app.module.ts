@@ -24,6 +24,9 @@ import { ChangeteamComponent } from './changeteam/changeteam.component';
 import { MenuComponent } from './menu/menu.component';
 import { FeedComponent } from './feed/feed.component';
 import { DisplaytaskComponent } from "./displaytask/displaytask.component";
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { ChangeprofileComponent } from './changeprofile/changeprofile.component';
+import { DisplayteamComponent } from './displayteam/displayteam.component';
 
 @NgModule({
   providers: [],
@@ -103,6 +106,18 @@ import { DisplaytaskComponent } from "./displaytask/displaytask.component";
           {
             path :"menu",
             component :MenuComponent
+          },
+          {
+            path :"forgotpassword",
+            component :ForgotpasswordComponent
+          },
+          {
+            path :"profile",
+            component :ProfileComponent
+          },
+          {
+            path :"changeprofile",
+            component :ChangeprofileComponent
           }
       
       
@@ -131,7 +146,10 @@ import { DisplaytaskComponent } from "./displaytask/displaytask.component";
     ChangeteamComponent,
     MenuComponent,
     FeedComponent,
-    DisplaytaskComponent
+    DisplaytaskComponent,
+    ForgotpasswordComponent,
+    ChangeprofileComponent,
+    DisplayteamComponent
   ]
 })
 export class AppModule {}
