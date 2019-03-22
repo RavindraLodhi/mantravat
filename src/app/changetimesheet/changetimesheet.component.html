@@ -1,0 +1,66 @@
+<div class="container-fluid container-fluid1 ">
+    <div class="row">
+        <div class=" col-xs-6  topnav">
+                <a href="javascript:void(0);" class="icon" >
+                 <i class="glyphicon glyphicon-menu-hamburger"(click)="myFunction()" id="icon"></i>
+                </a>
+        </div>
+        <div class=" col-xs-6 topnav">
+                <a href="javascript:void(0);" class="icon1">
+                 <i class="glyphicon glyphicon-menu-hamburger"(click)=" myFunctionFeedBack()" id="icon"></i>
+                </a>
+        </div>
+       
+        <div _ngcontent-c4="" class="col-sm-12 mainContainer">
+          
+            <div _ngcontent-c4="" class="row">
+             
+           <div  class="col-sm-12" style="background-color: white;
+           margin-top: 40px;
+           width: 167%;
+           margin-left: 13px;">
+                           <h2 align="center">Change Timesheet</h2>
+             Month<input #firstNameInput type="month"  value="{{today1}}" name="d" style="width:160px"/>
+          
+  
+             <button (click)="date(firstNameInput)" >Change</button>
+             <button  style="margin-left:578px">Submit</button>
+             <button >Save</button><br/><br/>
+             <table border="2" style="width: 100%;">
+                
+                <tr>
+                  <th>Select</th>
+                  <th>Date</th>
+                  <th>Days</th>
+                  <th>Project</th>
+                  <th>Tasks</th>
+                  <th>Description</th>
+                 </tr>
+                 <tr id="object-{{weeks[k]}}"   *ngFor= "let day of days ; let week of weeks ,let k=index" >
+                     <td><input type="checkbox" id="myCheck-{{day}}" name="cb1" (click)="check()"/> </td>
+
+                     <td style="color:black;" >{{day}}</td>
+                     <td id="object-{{weeks[k]}}">{{weeks[k]}}</td>
+                     
+                     <td ><p id="pro-{{day}}"  >Project</p><select id="object-{{day}}" style="color:black;display:none">
+                       <option *ngFor=" let x of names">{{x}}</option>
+                     </select></td>
+                     <td><p id="task-{{day}}" >Timesheet</p><input #t type="text" name="t" placeholder="Enter Your Task Name" id="object1-{{day}}" style="display:none;"/></td>
+                     <td><p id="des-{{day}}" >Screen Alignment</p><input #des type="text" name="Des" placeholder="Enter Description" id="object2-{{day}}" style="display:none;"/></td>
+                    </tr>
+              </table>
+           </div>
+               
+               
+         
+            </div>
+          
+          
+        </div>
+  
+        
+  
+  
+  </div>
+  </div>
+  

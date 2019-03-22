@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import $ = require('jquery');
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',

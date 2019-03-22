@@ -243,11 +243,11 @@ select {
     margin-top: 4px;
   }
   #Feed{
-    margin-left: 950px;
+    margin-left: 987px;
     position: fixed;
     z-index: 2;
     top:45px;
-    margin-top: 7px
+    margin-top: 7px;
   }
   
   @media screen and (max-width: 600px) {

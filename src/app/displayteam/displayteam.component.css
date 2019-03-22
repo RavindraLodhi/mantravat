@@ -1,0 +1,85 @@
+.container
+{
+
+    width: 100%;
+}
+#b1 {
+   
+    background-color: rgba(65, 19, 230, 0.96);
+    height: 31px;;
+    width: 69px;
+    /* margin-left: 532px; */
+    border-radius: 12px;
+    margin-left: 882px;
+  }
+  input[type=text], input[type=password] {
+    width: 70%;
+    padding: 5px 10px;
+    margin: 8px -200px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  } 
+  input[type=date] {
+    width: 27%;
+    padding: 5px 10px;
+    margin: 8px -200px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  } 
+  #Feed
+  {
+    margin-top: 50px;
+    background-color: white;
+    margin-left: 20px;
+    width: 271px;
+    
+  }
+  #l1
+  {
+      margin-left: 250px;
+  }
+  th{padding:20px 7px; font-size:15px; color:#444; background:#66C2E0;}
+td{padding:5px 10px; height:35px;}
+.row
+{
+    background-color: white;
+    margin-bottom: 15px;
+}
+table
+{
+  width: 100%;
+}
+@media screen and (max-width:600px)
+{
+    input[type=text], input[type=password] {
+        width: 70%;
+        padding: 5px 10px;
+        margin: 8px 0px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      } 
+      input[type=date] {
+        width: 40%;
+        padding: 5px 10px;
+        margin: 8px 0px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      } 
+      #l1
+      {
+          margin-left: 0px;
+      }
+      #b1 {
+   
+        background-color: rgba(65, 19, 230, 0.96);
+        height: 31px;;
+        width: 69px;
+        /* margin-left: 532px; */
+        border-radius: 12px;
+        margin-left: 208px;
+      }
+}

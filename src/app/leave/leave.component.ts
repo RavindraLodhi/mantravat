@@ -210,8 +210,7 @@ export class LeaveComponent implements OnInit {
     this.initialiseTaskForm();
     this.companyCalender();
     this.leaveHistryDummy();
-    this.applyLeave = true;
-    this.leaveHistry = false;
+    this.leaveHistry = true;
     this.leaveStatus = false;
   }
   get f() {
@@ -442,19 +441,7 @@ validate(value)
   }
 
   callComponentMethodHere(value) {
-    if (value == 1) {
-      this.applyLeave = true;
-      this.leaveHistry = false;
-      this.leaveStatus = false;
-    } else if (value == 2) {
-      this.applyLeave = false;
-      this.leaveHistry = true;
-      this.leaveStatus = false;
-    } else {
-      this.applyLeave = false;
-      this.leaveHistry = false;
-      this.leaveStatus = true;
-    }
+    this.leaveHistry = true;
   }
 
   leaveHistryDummy() {

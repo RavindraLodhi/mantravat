@@ -195,7 +195,7 @@ Enter text here...</textarea
     </div>
 
 
-    <div class="col-sm-7" style="width:80%;margin-top: 7px">
+    <div class="col-sm-7" style="width:77%;margin-top: 7px;">
       <div id="content2 ">
         <!-- <div *ngIf="applyLeave" class="container-fluid   divHight">
           <div class="headertext">
@@ -291,10 +291,8 @@ Enter text here...</textarea
           </div>
         </div> -->
         <div *ngIf="leaveHistry">
-            <h2 align="center">Leave History</h2>
           <div class="container-fluid " style="   display: block; margin-top: 32px;">
             <div class="row">
-              
               <div class="col-sm-5">
                 Start Date:<input style="margin-top :5px" type="date" name="" id="" />
               </div>
@@ -348,7 +346,6 @@ Enter text here...</textarea
                 </table>
               </div> -->
               <div class="search-table-outter wrapper">
-                
                 <table class="search-table inner">
                   <tr>
                     <th>Requested Date</th>
@@ -416,10 +413,35 @@ Enter text here...</textarea
               </div>
             </div> -->
         </div>
-        <!-- <div *ngIf="leaveStatus">
-          <h2 style="margin-left: 207px;">leaveStatus</h2>
+        <div *ngIf="leaveStatus" id="l" style=" height: 44px; margin-top: -16px;">
+          <h2 align="center">LeaveStatus</h2>
 
-        </div> -->
+          <div class="col-sm-12 A">
+            <div class="row">
+              <div class="col-sm-6 " *ngFor="let item1 of headerOpts1">
+                <div class="col-sm-2">
+                  <span class="glyphicon glyphicon-credit-card"></span></div>
+                <div class="col-sm-8 " style="text-align :center">{{item1}}</div>
+                <div *ngFor="let item of tname" ng-show="$first">
+                  <div class="col-sm-6 A">
+                    <div class="col-sm-12 A" style=" width: 147%;"><label> Start Date:{{item.StartDate}}</label></div>
+                    <div class="col-sm-12 A" style=" width: 147%;"> <label> End Date:{{item.EndDate}}</label><br />
+                    </div>
+                    <div class="col-sm-12 A" style=" width: 151%;"> <label> Reason:{{item.Reason}}</label></div>
+                    <div class="col-sm-12 A" style=" width: 127%;"> <label> total Days :{{item.total}}</label></div>
+
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+
+
+
+
+        </div>
       </div>
     </div>
     <div class="col-sm-3 right-sidebar" id="Feed">

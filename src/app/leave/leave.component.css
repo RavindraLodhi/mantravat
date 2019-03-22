@@ -243,9 +243,10 @@ input#file {
   margin-top: 4px;
 }
 #Feed{
-  margin-left: 897px;
+  margin-left: 990px;
   position: fixed;
   z-index: 2;
+  margin-top: 7px
 }
 
 @media screen and (max-width: 600px) {
