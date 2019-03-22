@@ -140,12 +140,13 @@
   position: fixed;
   height: 550px;
 } 
-ul[_ngcontent-c3][_ngcontent-c3] {
-  background: white;
-  margin-left: 90px;
-  width: 204px;
-  padding-left: 40px;
-  margin-top: -42px;
+
+  ul[_ngcontent-c3][_ngcontent-c3][_ngcontent-c3] {
+    background: white;
+    margin-left: 13px;
+    width: 204px;
+    padding-left: 40px;
+    margin-top: -42px;
 }
 
 li[_ngcontent-c3][_ngcontent-c3] {
@@ -390,7 +391,7 @@ input#file {
   background: white;
   margin-left: 16px;
   margin-top: -75px;
-  width: 781px;
+  width: 695px;
 }
 input[type=checkbox], input[type=radio] {
   margin: -93px 0 0;
@@ -528,4 +529,4 @@ textarea {
   /* #myTopnav{
     margin-top: 2px;
   } */
-
+  

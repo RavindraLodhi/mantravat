@@ -1,0 +1,96 @@
+
+label[_ngcontent-c3] {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 700;
+  margin-left: 345px;
+  margin-top: 18px;
+}
+ 
+  h3[_ngcontent-c3] {
+    font-size: 24px;
+    margin-top: 49px;
+    background: white;
+    width: 911px;
+    margin-left: 96px;
+}
+
+#b1{
+  margin-left: 817px;
+  /* background: blue; */
+  width: 67px;
+  border-radius: 73px;
+}
+#form{
+  background: white;
+    height: 359px;
+    width: 1041px;
+    margin-left: 186px;
+    margin-top: 32px;
+}
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin-top: 17px;
+}
+#h1{
+  font-size: 24px;
+    margin-top: 49px;
+    background: white;
+    width: 911px;
+    margin-left: 121px;
+}
+#form2{
+  background: white;
+    height: 352px;
+    width: 1053px;
+    margin-left: 181px;
+}table {
+  background-color: transparent;
+  margin-left: 179px;
+  width: 1066px;
+}
+#h2[_ngcontent-c3][_ngcontent-c3] {
+  font-size: 24px;
+  margin-top: 49px;
+  background: white;
+  width: 1058px;
+  margin-left: 180px;
+}
+#b2{
+  margin-left: 1085px;
+    background: blue;
+    width: 84px;
+    border-radius: 73px;
+}
+th {
+  margin-left: -29px;
+  text-align: left;
+  padding: 22px;
+  background: green;
+  width: 151px;
+}
+button[_ngcontent-c3], input[_ngcontent-c3], select[_ngcontent-c3], textarea[_ngcontent-c3] {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin-top: 17px;
+  /* border-radius: 13px; */
+  margin-left: -31px;
+  width: 235px;
+}
+#search{
+  margin-left: 525px;
+    margin-top: -34px;
+}
+#edit{
+  font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin-top: 17px;
+    border-radius: 13px;
+    margin-left: -2px;
+    width: 97px;
+}

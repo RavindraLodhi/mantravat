@@ -31,7 +31,7 @@
 
 
 
-    <div ng-app="" ng-init="names=['task-0','Hege','Kai']">
+    
         
         <div class="col-sm-6" id="project">
             <h2>project list</h2>
@@ -41,7 +41,7 @@
                 <div *ngFor="let item of names" id="proj">
                     <div class="col-sm-5 A">
                             <button class="collapsible"(click)="task()">{{item}}</button>
-                         <label>{{item}}</label> -->
+                        <label>{{item}}</label>
                         <div *ngFor="let item of subtask" class="content">
                              <div class="col-sm-5 A" *ngFor="let item of subtask" id="p1">
                             <label> name :{{item.name}}</label>
@@ -64,7 +64,7 @@
                 <div *ngFor="let item of names">
                     <div class="col-sm-5 A">
                             <button class="collapsible"(click)="task()">{{item}}</button>
-                        <label>{{item}}</label>
+                        <!-- <label>{{item}}</label> -->
                         <div *ngFor="let item of sub" class="content">
                             <div class="col-sm-5 A" id="p2">
                                 <label> StartDate :{{item.StartDate}}</label>
@@ -85,7 +85,7 @@
                 <div *ngFor="let item of names">
                     <div class="col-sm-5 A">
                             <button class="collapsible"(click)="task()">{{item}}</button>
-                         <label>{{item}}</label> -->
+                         <!-- <label>{{item}}</label> -->
                          <div *ngFor="let item of name" class="content">
                             <div class="col-sm-5 A" id="p3">
                                 <label> StartDate :{{item.StartDate}}</label>
@@ -100,8 +100,8 @@
                 <div class="content">
                 </div>
             </div>
-        </div>
-    </div>
+        </div> 
+    
     <div class="col-sm-3 right-sidebar" id="Feed">
             Feed Updates
           </div>

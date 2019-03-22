@@ -10,8 +10,8 @@ label {
     font-weight: 700;
 } */
 .collapsible {
-    background-color: #777;
-    color: white;
+    /* background-color: #777; */
+    /* color: white; */
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -22,14 +22,14 @@ label {
   }
   
   .active, .collapsible:hover {
-    background-color: #555;
+    /* background-color: #555; */
   }
   
   .content {
     padding: 0 18px;
     display: none;
     overflow: hidden;
-    background-color: #f1f1f1;
+    /* background-color: #f1f1f1; */
   }
   h2[_ngcontent-c3] {
     font-size: 27px;
@@ -43,16 +43,16 @@ label {
 }
 #Feed{
     height: 500px;
-    margin-top: 53px;
+    margin-top: -270px;
     background: white;
     width: 244px;
-    margin-left: 63px;
+    margin-left: 1058px;
 }
 .content[_ngcontent-c3] {
     padding: 0 18px;
     display: none;
     overflow: hidden;
-    background: gray;
+    /* background: gray; */
     width: 675px;
 }
 
@@ -83,10 +83,10 @@ label {
     padding-left: 45px;
     }
     #project{
-        margin-left: 96px;
-    background: white;
-    margin-top: 49px;
-    width: 819px;
+        margin-left: -18px;
+        background: white;
+        margin-top: -29px;
+        width: 819px;
      }
      #sidebar{
         background: white;
@@ -97,8 +97,24 @@ label {
         margin-top: 5px;
         margin-bottom: 10px;
         background: white;
-        margin-left: 73px;
+        margin-left: 2px;
         height: 183px;
-        width: 206px;
+        width: 170px;
+    }
+    #proj[_ngcontent-c3] {
+        display: block;
+        width: 37px;
+    }
+    .caret {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: 2px;
+        vertical-align: middle;
+        border-top: 4px dashed;
+        border-top: 4px solid\9;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+        margin-top: -24px;
     }
      

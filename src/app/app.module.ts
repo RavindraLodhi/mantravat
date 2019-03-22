@@ -23,6 +23,8 @@ import { LeavehistoryComponent } from './leavehistory/leavehistory.component';
 import { ChangeprojectComponent } from './changeproject/changeproject.component';
 import { ProjectListComponent } from "./project-list/project-list.component";
 import { CreateTaskComponent } from './create-task/create-task.component';
+import { ChangeTeamComponent } from "./change-team/ChangeTeamComponent";
+import { CreateTeamComponent } from './create-team/create-team.component';
 // import { DisplayTaskComponent } from './display-task/display-task.component';
 
 @NgModule({
@@ -100,6 +102,16 @@ import { CreateTaskComponent } from './create-task/create-task.component';
               {
                 path :"create-task",
                 component : CreateTaskComponent     },
+
+                {
+                  path :"change-team",
+                  component :ChangeTeamComponent
+                },
+                {
+                  path :"create-team",
+                  component : CreateTeamComponent     },
+  
+      
         ]
       }
     ])
@@ -124,6 +136,8 @@ import { CreateTaskComponent } from './create-task/create-task.component';
     ChangeprojectComponent,
     ProjectListComponent,
     CreateTaskComponent,
+    ChangeTeamComponent,
+    CreateTeamComponent,
     // DisplayTaskComponent
   ]
 })

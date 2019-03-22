@@ -77,21 +77,21 @@ export class HeaderComponent implements OnInit {
       }
     }
   }
-  search() {
-    var b = ["Aditya", "Ravi", "Anshul", "Joy", "Garima", "Smita", "Jintendra"]
-    var flag = 0;
-    var a = document.getElementById("s").value
-    for (var i = 0; i <= b.length; i++) {
-      if (b[i] == a) {
-        flag = 1;
-      }
-    }
-    if (flag == 1) {
-      alert('Your search was Sucessfull ' + a + ' is an Employee of Mantravat')
-    }
-    else {
-      alert('Your search was not Sucessfull ' + a + ' is not an Employee of Mantravat')
-    }
+  // search() {
+  //   var b = ["Aditya", "Ravi", "Anshul", "Joy", "Garima", "Smita", "Jintendra"]
+  //   var flag = 0;
+  //   var a = (document.getElementById("s")as HTMLElement).value
+  //   for (var i = 0; i <= b.length; i++) {
+  //     if (b[i] == a) {
+  //       flag = 1;
+  //     }
+  //   }
+  //   if (flag == 1) {
+  //     alert('Your search was Sucessfull ' + a + ' is an Employee of Mantravat')
+  //   }
+  //   else {
+  //     alert('Your search was not Sucessfull ' + a + ' is not an Employee of Mantravat')
+  //   }
   }
 
-}
+
