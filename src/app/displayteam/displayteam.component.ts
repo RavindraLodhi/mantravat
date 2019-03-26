@@ -17,8 +17,11 @@ export class DisplayteamComponent implements OnInit {
       'name':'Aditya',
       'rd':"angular",
       'sd':"02-092018",
-      'ed':"04-02-2019"
+      'ed':"04-02-2019",
+      'res':['Abcd','123','5']
   }]
+  console.log(this.resoures[0].res[0]);
+  
   
   }
   res()
